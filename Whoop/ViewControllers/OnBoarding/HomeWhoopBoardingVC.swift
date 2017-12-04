@@ -64,8 +64,10 @@ class HomeWhoopBoardingVC: UIViewController {
     }
     
     @IBAction func tapToByCard(_ sender: UIButton) {
-        let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as! WhoopButtonViewController
-        self.navigationController?.pushViewController(objHomeVC, animated: true)
+        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            self.navigationController?.pushViewController(objHomeVC, animated: true)
+        }
+        
     }
     @IBAction func tapToPopupClose(_ sender: UIButton) {
         self.objCodePopUp.removeFromSuperview()

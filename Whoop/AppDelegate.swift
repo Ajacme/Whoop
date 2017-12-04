@@ -15,13 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         arrSeeCodeData = SeeCode_Data.getData()
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
-//        UINavigationBar.appearance().barTintColor = UIColor(rgba: "#404040")
-//        UINavigationBar.appearance().tintColor = UIColor.darkGray
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
 
         IQKeyboardManager.sharedManager().enable = true
