@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7e2-xT-39U" customClass="SuperWhoopPopUp" customModule="Whoop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z2-9w-4I6">
+                    <rect key="frame" x="10" y="1208.5" width="355" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-Ix-APU">
+                            <rect key="frame" x="0.0" y="199" width="355" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="nhD-SZ-hyL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You’re all added" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZo-Yl-wNU">
+                            <rect key="frame" x="15" y="66" width="325" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="1Rc-MI-xFp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="You’re all added"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smp-2Z-eb6">
+                            <rect key="frame" x="310" y="12" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="fy8-St-LeF"/>
+                                <constraint firstAttribute="width" constant="30" id="mD4-J8-m3o"/>
+                            </constraints>
+                            <state key="normal" image="gray_close"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="Round" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIq-ia-m5l">
+                            <rect key="frame" x="0.0" y="50" width="355" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="6JG-Me-Kg8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well done! You’ve all added yourselves to the deal and unlocked an extra saving on your next travel Insurance policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHN-2T-p9I">
+                            <rect key="frame" x="15" y="99" width="325" height="85"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Well done! You’ve all added yourselves to the deal and unlocked an extra saving on your next travel Insurance policy"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJi-zC-wsk">
+                            <rect key="frame" x="20" y="210" width="315" height="30"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.36862745098039218" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="g2K-LJ-vPy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Close"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kHN-2T-p9I" firstAttribute="top" secondItem="MZo-Yl-wNU" secondAttribute="bottom" constant="10" id="0u1-Dh-c1d"/>
+                        <constraint firstAttribute="trailing" secondItem="iIq-ia-m5l" secondAttribute="trailing" id="Chd-44-gMu"/>
+                        <constraint firstAttribute="height" constant="250" id="Dt0-UK-DJr"/>
+                        <constraint firstItem="kHN-2T-p9I" firstAttribute="leading" secondItem="4z2-9w-4I6" secondAttribute="leading" constant="15" id="EAh-HI-hVV"/>
+                        <constraint firstAttribute="trailing" secondItem="ZjA-Ix-APU" secondAttribute="trailing" id="GEu-DE-Ztu"/>
+                        <constraint firstAttribute="trailing" secondItem="MZo-Yl-wNU" secondAttribute="trailing" constant="15" id="KyT-RC-0r0"/>
+                        <constraint firstItem="MZo-Yl-wNU" firstAttribute="top" secondItem="iIq-ia-m5l" secondAttribute="bottom" constant="15" id="N5W-7n-fqZ"/>
+                        <constraint firstItem="iIq-ia-m5l" firstAttribute="leading" secondItem="4z2-9w-4I6" secondAttribute="leading" id="Qj0-B3-GZH"/>
+                        <constraint firstItem="pJi-zC-wsk" firstAttribute="leading" secondItem="4z2-9w-4I6" secondAttribute="leading" constant="20" id="UQS-jf-5rS"/>
+                        <constraint firstAttribute="trailing" secondItem="pJi-zC-wsk" secondAttribute="trailing" constant="20" id="WIw-g7-2lC"/>
+                        <constraint firstAttribute="trailing" secondItem="kHN-2T-p9I" secondAttribute="trailing" constant="15" id="aL5-HG-b3U"/>
+                        <constraint firstItem="iIq-ia-m5l" firstAttribute="top" secondItem="4z2-9w-4I6" secondAttribute="top" constant="50" id="bcK-ZX-52p"/>
+                        <constraint firstItem="ZjA-Ix-APU" firstAttribute="leading" secondItem="4z2-9w-4I6" secondAttribute="leading" id="gAZ-Hx-ccP"/>
+                        <constraint firstItem="ZjA-Ix-APU" firstAttribute="top" secondItem="kHN-2T-p9I" secondAttribute="bottom" constant="15" id="gsJ-f4-9x2"/>
+                        <constraint firstItem="smp-2Z-eb6" firstAttribute="top" secondItem="4z2-9w-4I6" secondAttribute="top" constant="12" id="l1G-AC-dS0"/>
+                        <constraint firstAttribute="trailing" secondItem="smp-2Z-eb6" secondAttribute="trailing" constant="15" id="laD-bA-cn4"/>
+                        <constraint firstItem="MZo-Yl-wNU" firstAttribute="leading" secondItem="4z2-9w-4I6" secondAttribute="leading" constant="15" id="nbd-JC-U8C"/>
+                        <constraint firstAttribute="bottom" secondItem="ZjA-Ix-APU" secondAttribute="bottom" constant="50" id="npb-VA-u8e"/>
+                        <constraint firstAttribute="bottom" secondItem="pJi-zC-wsk" secondAttribute="bottom" constant="10" id="yO5-a9-LOs"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="SmallShadow" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4z2-9w-4I6" firstAttribute="centerY" secondItem="7e2-xT-39U" secondAttribute="centerY" constant="1000" id="9YD-6Q-AIb"/>
+                <constraint firstItem="ihi-xe-XGF" firstAttribute="trailing" secondItem="4z2-9w-4I6" secondAttribute="trailing" constant="10" id="FGk-bZ-zhs"/>
+                <constraint firstItem="4z2-9w-4I6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ihi-xe-XGF" secondAttribute="top" constant="30" id="gI8-gf-yAR"/>
+                <constraint firstItem="4z2-9w-4I6" firstAttribute="leading" secondItem="ihi-xe-XGF" secondAttribute="leading" constant="10" id="qiP-F0-wfG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ihi-xe-XGF"/>
+            <connections>
+                <outlet property="Cons_ViewMiddle" destination="9YD-6Q-AIb" id="FVd-OC-pto"/>
+                <outlet property="btnClose" destination="pJi-zC-wsk" id="Zly-IJ-LQr"/>
+                <outlet property="btnCross" destination="smp-2Z-eb6" id="PYL-jq-spQ"/>
+                <outlet property="labelDiscription" destination="kHN-2T-p9I" id="HrL-H0-NIC"/>
+                <outlet property="labelTitle" destination="MZo-Yl-wNU" id="Lev-Rj-On0"/>
+            </connections>
+            <point key="canvasLocation" x="-57.5" y="10.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gray_close" width="12" height="12"/>
+    </resources>
+</document>

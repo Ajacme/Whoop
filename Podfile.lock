@@ -1,0 +1,23 @@
+PODS:
+  - AASegmentedControl (0.1.0)
+  - ImageSlideshow (1.3.2):
+    - ImageSlideshow/Core (= 1.3.2)
+  - ImageSlideshow/Core (1.3.2)
+  - IQKeyboardManagerSwift (5.0.0)
+  - JHChainableAnimations (3.0.1)
+
+DEPENDENCIES:
+  - AASegmentedControl
+  - ImageSlideshow (~> 1.3.2)
+  - IQKeyboardManagerSwift (= 5.0.0)
+  - JHChainableAnimations (~> 3.0.1)
+
+SPEC CHECKSUMS:
+  AASegmentedControl: ad004106e9c30f6dd5a5dd685c5d3c3db40eaf8b
+  ImageSlideshow: a68a76fc618ebd2b7481ce355ad67d7097203976
+  IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
+  JHChainableAnimations: 0237489ed063f0ec5b351f5c7bb26c1891517074
+
+PODFILE CHECKSUM: 9a2bf51581488ae1104a66bd99d9711a2c8b1dc6
+
+COCOAPODS: 1.2.1
