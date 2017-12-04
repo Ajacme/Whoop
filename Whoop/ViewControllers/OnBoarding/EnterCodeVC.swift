@@ -79,8 +79,12 @@ class EnterCodeVC: UIViewController,CustomToolBarDelegate {
     // MARK: - CustumeView Design For PopUp
     func customChatView()  {
         
-        let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as! WhoopButtonViewController
-        self.navigationController?.pushViewController(objHomeVC, animated: true)
+        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            objHomeVC.isGreen = true
+        
+            
+            self.navigationController?.pushViewController(objHomeVC, animated: true)
+        }
         
             /*objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
             self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)

@@ -25,6 +25,7 @@ class SignInVC: UIViewController {
     @IBAction func tapSignInButton(_ sender: Any) {
         
         if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            objHomeVC.isRed = true
             self.navigationController?.pushViewController(objHomeVC, animated: true)
         }
         

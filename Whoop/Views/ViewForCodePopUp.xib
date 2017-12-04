@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogr-xJ-Y5n">
-                    <rect key="frame" x="10" y="1000" width="355" height="259"/>
+                    <rect key="frame" x="10" y="1000" width="355" height="240.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gde-30-v42">
-                            <rect key="frame" x="0.0" y="203" width="355" height="1"/>
+                            <rect key="frame" x="0.0" y="184.5" width="355" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="hcb-UN-Tbw"/>
@@ -38,7 +38,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0N-zS-skx">
-                            <rect key="frame" x="285" y="219" width="60" height="30"/>
+                            <rect key="frame" x="285" y="200.5" width="60" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="BBX-RQ-p3G"/>
                             </constraints>
@@ -87,15 +87,15 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-so-nm6" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
-                            <rect key="frame" x="20" y="76" width="315" height="112"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-so-nm6" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                            <rect key="frame" x="15" y="76" width="325" height="93.5"/>
                             <string key="text">Whoop! You've just joined your home's button. If you added a photo to your personal button it will now show On your home's button. You on now unlock your home's deals or use ones that have been unlocked. </string>
                             <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xL0-BV-IIu" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
-                            <rect key="frame" x="20" y="18" width="78" height="25"/>
+                            <rect key="frame" x="15" y="18" width="78" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="gXu-UR-ZYw"/>
                             </constraints>
@@ -107,8 +107,8 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="WuV-rn-m74" secondAttribute="trailing" id="3Um-3M-XH7"/>
-                        <constraint firstAttribute="trailing" secondItem="Vva-so-nm6" secondAttribute="trailing" constant="20" id="3z8-Uq-6w5"/>
-                        <constraint firstItem="xL0-BV-IIu" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" constant="20" id="4bA-6N-kA4"/>
+                        <constraint firstAttribute="trailing" secondItem="Vva-so-nm6" secondAttribute="trailing" constant="15" id="3z8-Uq-6w5"/>
+                        <constraint firstItem="xL0-BV-IIu" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" constant="15" id="4bA-6N-kA4"/>
                         <constraint firstItem="F0N-zS-skx" firstAttribute="top" secondItem="Gde-30-v42" secondAttribute="bottom" constant="15" id="7MM-Zc-NBM"/>
                         <constraint firstItem="WuV-rn-m74" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" id="CSe-S8-Zil"/>
                         <constraint firstAttribute="bottom" secondItem="F0N-zS-skx" secondAttribute="bottom" constant="10" id="FzN-Zi-fdI"/>
@@ -117,7 +117,7 @@
                         <constraint firstItem="xL0-BV-IIu" firstAttribute="top" secondItem="ogr-xJ-Y5n" secondAttribute="top" constant="18" id="VER-I8-zUJ"/>
                         <constraint firstItem="Vva-so-nm6" firstAttribute="top" secondItem="WuV-rn-m74" secondAttribute="bottom" constant="15" id="Vm0-NP-kqE"/>
                         <constraint firstItem="Gde-30-v42" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" id="W5p-Sm-nWf"/>
-                        <constraint firstItem="Vva-so-nm6" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" constant="20" id="Xws-VS-bns"/>
+                        <constraint firstItem="Vva-so-nm6" firstAttribute="leading" secondItem="ogr-xJ-Y5n" secondAttribute="leading" constant="15" id="Xws-VS-bns"/>
                         <constraint firstAttribute="bottom" secondItem="Gde-30-v42" secondAttribute="bottom" constant="55" id="YNf-Oh-gBr"/>
                         <constraint firstItem="Gde-30-v42" firstAttribute="top" secondItem="Vva-so-nm6" secondAttribute="bottom" constant="15" id="bOP-AY-Yd5"/>
                         <constraint firstItem="WuV-rn-m74" firstAttribute="top" secondItem="ogr-xJ-Y5n" secondAttribute="top" constant="60" id="hVr-Uh-AZz"/>
