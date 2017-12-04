@@ -30,10 +30,10 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
     }
     func setUpView(){
         if isDealToUnlock{
-             arrData  = [["image" : "moving_home_deals", "title" : "Moving home","badge":"11"],["image" : "insurance", "title" : "Insurance","badge":"6"],["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"9"],["image" : "vehicle_deals", "title" : "Vehicle","badge":"3"]]
+            arrData  = [["image" : "moving_home_deals", "title" : "Moving home","badge":"11"],["image" : "insurance", "title" : "Insurance","badge":"6"],["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"9"],["image" : "vehicle_deals", "title" : "My Vehicles","badge":"3"]]
             headerYourDeals.attributedText = NSMutableAttributedString(string: "Your Whoop! Button is loaded these deals.",attributes: headerAttributes)
         }else{
-             arrData  = [["image" : "moving_home_deals", "title" : "Moving home","badge":"13"],["image" : "insurance", "title" : "Insurance","badge":"4"],["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"3"],["image" : "vehicle_deals", "title" : "Vehicle","badge":"5"]]
+            arrData  = [["image" : "moving_home_deals", "title" : "Moving home","badge":"13"],["image" : "insurance", "title" : "Insurance","badge":"4"],["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"3"],["image" : "vehicle_deals", "title" : "My Vehicles","badge":"5"]]
             descriptionText.text = "You or someone you live with has unlocked these deals. If you have a Whoop! Me Happier boost code you can boost your savings"
             headerYourDeals.attributedText = NSMutableAttributedString(string: "Unlocked deals",attributes: headerAttributes)
         }
@@ -259,16 +259,19 @@ class settingUnlockCollectionViewCell : UICollectionViewCell {
         
     }
 }
-
+/*
 extension SettingUnlockDealViewController : UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var collectionViewSize = collectionView.frame.size
+        
         collectionViewSize.width = collectionViewSize.width/3.2 //Display Three elements in a row.
-        collectionViewSize.height = collectionViewSize.height/2.3
+//        collectionViewSize.height = collectionViewSize.width//collectionViewSize.height/1.3
+        print(collectionViewSize.width)
+        print(collectionViewSize.height)
         
         return collectionViewSize
     }
 }
-
+*/
