@@ -37,6 +37,7 @@
 		086AA5B11FCD820B00707528 /* GothamBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 086AA5AC1FCD820900707528 /* GothamBook.ttf */; };
 		087AD00A1FCE9A4C000DD17D /* ViewFor3xPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087AD0061FCE9A26000DD17D /* ViewFor3xPopUp.xib */; };
 		087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AD0091FCE9A4C000DD17D /* ViewFor3xPopUp.swift */; };
+		087FB6981FD5B00500F934AB /* WhoopButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */; };
 		08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB6D471FD13CD700A97161 /* SuperWhoopDetailVC.swift */; };
 		08AB6D4B1FD13EDD00A97161 /* SuperWhoopPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB6D491FD13EDA00A97161 /* SuperWhoopPopUp.swift */; };
 		08AB6D4C1FD13EDD00A97161 /* SuperWhoopPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AB6D4A1FD13EDC00A97161 /* SuperWhoopPopUp.xib */; };
@@ -86,7 +87,6 @@
 		F3152E471FB22EEC000E03B7 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3152E281FB22EEC000E03B7 /* SignUpVC.swift */; };
 		F3152E481FB22EEC000E03B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3152E291FB22EEC000E03B7 /* ViewController.swift */; };
 		F376C6801FB8E2D700132683 /* NewMessageCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F376C67F1FB8E2D700132683 /* NewMessageCentreViewController.swift */; };
-		F37883651FB356F800EC04F0 /* WhoopButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37883641FB356F800EC04F0 /* WhoopButtonViewController.swift */; };
 		F3D565271FB882DA00707207 /* MessageCentreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D565261FB882DA00707207 /* MessageCentreViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +126,7 @@
 		086AA5AC1FCD820900707528 /* GothamBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamBook.ttf; sourceTree = "<group>"; };
 		087AD0061FCE9A26000DD17D /* ViewFor3xPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewFor3xPopUp.xib; sourceTree = "<group>"; };
 		087AD0091FCE9A4C000DD17D /* ViewFor3xPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFor3xPopUp.swift; sourceTree = "<group>"; };
+		087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoopButtonViewController.swift; sourceTree = "<group>"; };
 		08AB6D471FD13CD700A97161 /* SuperWhoopDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperWhoopDetailVC.swift; sourceTree = "<group>"; };
 		08AB6D491FD13EDA00A97161 /* SuperWhoopPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperWhoopPopUp.swift; sourceTree = "<group>"; };
 		08AB6D4A1FD13EDC00A97161 /* SuperWhoopPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperWhoopPopUp.xib; sourceTree = "<group>"; };
@@ -182,7 +183,6 @@
 		F3152E281FB22EEC000E03B7 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		F3152E291FB22EEC000E03B7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F376C67F1FB8E2D700132683 /* NewMessageCentreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageCentreViewController.swift; sourceTree = "<group>"; };
-		F37883641FB356F800EC04F0 /* WhoopButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhoopButtonViewController.swift; path = "../New Group/WhoopButtonViewController.swift"; sourceTree = "<group>"; };
 		F3D565261FB882DA00707207 /* MessageCentreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCentreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,12 +295,12 @@
 			path = "View PopUp";
 			sourceTree = "<group>";
 		};
-		08AB6D4F1FD14EC600A97161 /* Whoop Button Home */ = {
+		087FB6961FD5AFEB00F934AB /* Whoop Home Button */ = {
 			isa = PBXGroup;
 			children = (
-				F37883641FB356F800EC04F0 /* WhoopButtonViewController.swift */,
+				087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */,
 			);
-			path = "Whoop Button Home";
+			path = "Whoop Home Button";
 			sourceTree = "<group>";
 		};
 		08BFA4E51FCEFD5E00294D88 /* OnBoarding */ = {
@@ -493,7 +493,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				08AB6D4F1FD14EC600A97161 /* Whoop Button Home */,
+				087FB6961FD5AFEB00F934AB /* Whoop Home Button */,
 				08BFA4F81FCF004500294D88 /* Personal Button */,
 				08BFA4E51FCEFD5E00294D88 /* OnBoarding */,
 				082EA7D71FCEC73200F21D89 /* Unlocked Deals */,
@@ -716,7 +716,6 @@
 				08AB6D4E1FD145D400A97161 /* CityListVC.swift in Sources */,
 				08BFA4F71FCEFDE500294D88 /* EnterCodeVC.swift in Sources */,
 				F3D565271FB882DA00707207 /* MessageCentreViewController.swift in Sources */,
-				F37883651FB356F800EC04F0 /* WhoopButtonViewController.swift in Sources */,
 				F376C6801FB8E2D700132683 /* NewMessageCentreViewController.swift in Sources */,
 				08BFA4E91FCEFD8300294D88 /* PersonalWoopVC.swift in Sources */,
 				086AA5AA1FCD7FBD00707528 /* ViewForPopUp.swift in Sources */,
@@ -731,6 +730,7 @@
 				087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */,
 				086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */,
 				04AB239C1FC6B9E7002A628F /* WMHVC.swift in Sources */,
+				087FB6981FD5B00500F934AB /* WhoopButtonViewController.swift in Sources */,
 				086AA59F1FCD7E6100707528 /* Helper.swift in Sources */,
 				08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */,
 				8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */,
@@ -876,7 +876,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -899,7 +899,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
