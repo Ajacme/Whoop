@@ -57,8 +57,6 @@ class WhoopHappyViewController: UIViewController {
             let labelText = "You've requested a unique code to unlock your home's button at 16, Westway, London, SW1 1AW"
             let range               = (labelText as NSString).range(of: "16, Westway, London, SW1 1AW")
             let attributedString    = NSMutableAttributedString(string: labelText)
-            
-            //        attributedString.addAttribute(NSLinkAttributeName, value: NSURL("http://www.google.fr")!, range: range)
             attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSNumber(value: 1), range: range)
             attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.colorWithHexString(hex: "FF6013"), range: range)
             

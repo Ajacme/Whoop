@@ -23,7 +23,10 @@ class WhoopButtonViewController: UIViewController {
     @IBOutlet var circleViews: [UIView]!
     var objCodePopUp = ViewForCodePopUp()
     
+    @IBOutlet var boostDealLbl: UILabel!
+    @IBOutlet var unlockedDealLbl: UILabel!
     @IBOutlet var secondLabelHeight: NSLayoutConstraint!
+    @IBOutlet var dealLeftToUnlocklbl: UILabel!
     var isRed = false
     var isGreen = false
     var isYellow = false
@@ -58,7 +61,6 @@ class WhoopButtonViewController: UIViewController {
         var labelText = ""
         attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.white, range: range)
         
-        yourHomeLabel.adjustsFontSizeToFitWidth = true
         if isRed{
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "F52404")
             lockedUnlockedLabel.text = "Locked"
@@ -69,6 +71,10 @@ class WhoopButtonViewController: UIViewController {
             attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.white, range: range)
             yourHomeLabel.text = labelText
             secondLineLabel.attributedText = attributedString
+            
+            boostDealLbl.text = "0"
+            unlockedDealLbl.text = "0"
+            dealLeftToUnlocklbl.text = "3"
         }
         if isGreen{
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "61B64F")
@@ -84,11 +90,13 @@ class WhoopButtonViewController: UIViewController {
            
         }
         if isYellow{
-            
+            boostDealLbl.text = "0"
+            unlockedDealLbl.text = "0"
+            dealLeftToUnlocklbl.text = "3"
             
             lockedUnlockedLabel.text = "Locked"
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "FBEB32")
-            secondLabelHeight.constant = 0
+            secondLabelHeight.constant = -5
             yourHomeLabel.textColor = UIColor.red
             labelText = "You've requested a unique code to unlock your home's button at 16, Westway, London, SW1 1AW"
             let attributedStringYellow    = NSMutableAttributedString(string: labelText)
@@ -128,12 +136,19 @@ class WhoopButtonViewController: UIViewController {
     }
     
     // MARK: - Click events..
+    @IBAction func tapRedNotificationBar(_ sender: Any) {
+        if isRed
+        {
+            if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeWhoopOnBoardingVC") as?   HomeWhoopOnBoardingVC{
+                self.navigationController?.pushViewController(objHomeVC, animated: true)
+            }
+        }
+        
+    }
     
     @IBAction func tapToPopupClose(_ sender: UIButton) {
         self.objCodePopUp.removeFromSuperview()
         self.objCodePopUp.Cons_ViewTop.constant = 1000
-     
-        
     }
     
     @IBAction func tapUnlockButton(_ sender: Any) {
@@ -161,10 +176,17 @@ class WhoopButtonViewController: UIViewController {
         objCodePopUp.lblTitle.textAlignment = NSTextAlignment.center
         if isGreen {
             objCodePopUp.lblTitle.text = "Unlocked!"
-            objCodePopUp.lblDesc.text = "Your home's button is now unlocked. You can now access all of your home’s deals and invite the people you live with."
+            objCodePopUp.lblDesc.text = "Your home's button is now unlocked. You can now access all of your home’s deals and invite the people you live with.\nRemember to add a photo to your button so the people you live with know it's you. Tap a profile to start. "
         }else{
-            objCodePopUp.lblTitle.text = "Welcome!"
-            objCodePopUp.lblDesc.text = "Verify your address to finishing unlocking your home's button and access all of your deals. If you've received an invite code enter it to join. For a quick start we’ve added 3 deals now to use straight away."
+            
+            if isYellow{
+                objCodePopUp.lblTitle.text = "Unique code"
+                objCodePopUp.lblDesc.text = "You've just requested a unique code to verify your address. It will arrive in 2 or 3 days. In the meantime you can use the deals we've added to your button."
+            }else{
+                objCodePopUp.lblTitle.text = "Your home's Whoop! Button."
+                 objCodePopUp.lblDesc.text = "Verify your address to finishing unlocking your home's button and access all of your deals. If you've received an invite code enter it to join. For a quick start we’ve added 3 deals now to use straight away."
+            }
+           
         }
         
         objCodePopUp.backgroundColor = UIColor.clear

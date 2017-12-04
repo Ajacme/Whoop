@@ -104,7 +104,7 @@ class HomeWhoopBoardingVC: UIViewController {
         objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
         self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
         objCodePopUp.lblTitle.text = "By Code"
-        objCodePopUp.lblDesc.text = "Thanks!We're posting you a unique code today. \nJust enter it to verify your address to finish unlocking your home's button and\nstart inviting the people you live with."
+        objCodePopUp.lblDesc.text = "We're posting you a unique code today. \nJust enter it to verify your address to finish unlocking your home's button and\nstart inviting the people you live with."
         objCodePopUp.backgroundColor = UIColor.clear
         self.view.addSubview(objCodePopUp)
         UIView.animate(withDuration: 0.5) {

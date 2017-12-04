@@ -135,6 +135,8 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3]
+        
         
     }
     
