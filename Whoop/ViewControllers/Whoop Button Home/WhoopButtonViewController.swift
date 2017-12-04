@@ -39,7 +39,6 @@ class WhoopButtonViewController: UIViewController {
         // Do any additional setup after loading the view.
         whoopButtonImageView.alpha = 0
         dealsStackView.alpha = 0
-        //        descriptionStackView.alpha = 0
         buttonsStackView.alpha = 0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
