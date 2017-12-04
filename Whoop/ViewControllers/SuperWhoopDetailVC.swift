@@ -87,7 +87,19 @@ class SuperWhoopDetailVC: UIViewController {
         viewForHeader.frame = CGRect(x: 0, y: 0, width: ScreenSize.WIDTH, height: 90)
         tableViewMain.tableHeaderView = viewForHeader
 
-        arrScrollData  = [["imageName" : "blue-travel-insurance","title" : "Travel Insurance deal".localized,"desc":"This deal is unlocked. Add yourself to \nunlock an extra saving if you use it in the future".localized,"displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : true, "lockText" : "Unlocked", "isLock":"true"],["imageName" : "add","title" : "Add Yourself".localized,"desc":"Add 3 deals to activate\nyour Super Whoop! Saving".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"],["imageName" : "add","title" : "Add Yourself".localized,"desc":"Add 3 deals to activate\nyour Super Whoop! Saving".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"]]
+        
+        /*
+ 
+         dic1.updateValue("true", forKey: "isLock")
+         dic1.updateValue("", forKey: "displayMessage")
+         dic1.updateValue("true", forKey: "isAddedSuper")
+         dic1.updateValue("", forKey: "desc")
+         
+         dic1.updateValue("Jakie Hughes", forKey: "title")
+         dic1.updateValue("add_yourself", forKey: "imageName")
+         dic1.updateValue("Is now Added", forKey: "lockText")
+    */
+        arrScrollData  = [["imageName" : "blue-travel-insurance","title" : "Travel Insurance deal".localized,"desc":"This deal is unlocked. Add yourself to \nunlock an extra saving if you use it in the future".localized,"displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : true, "lockText" : "Unlocked", "isLock":"true"],["imageName" : "add_yourself","title" : "Jakie Hughes".localized,"desc":"", "displayMessage" : "", "isAddedSuper" : true, "lockText" : "Is now Added", "isLock":"true"],["imageName" : "add","title" : "Add Yourself".localized,"desc":"Add 3 deals to activate\nyour Super Whoop! Saving".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"]]
         tableViewMain.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
         
         for dic in arrScrollData
@@ -176,8 +188,13 @@ class SuperWhoopDetailVC: UIViewController {
                                         dic1.updateValue("", forKey: "displayMessage")
                                         dic1.updateValue("true", forKey: "isAddedSuper")
                                         dic1.updateValue("", forKey: "desc")
+                                
+                                        dic1.updateValue("", forKey: "title")
+                                        dic1.updateValue("rightArrow", forKey: "imageName")
+                                        dic1.updateValue("You have Added yourself", forKey: "lockText")
                                         
-                                        if indexPath?.row == 1 {
+                                        
+                                        /*if indexPath?.row == 1 {
                                             dic1.updateValue("Jakie Hughes", forKey: "title")
                                             dic1.updateValue("add_yourself", forKey: "imageName")
                                             dic1.updateValue("Is now Added", forKey: "lockText")
@@ -185,7 +202,7 @@ class SuperWhoopDetailVC: UIViewController {
                                             dic1.updateValue("", forKey: "title")
                                             dic1.updateValue("rightArrow", forKey: "imageName")
                                             dic1.updateValue("You have Added yourself", forKey: "lockText")
-                                        }
+                                        }*/
                                        
                                         self.addedDeal += 1
                                         self.arrScrollData .remove(at: (indexPath?.row)!)

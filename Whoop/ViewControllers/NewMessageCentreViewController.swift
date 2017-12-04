@@ -169,7 +169,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     func getCardsBannerCell(indexPath: IndexPath) -> UITableViewCell  {
         let cardsDetails: [CardsDetails] = [
-            CardsDetails(title: "Big brands and local business can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
+            CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
             CardsDetails(title: "Car Breakdown insurance", description: "There are 96000 cars deals left in London 4600 have been unlocked there.", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_money_on_car_breakdown")),
             
             CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive.Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),

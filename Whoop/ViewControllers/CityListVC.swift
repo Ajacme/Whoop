@@ -103,10 +103,11 @@ class CityListVC: UIViewController {
                                         self.tblDataList.reloadData()
                                     }, completion: { (result) in
                                         self.pulseEffect.removeFromSuperlayer()
+                                        self.customCodeView()
                                     })
                                 }
                                 
-                                self.customCodeView()
+                                
                             }
             })
             
