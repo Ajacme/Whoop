@@ -119,7 +119,6 @@ class UnlockDealDetailVC: UIViewController {
             tableData.bgImage = dic["bgImage"] as! String
             arrInsuranceData.append(tableData)
         }
-        print(headerViewData.count)
         if headerViewData.count > 0 {
             headerData.title = headerViewData["title"] as! String
             headerData.desc = headerViewData["desc"] as! String

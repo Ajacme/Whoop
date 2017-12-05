@@ -213,43 +213,40 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     }
     @IBAction func tapToDeals(_ sender: UIButton) {
         let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3, 11: 4]
+        var vcTitle = ""
         if let iPath = indexHandler[sender.tag]{
-            let indexPathDeal = IndexPath(row:iPath , section: sender.tag)
-            
-            let cell = tableView.cellForRow(at: indexPathDeal) as? DealsCell
-            print(cell?.textLabel?.text)
-            
-            if let titile = cell?.textLabel?.text{
-               
-                var vcTitle = ""
-                switch titile{
-                case "Insurance Deals":
+//            let indexPathDeal = IndexPath(row:iPath , section: sender.tag)
+//
+//            let cell = tableView.cellForRow(at: indexPathDeal) as? DealsCell
+//            print(cell?.dealNameLabel.text)
+//
+//            if let titile = cell?.dealNameLabel.text{
+                switch iPath{
+                case 0:
                     vcTitle = "Insurance"
                     break
-                case "Vehicle Deals":
+                case 1:
                     vcTitle = "My Vehicle"
                     break
-                case "Tradesperson Deals":
-                    vcTitle = "TradesPeople"
+                case 2:
+                    vcTitle = "Tradespeople"
                     break
-                case "Moving Home Deals":
+                case 3:
                     vcTitle = "Moving Home"
                     break
-                case "Technology Deals ( Mobile / Broadband )":
+                case 4:
                     vcTitle = "Technology"
                     break
                     
                 default:
                     break
-                    
-                }
                 
-                if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
-                    initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: vcTitle, isDealToUnlock: true)
-                    initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: vcTitle, isDealToUnlock: true)
-                    self.navigationController?.pushViewController(initVC, animated: true)
-                }
-                
+            }
+            
+            if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
+                initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: vcTitle, isDealToUnlock: true)
+                initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: vcTitle, isDealToUnlock: true)
+                self.navigationController?.pushViewController(initVC, animated: true)
             }
            
         }

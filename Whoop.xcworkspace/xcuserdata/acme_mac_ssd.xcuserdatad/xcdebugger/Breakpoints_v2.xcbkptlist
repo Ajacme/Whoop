@@ -62,9 +62,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "getDataForHeader(dealName:isDealToUnlock:)"
-            landmarkType = "7">
+            endingLineNumber = "277">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
