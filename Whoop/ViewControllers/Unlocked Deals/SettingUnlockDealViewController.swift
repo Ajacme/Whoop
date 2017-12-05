@@ -31,20 +31,20 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
     func setUpView(){
         if isDealToUnlock{
              arrData  = [
-                ["image" : "moving_home_deals", "title" : "Moving home","badge":"11"],
+                ["image" : "moving_home", "title" : "Moving Home","badge":"11"],
                 ["image" : "insurance", "title" : "Insurance","badge":"6"],
                 ["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"9"],
-                ["image" : "vehicle_deals", "title" : "My Vehicle","badge":"3"],
-                ["image" : "whoop!_me_happy_face", "title" : "Technology","badge":"3"]
+                ["image" : "myvehicles", "title" : "My Vehicle","badge":"3"],
+                ["image" : "broadband", "title" : "Technology","badge":"3"]
             ]
             headerYourDeals.attributedText = NSMutableAttributedString(string: "Your Whoop! Button is loaded these deals.",attributes: headerAttributes)
         }else{
              arrData  = [
-                ["image" : "moving_home_deals", "title" : "Moving home","badge":"13"],
+                ["image" : "moving_home", "title" : "Moving Home","badge":"13"],
                 ["image" : "insurance", "title" : "Insurance","badge":"4"],
                 ["image" : "tradesperson_deals", "title" : "Tradespeople","badge":"3"],
-                ["image" : "vehicle_deals", "title" : "My Vehicle","badge":"5"],
-                ["image" : "whoop!_me_happy_face", "title" : "Technology","badge":"1"]
+                ["image" : "myvehicles", "title" : "My Vehicle","badge":"5"],
+                ["image" : "broadband", "title" : "Technology","badge":"1"]
             ]
             descriptionText.text = "You or someone you live with has unlocked these deals. If you have a Whoop! Me Happier boost code you can boost your savings"
             headerYourDeals.attributedText = NSMutableAttributedString(string: "Unlocked deals",attributes: headerAttributes)
@@ -164,15 +164,21 @@ class DealsToUnlockData{
             
         case "Technology":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Technology"]
+                headerData = ["image" : "technology","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tec", "category":"Technology"]
             }else{
                 headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
             }
         case "My Vehicle":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg", "category":"My Vehicle"]
+                headerData = ["image" : "myvehicles","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg_veh", "category":"My Vehicle"]
             }else{
                 headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
+            }
+        case "Moving Home":
+            if isDealToUnlock{
+                headerData = ["image" : "moving_home","title" : "Moving Home","desc" : " Here are your home's Moving Home deals. Unlock the ones you need","bgImage" : "bg_mov", "category":"Moving Home"]
+            }else{
+                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Moving Home"]
             }
             
         default:
@@ -180,6 +186,7 @@ class DealsToUnlockData{
         }
         
         return headerData
+        
     }
     public func getDataForView(dealName:String, isDealToUnlock:Bool) ->[[String : Any]]{
         var arrScrollData = [[String : Any]] ()
@@ -222,34 +229,49 @@ class DealsToUnlockData{
         case "Technology":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband Deal".localized,"desc":"Big name broadband brands are ready to Whoop@! You Happy with an exclusive price".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile Phone".localized,"desc":"Your favourite mobile brands are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"]
+                    ["image" : "broadband","selected_image" :"gray_broadband","title" : "Broadband Deal".localized,"desc":"Big name broadband brands are ready to Whoop@! You Happy with an exclusive price".localized,"bgImage" : "bg_tec", "message" : "Expires in 45 days", "category":"Technology"],
+                    ["image" : "mobile","selected_image" :"gray_mobile","title" : "Mobile Phone".localized,"desc":"Your favourite mobile brands are ready to Whoop! You Happy".localized,"bgImage" : "bg_tec", "message" : "Expires in 45 days", "category":"Technology"]
                 ]
             }else{
                 arrScrollData = [
-                     ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit", "category":"Technology"]
+                     ["image" : "broadband","selected_image" :"gray_broadband","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tec", "message" : "Expires in 45 days", "category":"Technology"],
+                    ["image" : "mobile","selected_image" :"gray_mobile","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Technology"]
                    
                 ]
             }
         case "My Vehicle":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"Expert mechanics are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"Unlock to get brand tyres fitted locally".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"]
+                    ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"Expert mechanics are ready to Whoop! You Happy".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                    ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"Unlock to get brand tyres fitted locally".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"]
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg", "message" : "Uses 1 credit", "category":"My Vehicle"]
+                    ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                    ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]
                     
                 ]
             }
+        case "Moving Home":
+            if isDealToUnlock{
+                arrScrollData = [
+                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"Our trusted local Conveyancing partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"Our fully Insured Removal partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"]
+                ]
+            }else{
+                arrScrollData = [
+                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]
+                    
+                ]
+            }
+
 
                 
         default:
             return arrScrollData
         }
         return arrScrollData
+        
     }
 }
