@@ -81,18 +81,10 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
         // Dispose of any resources that can be recreated.
     }
     // Header View Data
-    func getDataForHeader(dealName:String) ->[String : Any]{
+    public func getDataForHeader(dealName:String) ->[String : Any]{
         var headerData = [String : Any]()
         
         switch dealName {
-            
-//        case "Insurance":
-//             if isDealToUnlock{
-//                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins"]
-//
-//             }else{
-//                 headerData = ["image" : "info_ins","title" : "Insurance","desc" : "Everyone you live with canuse this deal"]
-//             }
           
         case "Insurance":
                 if isDealToUnlock{
@@ -124,7 +116,7 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
         
         return headerData
     }
-    func getDataForView(dealName:String) ->[[String : Any]]{
+    public func getDataForView(dealName:String) ->[[String : Any]]{
         var arrScrollData = [[String : Any]] ()
         switch dealName {
         case "Insurance":
@@ -207,16 +199,16 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
         case 1:
             if isDealToUnlock{
                 if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
-                    initVC.headerViewData = getDataForHeader(dealName: "Insurance")
-                    initVC.arrScrollData = getDataForView(dealName: "Insurance")
+                    initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: "Insurance", isDealToUnlock: isDealToUnlock)
+                    initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: "Insurance", isDealToUnlock: isDealToUnlock)
                     self.navigationController?.pushViewController(initVC, animated: true)
                 }
                 
             }else{
                 let storyBoard = UIStoryboard(name: "UnlockedDeal", bundle: Bundle.main)
                 let initVC = storyBoard.instantiateViewController(withIdentifier: "WebDealDetailVC") as! WebDealDetailVC
-                initVC.headerViewData = getDataForHeader(dealName: "Insurance")
-                initVC.arrScrollData = getDataForView(dealName: "Insurance")
+                initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: "Insurance", isDealToUnlock: isDealToUnlock)
+                initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: "Insurance", isDealToUnlock: isDealToUnlock)
                 self.navigationController?.pushViewController(initVC, animated: true)
             }
            
@@ -224,15 +216,15 @@ class SettingUnlockDealViewController: UIViewController, UICollectionViewDelegat
         case 2:
             if isDealToUnlock{
                 if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
-                    initVC.headerViewData = getDataForHeader(dealName: "TradesPeople")
-                    initVC.arrScrollData = getDataForView(dealName: "TradesPeople")
+                    initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: "TradesPeople", isDealToUnlock: isDealToUnlock)
+                    initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: "TradesPeople", isDealToUnlock: isDealToUnlock)
                     self.navigationController?.pushViewController(initVC, animated: true)
                 }
             }else{
                 let storyBoard = UIStoryboard(name: "UnlockedDeal", bundle: Bundle.main)
                 let initVC = storyBoard.instantiateViewController(withIdentifier: "WebDealDetailVC") as! WebDealDetailVC
-                initVC.headerViewData = getDataForHeader(dealName: "TradesPeople")
-                initVC.arrScrollData = getDataForView(dealName: "TradesPeople")
+                initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: "TradesPeople", isDealToUnlock: isDealToUnlock)
+                initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: "TradesPeople", isDealToUnlock: isDealToUnlock)
                 self.navigationController?.pushViewController(initVC, animated: true)
             }
             break
@@ -271,4 +263,92 @@ extension SettingUnlockDealViewController : UICollectionViewDelegateFlowLayout {
         return collectionViewSize
     }
 }
-
+class DealsToUnlockData{
+   
+    // Header View Data
+    public func getDataForHeader(dealName:String, isDealToUnlock:Bool) ->[String : Any]{
+        var headerData = [String : Any]()
+        
+        switch dealName {
+            
+        case "Insurance":
+            if isDealToUnlock{
+                
+                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins"]
+                
+            }else{
+                
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "Insurance If you have Whoop! Me Happy\ncode you can boost your savings"]
+            }
+        case "TradesPeople":
+            if isDealToUnlock{
+                headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
+            }else{
+                headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "Tradesperson If you have Whoop! Me Happy\ncode you can boost your savings"]
+            }
+            
+            
+        case "Technology":
+            if isDealToUnlock{
+                headerData = ["image" : "info_tra","title" : "Tradesperson","desc" : "Your home's Whoop! Button has 1 exclusive Tradesperson deal added to it. Unlock and your local Whoop! expert tradespeople"]
+            }else{
+                headerData = ["image" : "info_ins","title" : "Tradesperson","desc" : "Everyone you live with canuse this deal", "message":"Expires in 45 days"]
+            }
+            
+        default:
+            return headerData
+        }
+        
+        return headerData
+    }
+    public func getDataForView(dealName:String, isDealToUnlock:Bool) ->[[String : Any]]{
+        var arrScrollData = [[String : Any]] ()
+        switch dealName {
+        case "Insurance":
+            if isDealToUnlock{
+                arrScrollData = [
+                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]]
+            }else{
+                arrScrollData = [
+                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]
+                ]
+            }
+            
+            
+        case "TradesPeople":
+            if isDealToUnlock{
+                arrScrollData = [
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"]
+                ]
+            }else{
+                arrScrollData = [
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]
+                ]
+            }
+            
+            
+        case "Technology":
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg"],
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg"],
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg"]]
+        default:
+            return arrScrollData
+        }
+        return arrScrollData
+    }
+}

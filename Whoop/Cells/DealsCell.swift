@@ -17,6 +17,7 @@ class DealsCell: UITableViewCell {
     @IBOutlet weak var dealLeftLabel: UILabel!
     @IBOutlet weak var dealNameLabel: UILabel!
     @IBOutlet weak var dealImageView: UIImageView!
+    @IBOutlet var actionButtonDeals: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

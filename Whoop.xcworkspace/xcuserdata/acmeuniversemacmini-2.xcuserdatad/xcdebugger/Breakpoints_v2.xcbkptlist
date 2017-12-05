@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Whoop/ViewControllers/Unlocked Deals/SettingUnlockDealViewController.swift"
-            timestampString = "533852398.235147"
+            filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
+            timestampString = "534101416.819035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "setUpHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Whoop/ViewControllers/UnlockDealDetailVC.swift"
-            timestampString = "533852398.235268"
+            filePath = "Whoop/ViewControllers/NewMessageCentreViewController.swift"
+            timestampString = "534162600.417393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "tapToDeals(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Whoop/ViewControllers/NewMessageCentreViewController.swift"
+            timestampString = "534162600.417854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "tapToDeals(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
