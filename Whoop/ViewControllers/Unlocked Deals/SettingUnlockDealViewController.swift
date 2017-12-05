@@ -148,31 +148,31 @@ class DealsToUnlockData{
         case "Insurance":
             if isDealToUnlock{
                 
-                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins"]
+                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins", "category":"Insurance"]
                 
             }else{
                 
-                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings"]
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Insurance"]
             }
         case "Tradespeople":
             if isDealToUnlock{
-                headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
+                headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Tradespeople"]
             }else{
-                headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings"]
+                headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Tradespeople"]
             }
             
             
         case "Technology":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
+                headerData = ["image" : "whoop!_me_happy_face","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Technology"]
             }else{
-                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days"]
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
             }
         case "My Vehicle":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg"]
+                headerData = ["image" : "whoop!_me_happy_face","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg", "category":"My Vehicle"]
             }else{
-                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days"]
+                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
             }
             
         default:
