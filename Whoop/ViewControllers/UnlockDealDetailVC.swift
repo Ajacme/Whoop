@@ -53,17 +53,19 @@ class Header_Data : NSObject {
     var desc : String = ""
     var imageName : String = ""
     var backgroundImageName : String = ""
+    var category : String = ""
     
     override init() {
         
     }
     
-    init(title: String, desc: String, imageName: String, backgroundImage: String) {
+    init(title: String, desc: String, imageName: String, backgroundImage: String, category: String) {
         
         self.title = title
         self.desc = desc
         self.imageName = imageName
         self.backgroundImageName = backgroundImage
+        self.category = category
     }
 }
 class UnlockHeaderView: UIView {
