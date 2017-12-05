@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         arrSeeCodeData = SeeCode_Data.getData()
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
-//        UINavigationBar.appearance().barTintColor = UIColor(rgba: "#404040")
-//        UINavigationBar.appearance().tintColor = UIColor.darkGray
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
 
         IQKeyboardManager.sharedManager().enable = true

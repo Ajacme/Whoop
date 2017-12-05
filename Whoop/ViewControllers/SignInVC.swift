@@ -23,9 +23,16 @@ class SignInVC: UIViewController {
     
     // MARK: - Buuton Click Events
     @IBAction func tapSignInButton(_ sender: Any) {
-        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstIndexingVC") as? FirstIndexingVC{
+        
+        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            objHomeVC.isRed = true
             self.navigationController?.pushViewController(objHomeVC, animated: true)
         }
+        
+        //old Flow
+        /*if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "FirstIndexingVC") as? FirstIndexingVC{
+            self.navigationController?.pushViewController(objHomeVC, animated: true)
+        }*/
     }
     
     /*

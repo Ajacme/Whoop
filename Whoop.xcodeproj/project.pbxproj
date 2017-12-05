@@ -27,6 +27,7 @@
 		082A28951FCDC35600B39D0A /* ViewForCodePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082A28931FCDC35600B39D0A /* ViewForCodePopUp.xib */; };
 		082A28961FCDC52B00B39D0A /* UnlockDealDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A286E1FCDAEBE00B39D0A /* UnlockDealDetailVC.swift */; };
 		082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */; };
+		086A70031FD54D9F00FCEC29 /* WhoopButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086A70021FD54D9F00FCEC29 /* WhoopButtonViewController.swift */; };
 		086AA59C1FCD7E6100707528 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5981FCD7E6000707528 /* Localizable.swift */; };
 		086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5991FCD7E6000707528 /* MTUserDefault.swift */; };
 		086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA59A1FCD7E6000707528 /* CustomToolBar.swift */; };
@@ -111,6 +112,7 @@
 		082A28921FCDC35500B39D0A /* ViewForCodePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForCodePopUp.swift; sourceTree = "<group>"; };
 		082A28931FCDC35600B39D0A /* ViewForCodePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewForCodePopUp.xib; sourceTree = "<group>"; };
 		082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUnlockDealViewController.swift; sourceTree = "<group>"; };
+		086A70021FD54D9F00FCEC29 /* WhoopButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoopButtonViewController.swift; sourceTree = "<group>"; };
 		086AA5941FCD6FF000707528 /* BoostDealDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoostDealDetailVC.swift; sourceTree = "<group>"; };
 		086AA5951FCD6FF800707528 /* SeeCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeCodeVC.swift; sourceTree = "<group>"; };
 		086AA5981FCD7E6000707528 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -274,6 +276,14 @@
 			path = "Unlocked Deals";
 			sourceTree = "<group>";
 		};
+		086A70011FD54D8C00FCEC29 /* Whoop Button Home */ = {
+			isa = PBXGroup;
+			children = (
+				086A70021FD54D9F00FCEC29 /* WhoopButtonViewController.swift */,
+			);
+			path = "Whoop Button Home";
+			sourceTree = "<group>";
+		};
 		086AA5A61FCD7F8900707528 /* Pulse */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 			path = "View PopUp";
 			sourceTree = "<group>";
 		};
+
 		087FB6961FD5AFEB00F934AB /* Whoop Home Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +504,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+
 				087FB6961FD5AFEB00F934AB /* Whoop Home Button */,
 				08BFA4F81FCF004500294D88 /* Personal Button */,
 				08BFA4E51FCEFD5E00294D88 /* OnBoarding */,
@@ -730,6 +742,7 @@
 				087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */,
 				086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */,
 				04AB239C1FC6B9E7002A628F /* WMHVC.swift in Sources */,
+
 				087FB6981FD5B00500F934AB /* WhoopButtonViewController.swift in Sources */,
 				086AA59F1FCD7E6100707528 /* Helper.swift in Sources */,
 				08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */,

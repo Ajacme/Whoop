@@ -92,7 +92,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     */
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 11
+        return 12
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -135,6 +135,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         
     }
     
@@ -191,21 +192,71 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     }
     
     func getDealsCell(section: Int) -> UITableViewCell  {
-        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3]
+        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3, 11: 4]
         let imageTextData: [ImageTextTuple] = [
             (#imageLiteral(resourceName: "imsurence_deals"),"Insurance Deals"),
             (#imageLiteral(resourceName: "vehicle_deals"),"Vehicle Deals"),
             (#imageLiteral(resourceName: "tradesperson_deals"),"Tradesperson Deals"),
-            (#imageLiteral(resourceName: "moving_home_deals"),"Moving Home Deals")
+            (#imageLiteral(resourceName: "moving_home_deals"),"Moving Home Deals"),
+            (#imageLiteral(resourceName: "whoop!_me_happy_face"),"Technology Deals ( Mobile / Broadband )")
         ]
         
         let currentData = imageTextData[indexHandler[section]!]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DealsCell") as? DealsCell {
             cell.set(image: currentData.image, text: currentData.text)
+            cell.actionButtonDeals.tag = section
+            cell.actionButtonDeals.addTarget(self, action: #selector(self.tapToDeals(_:)), for: .touchUpInside)
             return cell
         }
         return UITableViewCell()
+    }
+    @IBAction func tapToDeals(_ sender: UIButton) {
+        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3, 11: 4]
+        if let iPath = indexHandler[sender.tag]{
+            let indexPathDeal = IndexPath(row:iPath , section: sender.tag)
+            
+            let cell = tableView.cellForRow(at: indexPathDeal) as? DealsCell
+            print(cell?.textLabel?.text)
+            
+            if let titile = cell?.textLabel?.text{
+               
+                var vcTitle = ""
+                switch titile{
+                case "Insurance Deals":
+                    vcTitle = "Insurance"
+                    break
+                case "Vehicle Deals":
+                    vcTitle = "My Vehicle"
+                    break
+                case "Tradesperson Deals":
+                    vcTitle = "TradesPeople"
+                    break
+                case "Moving Home Deals":
+                    vcTitle = "Moving Home"
+                    break
+                case "Technology Deals ( Mobile / Broadband )":
+                    vcTitle = "Technology"
+                    break
+                    
+                default:
+                    break
+                    
+                }
+                
+                if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
+                    initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: vcTitle, isDealToUnlock: true)
+                    initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: vcTitle, isDealToUnlock: true)
+                    self.navigationController?.pushViewController(initVC, animated: true)
+                }
+                
+            }
+           
+        }
+        
+       
+
+        
     }
     
     

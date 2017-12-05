@@ -70,9 +70,9 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
         
         if arrScrollData.count <= 0{
             arrScrollData  = [
-                ["image" : "blue_plane","selected_bg" :"","title" : "Travel Insurance".localized,"Desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
-                ["image" : "blue_travel_medical","selected_bg" :"","title" : "Travel Insurance with Medical".localized,"Desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
-                ["image" : "blue_car_break","selected_bg" :"","title" : "Car breakdown".localized,"Desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized]
+                ["image" : "blue_plane","selected_bg" :"","title" : "Travel Insurance".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
+                ["image" : "blue_travel_medical","selected_bg" :"","title" : "Travel Insurance with Medical".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
+                ["image" : "blue_car_break","selected_bg" :"","title" : "Car breakdown".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized]
             ]
 
         }
@@ -86,6 +86,7 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
             tableData.desc = dic["desc"] as! String
             tableData.isGetQuotes = false
             tableData.selectedBGImage = dic["selected_image"] as! String
+            tableData.bgImage = dic["bgImage"] as! String
             arrInsuranceData.append(tableData)
         }
         if headerViewData.count >= 0 {
@@ -106,7 +107,7 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
         
         
         if dic.imageName == "info_tra" {
-            unlockHeaderView.headerDescriptionLabel.textColor = UIColor.colorWithHexString(hex: "FBEB32")
+            unlockHeaderView.headerDescriptionLabel.textColor = UIColor.green
         }else{
             unlockHeaderView.headerDescriptionLabel.textColor = UIColor.colorWithHexString(hex: "FD5612")
         }

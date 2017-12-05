@@ -64,15 +64,18 @@ class HomeWhoopBoardingVC: UIViewController {
     }
     
     @IBAction func tapToByCard(_ sender: UIButton) {
-        let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as! WhoopButtonViewController
-        self.navigationController?.pushViewController(objHomeVC, animated: true)
+        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            objHomeVC.isGreen = true
+            self.navigationController?.pushViewController(objHomeVC, animated: true)
+        }
+        
     }
     @IBAction func tapToPopupClose(_ sender: UIButton) {
         self.objCodePopUp.removeFromSuperview()
         self.objCodePopUp.Cons_ViewTop.constant = 1000
         
-        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopHappy") as? WhoopHappyViewController{
-            objHomeVC.isGreen = true
+        if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WhoopButtonViewController") as?   WhoopButtonViewController{
+            objHomeVC.isYellow = true
             self.navigationController?.pushViewController(objHomeVC, animated: true)
         }
         
@@ -101,7 +104,7 @@ class HomeWhoopBoardingVC: UIViewController {
         objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
         self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
         objCodePopUp.lblTitle.text = "By Code"
-        objCodePopUp.lblDesc.text = "Thanks!We're posting you a\nunique code today. Just enter it to\nverify your address to finish\nunlocking your home's button and\nstart inviting the people you live\n with. Until then you can use your\n personal button."
+        objCodePopUp.lblDesc.text = "We're posting you a unique code today. \nJust enter it to verify your address to finish unlocking your home's button and\nstart inviting the people you live with."
         objCodePopUp.backgroundColor = UIColor.clear
         self.view.addSubview(objCodePopUp)
         UIView.animate(withDuration: 0.5) {
