@@ -124,6 +124,7 @@ class UnlockDealDetailVC: UIViewController {
             headerData.desc = headerViewData["desc"] as! String
             headerData.imageName = headerViewData["image"] as! String
             headerData.backgroundImageName = headerViewData["bgImage"] as! String
+            headerData.category = headerViewData["category"] as! String
             self.setUpHeader()
         }
         self.navigationController?.isNavigationBarHidden = true
@@ -173,6 +174,8 @@ extension UnlockDealDetailVC: UITableViewDelegate,UITableViewDataSource{
         //        cell.cntrolTapImage.tag = indexPath.row
         cell.lblMainTitle.text = dic.title
         cell.lblDesc.text = dic.desc
+        cell.btnMeetYourPlumber.tag = indexPath.row
+        cell.btnMeetYourPlumber.addTarget(self, action: #selector(tapToMeetYourPlumber(sender:)), for: .touchUpInside)
         
         if dic.isLocked
         {
@@ -185,6 +188,7 @@ extension UnlockDealDetailVC: UITableViewDelegate,UITableViewDataSource{
             cell.lblTapUnlock.isHidden = false
             cell.lblLocked.text = "Locked".localized
             cell.imgTopBG.image = UIImage(named:dic.bgImage)
+            
         }
         return cell
     }
@@ -220,12 +224,28 @@ extension UnlockDealDetailVC: UITableViewDelegate,UITableViewDataSource{
                 self.pulseEffect.backgroundColor = UIColor.init(red: 75/255.0, green: 166/255.0, blue: 249/255.0, alpha: 0.0).cgColor
                
             }, completion: { (result) in
+                if self.headerData.category == "Tradespeople" {
+                    cell.btnMeetYourPlumber.isHidden = false
+                }else{
+                    cell.btnMeetYourPlumber.isHidden = true
+                }
                 self.pulseEffect.removeFromSuperlayer()
             })
         }
         }
     }
     
+    @objc func tapToMeetYourPlumber(sender : UIButton) {
+        print(sender.tag)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
+//            let dic = headerData
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Tradespeople")
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Tradespeople")
+            self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
+        }
+        
+    }
     func setCellcolorAndImage(cell : CellForTickets ,dic : Insurance_data) {
         
         cell.imgMiddleblue.image = UIImage(named: dic.UnlockedimageName)

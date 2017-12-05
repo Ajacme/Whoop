@@ -136,6 +136,10 @@ extension SettingUnlockDealViewController : UICollectionViewDelegateFlowLayout {
         
         return collectionViewSize
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10.0
+//    }
 }
 class DealsToUnlockData{
    

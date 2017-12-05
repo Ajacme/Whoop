@@ -370,13 +370,13 @@ class BrandList {
     // Header View Data
     public func getDataForHeader(dealName:String) ->[String : Any]{
         var headerData = [String : Any]()
-        
+        print(dealName)
         switch dealName {
             
         case "Insurance":
                 headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "Insurance If you have Whoop! Me Happy\ncode you can boost your savings"]
             
-        case "TradesPeople":
+        case "Tradespeople":
             
             headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "Tradesperson If you have Whoop! Me Happy\ncode you can boost your savings"]
             
@@ -404,7 +404,7 @@ class BrandList {
                     
                 ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]]
             
-        case "TradesPeople":
+        case "Tradespeople":
             
             arrScrollData = [
                     ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]]
