@@ -90,9 +90,11 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
             arrInsuranceData.append(tableData)
         }
         if headerViewData.count >= 0 {
+            
             headerData.title = headerViewData["title"] as! String
             headerData.desc = headerViewData["desc"] as! String
             headerData.imageName = headerViewData["image"] as! String
+            headerData.category = headerViewData["category"] as! String
             self.setUpHeader()
         }
         self.tabBarController?.tabBar.isHidden = true
@@ -177,6 +179,9 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
     @IBAction func tapToGetQuote(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
+            let dic = headerData
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: headerData.category)
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: headerData.category)
             self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
         }
     }
@@ -357,5 +362,63 @@ extension WebDealDetailVC: UITableViewDelegate,UITableViewDataSource{
         cell.lblDealBoosted.text = "Deal Boosted".localized
         cell.lblGetQuotes.text = "Get a Quote".localized
         cell.imgTopBG.image = UIImage(named:"orange_bg")
+    }
+}
+
+class BrandList {
+    
+    // Header View Data
+    public func getDataForHeader(dealName:String) ->[String : Any]{
+        var headerData = [String : Any]()
+        
+        switch dealName {
+            
+        case "Insurance":
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "Insurance If you have Whoop! Me Happy\ncode you can boost your savings"]
+            
+        case "TradesPeople":
+            
+            headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "Tradesperson If you have Whoop! Me Happy\ncode you can boost your savings"]
+            
+        case "Technology":
+            
+            headerData = ["image" : "info_ins","title" : "Tradesperson","desc" : "Everyone you live with canuse this deal", "message":"Expires in 45 days"]
+            
+        default:
+            return headerData
+        }
+        
+        return headerData
+    }
+    public func getDataForView(dealName:String) ->[[String : Any]]{
+        var arrScrollData = [[String : Any]] ()
+        switch dealName {
+        case "Insurance":
+           
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    
+                    
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]]
+            
+        case "TradesPeople":
+            
+            arrScrollData = [
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]]
+            
+        case "Technology":
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg"],
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg"],
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg"]]
+        default:
+            return arrScrollData
+        }
+        return arrScrollData
     }
 }
