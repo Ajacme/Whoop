@@ -174,12 +174,19 @@ class DealsToUnlockData{
             }else{
                 headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
             }
+        case "Moving Home":
+            if isDealToUnlock{
+                headerData = ["image" : "moving_home","title" : "Moving Home","desc" : " Here are your home's Moving Home deals. Unlock the ones you need","bgImage" : "bg_mov", "category":"Moving Home"]
+            }else{
+                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Moving Home"]
+            }
             
         default:
             return headerData
         }
         
         return headerData
+        
     }
     public func getDataForView(dealName:String, isDealToUnlock:Bool) ->[[String : Any]]{
         var arrScrollData = [[String : Any]] ()
@@ -245,11 +252,26 @@ class DealsToUnlockData{
                     
                 ]
             }
+        case "Moving Home":
+            if isDealToUnlock{
+                arrScrollData = [
+                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"Our trusted local Conveyancing partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Car Tyres Deal".localized,"desc":"Our fully Insured Removal partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"]
+                ]
+            }else{
+                arrScrollData = [
+                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]
+                    
+                ]
+            }
+
 
                 
         default:
             return arrScrollData
         }
         return arrScrollData
+        
     }
 }
