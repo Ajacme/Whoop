@@ -974,6 +974,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNo-3o-HKB">
+
                                         <rect key="frame" x="103.00000000000001" y="50.333333333333343" width="208.33333333333337" height="28"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -2035,6 +2036,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your home's deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLV-hX-H0h">
+
                                         <rect key="frame" x="108.33333333333331" y="36.333333333333336" width="198" height="28.000000000000007"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -3892,13 +3894,33 @@ Whoop! Me Happy Prices</string>
                                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4a-C2-IIK">
+                                                                    <rect key="frame" x="105" y="243" width="184" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="22" id="Xu7-kd-hKB"/>
+                                                                    </constraints>
+                                                                    <state key="normal">
+                                                                        <attributedString key="attributedTitle">
+                                                                            <fragment content="Meet your home's plumber">
+                                                                                <attributes>
+                                                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                    <integer key="NSUnderline" value="1"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                    </state>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="QgH-s9-oNQ" firstAttribute="leading" secondItem="oc7-MC-Lmr" secondAttribute="leading" constant="10" id="06E-4o-oUS"/>
                                                                 <constraint firstItem="c2m-Oe-W9q" firstAttribute="top" secondItem="M8Y-dU-7if" secondAttribute="bottom" constant="12" id="6HR-ja-gJp"/>
+                                                                <constraint firstItem="a4a-C2-IIK" firstAttribute="centerX" secondItem="oc7-MC-Lmr" secondAttribute="centerX" id="7Ox-4s-JJJ"/>
                                                                 <constraint firstAttribute="bottom" secondItem="c2m-Oe-W9q" secondAttribute="bottom" id="8wz-O0-yTw"/>
                                                                 <constraint firstAttribute="trailing" secondItem="c2m-Oe-W9q" secondAttribute="trailing" constant="-200" id="E8X-GX-Dfg"/>
+                                                                <constraint firstItem="a4a-C2-IIK" firstAttribute="top" secondItem="Tp4-dT-gcs" secondAttribute="bottom" constant="16" id="ETv-Bc-g0l"/>
+                                                                <constraint firstItem="QgH-s9-oNQ" firstAttribute="top" secondItem="a4a-C2-IIK" secondAttribute="bottom" constant="6.6666666666666856" id="JkN-op-R7O"/>
                                                                 <constraint firstItem="Tp4-dT-gcs" firstAttribute="leading" secondItem="oc7-MC-Lmr" secondAttribute="leading" constant="10" id="Pqt-qd-pXP"/>
                                                                 <constraint firstAttribute="trailing" secondItem="M8Y-dU-7if" secondAttribute="trailing" id="S92-VE-6Vs"/>
                                                                 <constraint firstItem="Tp4-dT-gcs" firstAttribute="top" secondItem="8BN-9n-mpU" secondAttribute="bottom" constant="38" id="TR1-x3-YrB"/>
@@ -3947,6 +3969,7 @@ Whoop! Me Happy Prices</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnMeetYourPlumber" destination="a4a-C2-IIK" id="G5D-ed-SzW"/>
                                             <outlet property="cntrolTapImage" destination="xEp-sh-6Bg" id="lKo-gZ-3ha"/>
                                             <outlet property="cons_LockedLeading" destination="QAf-Kh-LeK" id="C8Q-g2-lIE"/>
                                             <outlet property="imgMiddleblue" destination="0pS-lG-5di" id="l4Y-Ym-2MN"/>
@@ -4101,7 +4124,7 @@ ones you want to unlock this month</string>
                     </connections>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2871" y="-1314"/>
+            <point key="canvasLocation" x="2869.5652173913045" y="-1314.1304347826087"/>
         </scene>
         <!--Settings MenuVC-->
         <scene sceneID="Fq4-L9-kLa">
@@ -7642,6 +7665,7 @@ Super Whoop! Deal next month</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your home's deals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-7u-3al">
+
                                         <rect key="frame" x="108.66666666666669" y="36.666666666666664" width="198" height="27.999999999999993"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="24"/>
                                         <nil key="textColor"/>

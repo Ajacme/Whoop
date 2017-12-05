@@ -373,7 +373,7 @@ class BrandList {
     // Header View Data
     public func getDataForHeader(dealName:String) ->[String : Any]{
         var headerData = [String : Any]()
-        
+        print(dealName)
         switch dealName {
             
         case "Insurance":

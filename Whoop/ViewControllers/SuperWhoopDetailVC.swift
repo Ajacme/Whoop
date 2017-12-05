@@ -57,6 +57,7 @@ class CellForTickets: UITableViewCell {
     @IBOutlet weak var cons_LockedLeading: NSLayoutConstraint!
     @IBOutlet weak var imgUnlock: UIImageView!
     
+    @IBOutlet weak var btnMeetYourPlumber: UIButton!
     @IBOutlet weak var btnTopIcon: UIButton!
     @IBOutlet weak var lblUsesCredit: UILabel!
     @IBOutlet weak var lblDealBoosted: UILabel!
