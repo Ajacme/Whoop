@@ -26,7 +26,7 @@
         <!--Personal ButtonVC-->
         <scene sceneID="MR0-p0-3H8">
             <objects>
-                <viewController storyboardIdentifier="PersonalButtonVC" id="Z0l-hG-SO4" customClass="PersonalButtonVC" customModule="Whoop_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalButtonVC" id="Z0l-hG-SO4" customClass="PersonalButtonVC" customModule="Whoop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oQg-ZQ-el0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-Ye-PN3" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-Ye-PN3" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
                                         <rect key="frame" x="50" y="259" width="275.5" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="275.5" id="4mG-oD-Ldd"/>
@@ -56,7 +56,7 @@ change your photo</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's your personal Whoop! button." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-0W-M67" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's your personal Whoop! button." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-0W-M67" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="375" height="19.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19.5" id="YGN-XD-CcQ"/>
@@ -146,7 +146,7 @@ change your photo</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnW-aE-xfR">
                                         <rect key="frame" x="40" y="80" width="295" height="175"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-H6-guH" customClass="MTButton" customModule="Whoop_" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-H6-guH" customClass="MTButton" customModule="Whoop" customModuleProvider="target">
                                                 <rect key="frame" x="36" y="50" width="223" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="NRN-aB-dxo"/>
@@ -168,7 +168,7 @@ change your photo</string>
                                                     <action selector="tappedOnBtnSave:" destination="Z0l-hG-SO4" eventType="touchUpInside" id="mz6-Ss-dsN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yle-sE-6Ry" customClass="MTButton" customModule="Whoop_" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yle-sE-6Ry" customClass="MTButton" customModule="Whoop" customModuleProvider="target">
                                                 <rect key="frame" x="36" y="105" width="223" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="Byo-ta-IG7"/>
@@ -240,20 +240,20 @@ change your photo</string>
         <!--Home ButtonVC-->
         <scene sceneID="voY-DL-OeO">
             <objects>
-                <viewController storyboardIdentifier="HomeButtonVC" id="KI5-Ps-RE7" customClass="HomeButtonVC" customModule="Whoop_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeButtonVC" id="KI5-Ps-RE7" customClass="HomeButtonVC" customModule="Whoop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E13-Hw-uVM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q9-vQ-hOi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="-46" width="375" height="379"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="Wj4-YG-ODJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Your home's Whoop! button." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-gg-Jko" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Your home's Whoop! button." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj7-gg-Jko" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72.5" width="375" height="20"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -261,8 +261,8 @@ change your photo</string>
                                             <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Your home's Whoop! button."/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="15, Charles St, London, W2 4EB." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-lJ-0W4" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="264" width="295" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="15, Charles St, London, W2 4EB." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU5-lJ-0W4" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="286.5" width="295" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="295" id="gHa-vn-Eqs"/>
                                         </constraints>
@@ -274,14 +274,14 @@ change your photo</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="getting_ready" translatesAutoresizingMaskIntoConstraints="NO" id="b6L-UP-Z36">
-                                        <rect key="frame" x="112" y="92" width="150" height="150"/>
+                                        <rect key="frame" x="112" y="114.5" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Kza-op-47q"/>
                                             <constraint firstAttribute="width" constant="150" id="ano-cO-C53"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFG-Y1-Z0V" customClass="UIControl">
-                                        <rect key="frame" x="175.5" y="216" width="24" height="24"/>
+                                        <rect key="frame" x="175" y="238.5" width="24" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="dby-7y-vwc">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -308,7 +308,7 @@ change your photo</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpr-hR-zXd" customClass="UIControl">
-                                        <rect key="frame" x="114.5" y="155.5" width="24" height="24"/>
+                                        <rect key="frame" x="114" y="177.5" width="24" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bIk-Ee-h1c">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -335,7 +335,7 @@ change your photo</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjJ-pH-cwK" customClass="UIControl">
-                                        <rect key="frame" x="236.5" y="154.5" width="24" height="24"/>
+                                        <rect key="frame" x="236" y="177.5" width="24" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="6vk-ux-eOe">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -362,7 +362,7 @@ change your photo</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZO-xx-KG8" customClass="UIControl">
-                                        <rect key="frame" x="175.5" y="94" width="24" height="24"/>
+                                        <rect key="frame" x="175" y="116.5" width="24" height="24"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Qj6-ZC-q4c">
                                                 <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -413,16 +413,17 @@ change your photo</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3m-Wb-33l">
-                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="333" width="375" height="334"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zir-yP-X5f">
-                                        <rect key="frame" x="35" y="64.5" width="305" height="205"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdb-1v-VaA" customClass="UIControl">
-                                                <rect key="frame" x="54" y="15" width="197" height="35"/>
+                                                <rect key="frame" x="85" y="72" width="206" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-eV-dYl" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
-                                                        <rect key="frame" x="47.5" y="9" width="103" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGn-eV-dYl" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                        <rect key="frame" x="48" y="9" width="103" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -432,21 +433,16 @@ change your photo</string>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="0K8-Si-hdO"/>
-                                                    <constraint firstItem="jGn-eV-dYl" firstAttribute="centerY" secondItem="hdb-1v-VaA" secondAttribute="centerY" id="9Tj-Ds-iYS"/>
-                                                    <constraint firstAttribute="width" constant="197" id="EmE-0w-0rZ"/>
-                                                    <constraint firstItem="jGn-eV-dYl" firstAttribute="centerX" secondItem="hdb-1v-VaA" secondAttribute="centerX" id="gGu-oy-FUJ"/>
-                                                </constraints>
                                                 <connections>
                                                     <action selector="tappedOnControlChangeAddress:" destination="KI5-Ps-RE7" eventType="touchUpInside" id="bOd-Df-iza"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbT-OZ-mzY" customClass="UIControl">
-                                                <rect key="frame" x="54" y="68" width="197" height="35"/>
+                                                <rect key="frame" x="85" y="125" width="206" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-YB-eMn" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
-                                                        <rect key="frame" x="52.5" y="9" width="93.5" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delete yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-YB-eMn" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                        <rect key="frame" x="53" y="9" width="94" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                                         <color key="textColor" red="1" green="0.32156862749999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -456,12 +452,6 @@ change your photo</string>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="72C-um-FdI"/>
-                                                    <constraint firstAttribute="width" constant="197" id="PWt-rW-Xzq"/>
-                                                    <constraint firstItem="2IS-YB-eMn" firstAttribute="centerX" secondItem="AbT-OZ-mzY" secondAttribute="centerX" id="T20-Dt-HDU"/>
-                                                    <constraint firstItem="2IS-YB-eMn" firstAttribute="centerY" secondItem="AbT-OZ-mzY" secondAttribute="centerY" id="wiQ-uT-Guv"/>
-                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" red="1" green="0.32156862749999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -474,8 +464,8 @@ change your photo</string>
                                                     <action selector="tappedOnControlDeleteYourself:" destination="KI5-Ps-RE7" eventType="touchUpInside" id="LUz-Jt-CRf"/>
                                                 </connections>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-20-yuP" customClass="MTLabel" customModule="Whoop_" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="118" width="305" height="87"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-20-yuP" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="180" width="322" height="138"/>
                                                 <string key="text">If you've moved home you can unlock your new home's
 Whoop! Button and you'll be automatically
 deleted from your current button. To stop using Whoop!
@@ -494,46 +484,73 @@ home's button.</string>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZ7-xf-RER" customClass="UIControl">
+                                                <rect key="frame" x="85" y="19" width="206" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPB-Ya-259" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                        <rect key="frame" x="48" y="9" width="103" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Change address"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.3411764706" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="tappedOnControlChangeAddress:" destination="KI5-Ps-RE7" eventType="touchUpInside" id="Omm-M9-msa"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="centerX" secondItem="zir-yP-X5f" secondAttribute="centerX" id="Du0-2k-ABt"/>
-                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="top" secondItem="hdb-1v-VaA" secondAttribute="bottom" constant="18" id="Hqy-UY-Cag"/>
-                                            <constraint firstAttribute="bottom" secondItem="Qnv-20-yuP" secondAttribute="bottom" id="Qca-bO-qyK"/>
-                                            <constraint firstItem="Qnv-20-yuP" firstAttribute="leading" secondItem="zir-yP-X5f" secondAttribute="leading" id="RJh-qe-3UD"/>
-                                            <constraint firstAttribute="trailing" secondItem="Qnv-20-yuP" secondAttribute="trailing" id="XP2-wq-3de"/>
-                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="centerX" secondItem="zir-yP-X5f" secondAttribute="centerX" id="a4M-MX-MfR"/>
-                                            <constraint firstAttribute="height" constant="205" id="aXA-BK-6QG"/>
-                                            <constraint firstItem="Qnv-20-yuP" firstAttribute="top" secondItem="AbT-OZ-mzY" secondAttribute="bottom" constant="15" id="jre-jq-gbr"/>
-                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="top" secondItem="zir-yP-X5f" secondAttribute="top" constant="15" id="ubp-GZ-eol"/>
+                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="trailing" secondItem="CZ7-xf-RER" secondAttribute="trailing" id="1Ai-Fe-VBb"/>
+                                            <constraint firstItem="CZ7-xf-RER" firstAttribute="width" secondItem="zir-yP-X5f" secondAttribute="width" multiplier="0.55" id="1N3-Pe-qcX"/>
+                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="top" secondItem="CZ7-xf-RER" secondAttribute="bottom" constant="13" id="41x-mg-dbK"/>
+                                            <constraint firstItem="CZ7-xf-RER" firstAttribute="centerX" secondItem="zir-yP-X5f" secondAttribute="centerX" id="6Ee-T1-Yf0"/>
+                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="height" secondItem="hdb-1v-VaA" secondAttribute="height" id="FK8-cS-yG6"/>
+                                            <constraint firstItem="Qnv-20-yuP" firstAttribute="top" secondItem="AbT-OZ-mzY" secondAttribute="bottom" constant="15" id="HJ8-5j-iKa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qnv-20-yuP" secondAttribute="trailing" constant="27" id="Izs-UF-BpP"/>
+                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="leading" secondItem="CZ7-xf-RER" secondAttribute="leading" id="MNX-Uo-FUf"/>
+                                            <constraint firstItem="hdb-1v-VaA" firstAttribute="height" secondItem="CZ7-xf-RER" secondAttribute="height" id="RYE-wM-Tpb"/>
+                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="top" secondItem="hdb-1v-VaA" secondAttribute="bottom" constant="13" id="U5X-UB-5cI"/>
+                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="leading" secondItem="hdb-1v-VaA" secondAttribute="leading" id="Vqd-k9-YNY"/>
+                                            <constraint firstItem="CZ7-xf-RER" firstAttribute="height" secondItem="zir-yP-X5f" secondAttribute="height" multiplier="0.12" id="cCI-Fh-7rl"/>
+                                            <constraint firstItem="AbT-OZ-mzY" firstAttribute="trailing" secondItem="hdb-1v-VaA" secondAttribute="trailing" id="j0o-v1-UqH"/>
+                                            <constraint firstItem="Qnv-20-yuP" firstAttribute="leading" secondItem="zir-yP-X5f" secondAttribute="leading" constant="26" id="p26-gK-odZ"/>
+                                            <constraint firstItem="CZ7-xf-RER" firstAttribute="top" secondItem="zir-yP-X5f" secondAttribute="top" constant="19" id="ptZ-tp-O8o"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qnv-20-yuP" secondAttribute="bottom" constant="16" id="sgi-Tt-gbf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="zir-yP-X5f" firstAttribute="leading" secondItem="c3m-Wb-33l" secondAttribute="leading" constant="35" id="NBY-xj-wra"/>
-                                    <constraint firstItem="zir-yP-X5f" firstAttribute="centerY" secondItem="c3m-Wb-33l" secondAttribute="centerY" id="jrX-XS-SWT"/>
-                                    <constraint firstAttribute="trailing" secondItem="zir-yP-X5f" secondAttribute="trailing" constant="35" id="zTw-gI-x1g"/>
+                                    <constraint firstItem="zir-yP-X5f" firstAttribute="top" secondItem="c3m-Wb-33l" secondAttribute="top" id="EpT-Iq-X3d"/>
+                                    <constraint firstItem="zir-yP-X5f" firstAttribute="leading" secondItem="c3m-Wb-33l" secondAttribute="leading" id="NBY-xj-wra"/>
+                                    <constraint firstAttribute="bottom" secondItem="zir-yP-X5f" secondAttribute="bottom" id="b2T-or-RY7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zir-yP-X5f" secondAttribute="trailing" id="zTw-gI-x1g"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="7Q9-vQ-hOi" secondAttribute="trailing" id="0Hk-t5-Llz"/>
+                            <constraint firstItem="c3m-Wb-33l" firstAttribute="top" secondItem="E13-Hw-uVM" secondAttribute="top" constant="333" id="BOk-za-2QT"/>
                             <constraint firstItem="iIt-oj-vUB" firstAttribute="trailing" secondItem="c3m-Wb-33l" secondAttribute="trailing" id="NOc-BH-LIo"/>
-                            <constraint firstItem="c3m-Wb-33l" firstAttribute="top" secondItem="7Q9-vQ-hOi" secondAttribute="bottom" id="bNJ-yH-hYO"/>
                             <constraint firstItem="c3m-Wb-33l" firstAttribute="leading" secondItem="iIt-oj-vUB" secondAttribute="leading" id="ePY-mB-C0i"/>
-                            <constraint firstItem="7Q9-vQ-hOi" firstAttribute="top" secondItem="E13-Hw-uVM" secondAttribute="top" id="m0Y-zg-dlB"/>
                             <constraint firstItem="7Q9-vQ-hOi" firstAttribute="leading" secondItem="E13-Hw-uVM" secondAttribute="leading" id="nYo-TV-EvM"/>
-                            <constraint firstItem="iIt-oj-vUB" firstAttribute="bottom" secondItem="c3m-Wb-33l" secondAttribute="bottom" id="rgo-0E-LTs"/>
-                            <constraint firstItem="7Q9-vQ-hOi" firstAttribute="height" secondItem="E13-Hw-uVM" secondAttribute="height" multiplier="0.5" id="u1G-Ej-dU4"/>
+                            <constraint firstItem="c3m-Wb-33l" firstAttribute="top" secondItem="7Q9-vQ-hOi" secondAttribute="bottom" id="pZx-Kg-5lM"/>
+                            <constraint firstItem="c3m-Wb-33l" firstAttribute="bottom" secondItem="iIt-oj-vUB" secondAttribute="bottom" id="vV1-j8-1Cf"/>
+                            <constraint firstItem="c3m-Wb-33l" firstAttribute="width" secondItem="7Q9-vQ-hOi" secondAttribute="width" id="xEA-mj-5ws"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iIt-oj-vUB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqu-3o-QPt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="773"/>
+            <point key="canvasLocation" x="1732" y="772.26386806596713"/>
         </scene>
     </scenes>
     <resources>
