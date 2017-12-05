@@ -69,11 +69,14 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
         tableViewMain.tableHeaderView = viewForHeader
         
         if arrScrollData.count <= 0{
-            arrScrollData  = [
-                ["image" : "blue_plane","selected_bg" :"","title" : "Travel Insurance".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
-                ["image" : "blue_travel_medical","selected_bg" :"","title" : "Travel Insurance with Medical".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized],
-                ["image" : "blue_car_break","selected_bg" :"","title" : "Car breakdown".localized,"desc":"Everyone you live with canuse this deal".localized , "message" : "Expires in 45 days".localized]
-            ]
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
 
         }
         
@@ -374,15 +377,17 @@ class BrandList {
         switch dealName {
             
         case "Insurance":
-                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "Insurance If you have Whoop! Me Happy\ncode you can boost your savings"]
+                headerData = ["title" : "Use a deal you've unlocked"]
             
         case "Tradespeople":
-            
-            headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "Tradesperson If you have Whoop! Me Happy\ncode you can boost your savings"]
+            headerData = ["title" : "Use a deal you've unlocked"]
             
         case "Technology":
-            
-            headerData = ["image" : "info_ins","title" : "Tradesperson","desc" : "Everyone you live with canuse this deal", "message":"Expires in 45 days"]
+            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+        case "Moving Home":
+            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+        case "My Vehicle":
+            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
             
         default:
             return headerData
@@ -396,29 +401,90 @@ class BrandList {
         case "Insurance":
            
             arrScrollData = [
-                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
-                    
-                    
-                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
-                    
-                    
-                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]]
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
             
         case "Tradespeople":
             
             arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Start Rescue".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Tradespeople"]]
             
         case "Technology":
             arrScrollData = [
-                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg"],
-                
-                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg"],
-                
-                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg"]]
+                ["image" : "brand_broadband","selected_image" :"brand_broadband","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_brand_broad", "message" : "Expires in 45 days", "category":"Technology"]]
+            
+        case "My Vehicle":
+            arrScrollData = [
+                ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
+            
+        case "Moving Home":
+            
+            arrScrollData = [
+                ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
+            
         default:
             return arrScrollData
         }
         return arrScrollData
     }
 }
+
+
+/*
+ public func getDataForHeader(dealName:String, isDealToUnlock:Bool) ->[String : Any]{
+ var headerData = [String : Any]()
+ 
+ switch dealName {
+ 
+ case "Insurance":
+ if isDealToUnlock{
+ 
+ headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins", "category":"Insurance"]
+ 
+ }else{
+ 
+ headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Insurance"]
+ }
+ case "Tradespeople":
+ if isDealToUnlock{
+ headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Tradespeople"]
+ }else{
+ headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Tradespeople"]
+ }
+ 
+ 
+ case "Technology":
+ if isDealToUnlock{
+ headerData = ["image" : "technology","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tec", "category":"Technology"]
+ }else{
+ headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
+ }
+ case "My Vehicle":
+ if isDealToUnlock{
+ headerData = ["image" : "myvehicles","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg_veh", "category":"My Vehicle"]
+ }else{
+ headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
+ }
+ case "Moving Home":
+ if isDealToUnlock{
+ headerData = ["image" : "moving_home","title" : "Moving Home","desc" : " Here are your home's Moving Home deals. Unlock the ones you need","bgImage" : "bg_mov", "category":"Moving Home"]
+ }else{
+ headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Moving Home"]
+ }
+ 
+ default:
+ return headerData
+ }
+ 
+ return headerData
+ 
+ }
+ 
+ */
