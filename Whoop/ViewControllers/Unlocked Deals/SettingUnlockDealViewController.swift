@@ -154,7 +154,7 @@ class DealsToUnlockData{
                 
                 headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings"]
             }
-        case "TradesPeople":
+        case "Tradespeople":
             if isDealToUnlock{
                 headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
             }else{
@@ -207,7 +207,7 @@ class DealsToUnlockData{
             }
             
             
-        case "TradesPeople":
+        case "Tradespeople":
             if isDealToUnlock{
                 arrScrollData = [
                     ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"]
@@ -240,8 +240,8 @@ class DealsToUnlockData{
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg", "message" : "Uses 1 credit"]
                     
                 ]
             }

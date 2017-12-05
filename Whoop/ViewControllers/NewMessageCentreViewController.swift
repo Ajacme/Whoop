@@ -229,7 +229,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
                     vcTitle = "My Vehicle"
                     break
                 case 2:
-                    vcTitle = "TradesPeople"
+                    vcTitle = "Tradespeople"
                     break
                 case 3:
                     vcTitle = "Moving Home"
