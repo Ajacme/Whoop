@@ -148,31 +148,31 @@ class DealsToUnlockData{
         case "Insurance":
             if isDealToUnlock{
                 
-                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins"]
+                headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins", "category":"Insurance"]
                 
             }else{
                 
-                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings"]
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Insurance"]
             }
         case "Tradespeople":
             if isDealToUnlock{
-                headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
+                headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Tradespeople"]
             }else{
-                headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings"]
+                headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Tradespeople"]
             }
             
             
         case "Technology":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra"]
+                headerData = ["image" : "whoop!_me_happy_face","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Technology"]
             }else{
-                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days"]
+                headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
             }
         case "My Vehicle":
             if isDealToUnlock{
-                headerData = ["image" : "whoop!_me_happy_face","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg"]
+                headerData = ["image" : "whoop!_me_happy_face","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg", "category":"My Vehicle"]
             }else{
-                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days"]
+                headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
             }
             
         default:
@@ -187,22 +187,22 @@ class DealsToUnlockData{
         case "Insurance":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
                     
                     
-                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
                     
                     
-                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]]
+                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
             }else{
                 arrScrollData = [
-                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
                     
                     
-                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized],
+                    ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
                     
                     
-                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized]
+                    ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]
                 ]
             }
             
@@ -210,11 +210,11 @@ class DealsToUnlockData{
         case "Tradespeople":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit", "category":"Tradespeople"]
                 ]
             }
             
@@ -222,26 +222,26 @@ class DealsToUnlockData{
         case "Technology":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband Deal".localized,"desc":"Big name broadband brands are ready to Whoop@! You Happy with an exclusive price".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile Phone".localized,"desc":"Your favourite mobile brands are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"]
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband Deal".localized,"desc":"Big name broadband brands are ready to Whoop@! You Happy with an exclusive price".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"],
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile Phone".localized,"desc":"Your favourite mobile brands are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"]
                 ]
             }else{
                 arrScrollData = [
-                     ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit"]
+                     ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Technology"],
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit", "category":"Technology"]
                    
                 ]
             }
         case "My Vehicle":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"Expert mechanics are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"Unlock to get brand tyres fitted locally".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"]
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"Expert mechanics are ready to Whoop! You Happy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"Unlock to get brand tyres fitted locally".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"]
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days"],
-                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg", "message" : "Uses 1 credit"]
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                    ["image" : "whoop!_me_happy_face","selected_image" :"footer_whoop!_me_happy","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg", "message" : "Uses 1 credit", "category":"My Vehicle"]
                     
                 ]
             }
