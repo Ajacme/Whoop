@@ -337,7 +337,7 @@ extension WebDealDetailVC: UITableViewDelegate,UITableViewDataSource{
         }else{
             cell.imgMiddleblue.image = UIImage(named: dic.imageName)
             cell.lblGetQuotes.text = "GET A QUOTE".localized
-            cell.imgTopBG.image = UIImage(named:"bg")
+            cell.imgTopBG.image = UIImage(named:dic.bgImage)
             cell.btnTopIcon.isHidden = false
             cell.lblDealBoosted.text = ""
         }
