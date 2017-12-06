@@ -10,9 +10,11 @@ import UIKit
 
 class WriteReviewViewController: UIViewController {
 
+    @IBOutlet var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = UIColor.lightGray.cgColor
         // Do any additional setup after loading the view.
     }
 
