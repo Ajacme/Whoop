@@ -125,7 +125,7 @@ class settingUnlockCollectionViewCell : UICollectionViewCell {
         
     }
 }
-
+/*
 extension SettingUnlockDealViewController : UICollectionViewDelegateFlowLayout {
     
     
@@ -140,7 +140,7 @@ extension SettingUnlockDealViewController : UICollectionViewDelegateFlowLayout {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 10.0
 //    }
-}
+}*/
 class DealsToUnlockData{
    
     // Header View Data
@@ -225,7 +225,7 @@ class DealsToUnlockData{
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Uses 1 credit", "category":"Tradespeople"]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
                 ]
             }
             
@@ -239,7 +239,7 @@ class DealsToUnlockData{
             }else{
                 arrScrollData = [
                      ["image" : "broadband","selected_image" :"gray_broadband","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tec", "message" : "Expires in 45 days", "category":"Technology"],
-                    ["image" : "mobile","selected_image" :"gray_mobile","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Technology"]
+                    ["image" : "mobile","selected_image" :"gray_mobile","title" : "Mobile".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Expires in 45 days", "category":"Technology"]
                    
                 ]
             }
@@ -252,7 +252,7 @@ class DealsToUnlockData{
             }else{
                 arrScrollData = [
                     ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                    ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]
+                    ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"]
                     
                 ]
             }

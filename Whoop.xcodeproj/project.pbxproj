@@ -38,6 +38,8 @@
 		087AD00A1FCE9A4C000DD17D /* ViewFor3xPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087AD0061FCE9A26000DD17D /* ViewFor3xPopUp.xib */; };
 		087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087AD0091FCE9A4C000DD17D /* ViewFor3xPopUp.swift */; };
 		087FB6981FD5B00500F934AB /* WhoopButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */; };
+		089665301FD8576D00C8684F /* UserReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896652F1FD8576D00C8684F /* UserReviewsViewController.swift */; };
+		089665321FD857C100C8684F /* WriteReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089665311FD857C100C8684F /* WriteReviewViewController.swift */; };
 		08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB6D471FD13CD700A97161 /* SuperWhoopDetailVC.swift */; };
 		08AB6D4B1FD13EDD00A97161 /* SuperWhoopPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AB6D491FD13EDA00A97161 /* SuperWhoopPopUp.swift */; };
 		08AB6D4C1FD13EDD00A97161 /* SuperWhoopPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08AB6D4A1FD13EDC00A97161 /* SuperWhoopPopUp.xib */; };
@@ -127,6 +129,8 @@
 		087AD0061FCE9A26000DD17D /* ViewFor3xPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewFor3xPopUp.xib; sourceTree = "<group>"; };
 		087AD0091FCE9A4C000DD17D /* ViewFor3xPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFor3xPopUp.swift; sourceTree = "<group>"; };
 		087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoopButtonViewController.swift; sourceTree = "<group>"; };
+		0896652F1FD8576D00C8684F /* UserReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewsViewController.swift; sourceTree = "<group>"; };
+		089665311FD857C100C8684F /* WriteReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteReviewViewController.swift; sourceTree = "<group>"; };
 		08AB6D471FD13CD700A97161 /* SuperWhoopDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperWhoopDetailVC.swift; sourceTree = "<group>"; };
 		08AB6D491FD13EDA00A97161 /* SuperWhoopPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperWhoopPopUp.swift; sourceTree = "<group>"; };
 		08AB6D4A1FD13EDC00A97161 /* SuperWhoopPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuperWhoopPopUp.xib; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 				087FB6971FD5B00500F934AB /* WhoopButtonViewController.swift */,
 			);
 			path = "Whoop Home Button";
+			sourceTree = "<group>";
+		};
+		0896652E1FD8573600C8684F /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				0896652F1FD8576D00C8684F /* UserReviewsViewController.swift */,
+				089665311FD857C100C8684F /* WriteReviewViewController.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		08BFA4E51FCEFD5E00294D88 /* OnBoarding */ = {
@@ -493,6 +506,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0896652E1FD8573600C8684F /* Review */,
 				087FB6961FD5AFEB00F934AB /* Whoop Home Button */,
 				08BFA4F81FCF004500294D88 /* Personal Button */,
 				08BFA4E51FCEFD5E00294D88 /* OnBoarding */,
@@ -725,6 +739,7 @@
 				F3152E461FB22EEC000E03B7 /* SignInVC.swift in Sources */,
 				08BFA4F11FCEFDE500294D88 /* HomeWhoopOnBoardingVC.swift in Sources */,
 				082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */,
+				089665301FD8576D00C8684F /* UserReviewsViewController.swift in Sources */,
 				F3152E2A1FB22EEC000E03B7 /* AppDelegate.swift in Sources */,
 				082A288D1FCDC2B800B39D0A /* SettingsMenuVC.swift in Sources */,
 				087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */,
@@ -735,6 +750,7 @@
 				08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */,
 				8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */,
 				F3152E441FB22EEC000E03B7 /* ForgotPasswordVC.swift in Sources */,
+				089665321FD857C100C8684F /* WriteReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

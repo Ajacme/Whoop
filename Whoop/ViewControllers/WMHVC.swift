@@ -95,6 +95,8 @@ class WMHVC: UIViewController,UITextFieldDelegate {
             ]
             
         }
+        
+        
         for dic in arrScrollData
         {
             let tableData = Insurance_data()

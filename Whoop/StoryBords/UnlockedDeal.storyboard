@@ -44,10 +44,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-Sf-QAh">
-                                        <rect key="frame" x="10" y="43" width="15" height="15"/>
+                                        <rect key="frame" x="10" y="30.5" width="36" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="3Hl-Dc-Rcb"/>
-                                            <constraint firstAttribute="height" constant="15" id="CPN-1k-s6r"/>
+                                            <constraint firstAttribute="width" constant="36" id="3Hl-Dc-Rcb"/>
+                                            <constraint firstAttribute="height" constant="40" id="CPN-1k-s6r"/>
                                         </constraints>
                                         <state key="normal" image="close">
                                             <color key="titleColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,13 +56,13 @@
                                             <action selector="tapToBack:" destination="QWt-9Y-6rP" eventType="touchUpInside" id="tza-BV-o1l"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-iH-hGs">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-iH-hGs">
+                                        <rect key="frame" x="112" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
@@ -70,12 +70,12 @@
                                 <constraints>
                                     <constraint firstItem="YLk-Sf-QAh" firstAttribute="leading" secondItem="oKJ-fa-fBN" secondAttribute="leading" constant="10" id="M6b-FM-vXS"/>
                                     <constraint firstAttribute="trailing" secondItem="VzF-1p-VPR" secondAttribute="trailing" id="SAU-6f-wi5"/>
-                                    <constraint firstItem="6TD-iH-hGs" firstAttribute="leading" secondItem="YLk-Sf-QAh" secondAttribute="trailing" constant="30" id="Zkk-5C-4EQ"/>
                                     <constraint firstItem="6TD-iH-hGs" firstAttribute="centerY" secondItem="oKJ-fa-fBN" secondAttribute="centerY" constant="5" id="gH5-B6-C0e"/>
                                     <constraint firstItem="VzF-1p-VPR" firstAttribute="leading" secondItem="oKJ-fa-fBN" secondAttribute="leading" id="pk4-dT-ppU"/>
                                     <constraint firstAttribute="height" constant="91" id="qAq-IN-y3j"/>
                                     <constraint firstItem="YLk-Sf-QAh" firstAttribute="centerY" secondItem="oKJ-fa-fBN" secondAttribute="centerY" constant="5" id="vdz-2g-tv0"/>
                                     <constraint firstAttribute="bottom" secondItem="VzF-1p-VPR" secondAttribute="bottom" id="xK1-fN-kQ4"/>
+                                    <constraint firstItem="6TD-iH-hGs" firstAttribute="centerX" secondItem="oKJ-fa-fBN" secondAttribute="centerX" id="yRt-QC-bCe"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ucK-GR-LU0">
@@ -408,10 +408,10 @@ code you can boost your savings</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7i-ZU-etl">
-                                        <rect key="frame" x="10" y="43" width="15" height="15"/>
+                                        <rect key="frame" x="10" y="30.5" width="36" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="68Q-4q-LKi"/>
-                                            <constraint firstAttribute="height" constant="15" id="gBG-Jw-5dt"/>
+                                            <constraint firstAttribute="width" constant="36" id="68Q-4q-LKi"/>
+                                            <constraint firstAttribute="height" constant="40" id="gBG-Jw-5dt"/>
                                         </constraints>
                                         <state key="normal" image="close">
                                             <color key="titleColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -420,13 +420,13 @@ code you can boost your savings</string>
                                             <action selector="tapToBack:" destination="OBS-w5-iVq" eventType="touchUpInside" id="gKD-Bs-7iV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uya-Fj-hUM">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uya-Fj-hUM">
+                                        <rect key="frame" x="112" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
@@ -434,7 +434,7 @@ code you can boost your savings</string>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="4xv-eN-s83"/>
                                     <constraint firstAttribute="trailing" secondItem="zRT-rD-5O2" secondAttribute="trailing" id="QNc-2a-ZdD"/>
-                                    <constraint firstItem="Uya-Fj-hUM" firstAttribute="leading" secondItem="W7i-ZU-etl" secondAttribute="trailing" constant="30" id="Z8V-2j-rA5"/>
+                                    <constraint firstItem="Uya-Fj-hUM" firstAttribute="centerX" secondItem="fQN-QD-efB" secondAttribute="centerX" id="bsl-iH-rdx"/>
                                     <constraint firstItem="W7i-ZU-etl" firstAttribute="leading" secondItem="fQN-QD-efB" secondAttribute="leading" constant="10" id="eRi-O9-mKL"/>
                                     <constraint firstItem="W7i-ZU-etl" firstAttribute="centerY" secondItem="fQN-QD-efB" secondAttribute="centerY" constant="5" id="iIF-DS-CdR"/>
                                     <constraint firstItem="Uya-Fj-hUM" firstAttribute="centerY" secondItem="fQN-QD-efB" secondAttribute="centerY" constant="5" id="nFE-th-D3z"/>
@@ -648,10 +648,10 @@ code you can boost your savings</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYj-sq-7cO">
-                                        <rect key="frame" x="10" y="43" width="15" height="15"/>
+                                        <rect key="frame" x="10" y="30.5" width="36" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="O7z-eG-VM7"/>
-                                            <constraint firstAttribute="height" constant="15" id="s64-e5-2Ac"/>
+                                            <constraint firstAttribute="width" constant="36" id="O7z-eG-VM7"/>
+                                            <constraint firstAttribute="height" constant="40" id="s64-e5-2Ac"/>
                                         </constraints>
                                         <state key="normal" image="close">
                                             <color key="titleColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -660,20 +660,20 @@ code you can boost your savings</string>
                                             <action selector="tapToBack:" destination="JfT-RO-M2j" eventType="touchUpInside" id="Wuk-bL-o6D"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtn-yS-6UL">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtn-yS-6UL">
+                                        <rect key="frame" x="112" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96862745100000003" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="o2o-FU-eSS" secondAttribute="trailing" id="9LG-uc-d7X"/>
-                                    <constraint firstItem="Qtn-yS-6UL" firstAttribute="leading" secondItem="PYj-sq-7cO" secondAttribute="trailing" constant="30" id="ARG-JR-Vdr"/>
+                                    <constraint firstItem="Qtn-yS-6UL" firstAttribute="centerX" secondItem="Qf9-fI-bOw" secondAttribute="centerX" id="Hvs-4K-tID"/>
                                     <constraint firstAttribute="bottom" secondItem="o2o-FU-eSS" secondAttribute="bottom" id="WTr-Oi-HWf"/>
                                     <constraint firstItem="PYj-sq-7cO" firstAttribute="centerY" secondItem="Qf9-fI-bOw" secondAttribute="centerY" constant="5" id="Yyn-XH-Etq"/>
                                     <constraint firstItem="PYj-sq-7cO" firstAttribute="leading" secondItem="Qf9-fI-bOw" secondAttribute="leading" constant="10" id="Zyu-hz-yN6"/>
