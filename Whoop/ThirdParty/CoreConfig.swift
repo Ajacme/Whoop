@@ -40,4 +40,7 @@ extension CoreConfig {
     public func isFirstEnter() -> Bool {
         return  UserDefaults.standard.bool(forKey: "isFirstEnter")
     }
+    public func isTakeImage() -> Data? {
+        return  UserDefaults.standard.value(forKey: "isTakeImage") as? Data//(UserDefaults.standard.object(forKey: "isTakeImage") as? UIImage?)!
+    }
 }

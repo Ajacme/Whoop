@@ -9,7 +9,7 @@
 import UIKit
 import JHChainableAnimations
 
-class WhoopButtonViewController: UIViewController {
+class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var dealsStackView: UIStackView!
     @IBOutlet weak var whoopButtonImageView: UIImageView!
@@ -21,31 +21,50 @@ class WhoopButtonViewController: UIViewController {
     
     @IBOutlet var lockedUnlockedLabel: UILabel!
     @IBOutlet var circleViews: [UIView]!
-    var objCodePopUp = ViewForCodePopUp()
+
     
+    @IBOutlet var addPhotoButton: UIButton!
     @IBOutlet var boostDealLbl: UILabel!
     @IBOutlet var unlockedDealLbl: UILabel!
     @IBOutlet var secondLabelHeight: NSLayoutConstraint!
     @IBOutlet var dealLeftToUnlocklbl: UILabel!
+    @IBOutlet var addPhotoButtonText: UIButton!
+    
+    
+    @IBOutlet var buttonRGY: UIButton!
+    @IBOutlet var inviteLabel: UILabel!
+    @IBOutlet var inviteIcon: UIButton!
+    @IBOutlet var lockedButtonIcon: UIButton!
+    @IBOutlet var whiteTickIcon: UIButton!
+    var objCodePopUp = ViewForCodePopUp()
+    var config = CoreConfig.sharedInstance
+    private var cameraController = UIImagePickerController()
+    
     var isRed = false
     var isGreen = false
     var isYellow = false
+    
+    var isTakeImage = Bool()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
      
     }
     func setUpView(){
-        // Do any additional setup after loading the view.
         whoopButtonImageView.alpha = 0
         dealsStackView.alpha = 0
-        //        descriptionStackView.alpha = 0
         buttonsStackView.alpha = 0
+        addPhotoButton.alpha = 0
+        addPhotoButtonText.alpha = 0
+        addPhotoButton.layer.borderWidth = 1
+        addPhotoButton.layer.borderColor = UIColor.lightGray.cgColor
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        buttonRGY.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
             self.customChatView()
         })
-        
+       
         
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
@@ -62,21 +81,32 @@ class WhoopButtonViewController: UIViewController {
         attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.white, range: range)
         
         if isRed{
+            
+            inviteIcon.setImage(#imageLiteral(resourceName: "invite_grey"), for: .normal)
+            inviteIcon.tintColor = UIColor.groupTableViewBackground
+            whiteTickIcon.tintColor =  UIColor.groupTableViewBackground
+            whiteTickIcon.setImage(#imageLiteral(resourceName: "tick-white"), for: .normal)
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "F52404")
             lockedUnlockedLabel.text = "Locked"
             
-            labelText = "Verify your address to unlock all your deals"
+            labelText = "Unlock your home's Whoop! Button \nYou save more money"
+//            secondLineLabel.text = "You save more money"
+            secondLabelHeight.constant = -5
             yourHomeLabel.textColor = UIColor.white
-            secondLineLabel.textColor = UIColor.white
-            attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.white, range: range)
+//            secondLineLabel.textColor = UIColor.white
+
             yourHomeLabel.text = labelText
-            secondLineLabel.attributedText = attributedString
-            
             boostDealLbl.text = "0"
             unlockedDealLbl.text = "0"
             dealLeftToUnlocklbl.text = "3"
         }
         if isGreen{
+            inviteIcon.tintColor = UIColor.colorWithHexString(hex: "FE8B3A")
+            addPhotoButton.isHidden = false
+            addPhotoButtonText.isHidden = false
+            whiteTickIcon.setImage(#imageLiteral(resourceName: "tick"), for: .normal)
+            whiteTickIcon.tintColor =  UIColor.colorWithHexString(hex: "FE8B3A")
+            
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "61B64F")
             lockedUnlockedLabel.text = "Unlocked"
             
@@ -90,6 +120,10 @@ class WhoopButtonViewController: UIViewController {
            
         }
         if isYellow{
+            inviteIcon.tintColor = UIColor.groupTableViewBackground
+            whiteTickIcon.setImage(#imageLiteral(resourceName: "tick-white"), for: .normal)
+            whiteTickIcon.tintColor =  UIColor.groupTableViewBackground
+//            inviteLabel.text = "Day Left"
             boostDealLbl.text = "0"
             unlockedDealLbl.text = "0"
             dealLeftToUnlocklbl.text = "3"
@@ -113,6 +147,16 @@ class WhoopButtonViewController: UIViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        guard let imageAdd =  config.isTakeImage() else {
+            addPhotoButton.setImage(#imageLiteral(resourceName: "add_photo"), for: .normal)
+            addPhotoButtonText.titleLabel?.text = "Add Photo"
+            return
+        }
+        let imageFromData = UIImage(data: imageAdd)
+        addPhotoButton.setImage(imageFromData, for: .normal)
+        addPhotoButtonText.setTitle("Change Photo", for: .normal)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -127,8 +171,11 @@ class WhoopButtonViewController: UIViewController {
         let animator2 = JHChainableAnimator(view: dealsStackView)
         animator2?.moveY()(200)?.thenAfter()(0.1)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
         
-//        let animator3 = JHChainableAnimator(view: descriptionStackView)
-//        animator3?.moveY()(200)?.thenAfter()(0.15)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
+        let animator3 = JHChainableAnimator(view: addPhotoButton)
+        animator3?.moveY()(200)?.thenAfter()(0.15)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
+        
+        let animator5 = JHChainableAnimator(view: addPhotoButtonText)
+        animator5?.moveY()(200)?.thenAfter()(0.15)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
         
         let animator4 = JHChainableAnimator(view: buttonsStackView)
         animator4?.moveY()(200)?.thenAfter()(0.2)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
@@ -137,26 +184,38 @@ class WhoopButtonViewController: UIViewController {
     
     // MARK: - Click events..
     @IBAction func tapRedNotificationBar(_ sender: Any) {
-        if isRed
-        {
-            if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeWhoopOnBoardingVC") as?   HomeWhoopOnBoardingVC{
+        customChatView()
+    }
+    
+    @IBAction func tapAddPhotoButton(_ sender: Any) {
+      
+        if let title = addPhotoButtonText.titleLabel?.text, title == "Add Photo"{
+            getPhotoLibrary()
+        }else{
+            let storyboard = UIStoryboard(name: "ButtonManagementInSetting", bundle: nil)
+            if let objHomeVC = storyboard.instantiateViewController(withIdentifier: "HomeButtonVC") as?   HomeButtonVC{
                 self.navigationController?.pushViewController(objHomeVC, animated: true)
             }
         }
         
+       
+        
     }
     
     @IBAction func tapToPopupClose(_ sender: UIButton) {
+        buttonRGY.isUserInteractionEnabled = true
         self.objCodePopUp.removeFromSuperview()
         self.objCodePopUp.Cons_ViewTop.constant = 1000
     }
     
     @IBAction func tapUnlockButton(_ sender: Any) {
-        if lockedUnlockedLabel.text == "Locked"{
-            if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeWhoopOnBoardingVC") as?   HomeWhoopOnBoardingVC{
-                self.navigationController?.pushViewController(objHomeVC, animated: true)
+        
+            if lockedUnlockedLabel.text == "Locked"{
+                if let objHomeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeWhoopOnBoardingVC") as?   HomeWhoopOnBoardingVC{
+                    self.navigationController?.pushViewController(objHomeVC, animated: true)
+                }
             }
-        }
+       
     }
     @IBAction func settingsButtonTapped(_ sender: Any) {
         
@@ -170,6 +229,7 @@ class WhoopButtonViewController: UIViewController {
     
     // MARK: - CustumeView Design For PopUp
     func customChatView()  {
+        buttonRGY.isUserInteractionEnabled = false
         objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
         self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
         
@@ -200,6 +260,63 @@ class WhoopButtonViewController: UIViewController {
         self.objCodePopUp.btnClose.addTarget(self, action: #selector(self.tapToPopupClose(_:)), for: .touchUpInside)
         self.objCodePopUp.btnCancel.addTarget(self, action: #selector(self.tapToPopupClose(_:)), for: .touchUpInside)
     }
+    
+    // Photo Alertaction
+    func getPhotoLibrary(){
+        let actionSheetController: UIAlertController = UIAlertController(title:nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+        }
+        actionSheetController.addAction(cancelAction)
+        
+        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Photo Library", style: .default) { action -> Void in
+            
+            _ = self.startCameraFromViewController(self, sourceType:.photoLibrary, withDelegate:self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+        }
+        actionSheetController.addAction(choosePictureAction)
+        
+        self.present(actionSheetController, animated: true, completion: nil)
+        
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "Choose From Camera", style: .default) { action -> Void in
+            
+            _ = self.startCameraFromViewController(self, sourceType: .camera, withDelegate: self as UIImagePickerControllerDelegate & UINavigationControllerDelegate )
+        }
+        actionSheetController.addAction(takePictureAction)
+    }
+    
+    
+    
+    //MARK: - ImagePicker Delegate Action
+    
+    func startCameraFromViewController(_ viewController: UIViewController,sourceType:UIImagePickerControllerSourceType, withDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> Bool {
+        
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) == false {
+            return false
+        }
+        cameraController = UIImagePickerController()
+        cameraController.sourceType = sourceType
+        cameraController.allowsEditing = true
+        cameraController.delegate = delegate
+        present(cameraController, animated: true, completion: nil)
+        return true
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        dismiss(animated: true, completion: nil)
+        
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.isTakeImage = true
+            addPhotoButton.setImage(pickedImage, for: .normal)
+            UserDefaults.standard.register(defaults: ["isTakeImage":UIImageJPEGRepresentation(pickedImage, 100)!])
+            UserDefaults.standard.set(UIImageJPEGRepresentation(pickedImage, 100), forKey: "isTakeImage")
 
+
+//            imgProfile.image = pickedImage
+//            UserDefaults.standard.set(pickedImage, forKey: "isTakeImage")
+            UserDefaults.standard.synchronize()
+        }
+    }
+   
+    
 }
 

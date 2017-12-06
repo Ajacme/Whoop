@@ -30,6 +30,7 @@ class CardsCell: UITableViewCell {
     @IBOutlet weak var detailsLabel: UILabel!
     
     @IBOutlet weak var hyperLinkLabel: UILabel!
+    @IBOutlet var unlockHomesDeal: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -54,6 +55,8 @@ class CardsCell: UITableViewCell {
         let currentRecord = data[selectedIndex]
         cellSettings(record: currentRecord)
         
+        
+        
         addSwipe()
         
     }
@@ -69,6 +72,26 @@ class CardsCell: UITableViewCell {
         } else {
             bannerView.isHidden = true
             bannerViewHeight.constant = 40
+        }
+        
+        if record.title == "Big brands and local businesses can't wait to Whoop! You happy with lower prices." && pageIndex == 0{
+            self.hyperLinkLabel.textColor = UIColor.black
+            let textToChange = "The deal is unlocked, Unlocked by: Sandip Gopani"
+            let attributedString    = NSMutableAttributedString(string: textToChange)
+            let range               = (textToChange as NSString).range(of: "The deal is unlocked, Unlocked by:")
+            attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.colorWithHexString(hex: "FE8B3A"), range: range)
+            
+            self.hyperLinkLabel.attributedText = attributedString
+        }else{
+            self.hyperLinkLabel.textColor = UIColor.blue
+            let textToChange = "Unlock your home's deal for free"
+            let attributedString    = NSMutableAttributedString(string: textToChange)
+            let range               = (textToChange as NSString).range(of: textToChange)
+            
+            attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSNumber(value: 1), range: range)
+            attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.blue, range: range)
+ 
+            self.hyperLinkLabel.attributedText = attributedString
         }
     }
     

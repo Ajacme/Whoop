@@ -494,13 +494,13 @@ home's button.</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Change address"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Add Photo"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <action selector="tappedOnControlChangeAddress:" destination="KI5-Ps-RE7" eventType="touchUpInside" id="Omm-M9-msa"/>
+                                                    <action selector="tapAddPhotoButton:" destination="KI5-Ps-RE7" eventType="touchUpInside" id="Gta-2I-efH"/>
                                                 </connections>
                                             </view>
                                         </subviews>

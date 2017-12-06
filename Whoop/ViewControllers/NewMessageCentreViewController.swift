@@ -92,7 +92,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     */
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 12
+        return 13
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -126,8 +126,10 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             return tableView.dequeueReusableCell(withIdentifier: "CellWithNote")!
         case 5:
             return tableView.dequeueReusableCell(withIdentifier: "CityCellWithNote")!
+        case 6:
+            return tableView.dequeueReusableCell(withIdentifier: "PlumberReviewCell")!
             
-        case 7:
+        case 8:
             return getCardsBannerCell(indexPath: indexPath)
         default:
             return getDealsCell(section: indexPath.section)
@@ -135,7 +137,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print(indexPath)
         
     }
     
@@ -170,29 +172,41 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     func getCardsBannerCell(indexPath: IndexPath) -> UITableViewCell  {
         let cardsDetails: [CardsDetails] = [
-            CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
-            CardsDetails(title: "Car Breakdown insurance", description: "There are 96000 cars deals left in London 4600 have been unlocked there.", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_money_on_car_breakdown")),
+            CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "brand_broadband"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
+            CardsDetails(title: "Car Breakdown insurance", description: "There are 96000 cars deals left in London 4600 have been unlocked there.", userImage: #imageLiteral(resourceName: "blue_car_break"), bannerImage: #imageLiteral(resourceName: "save_money_on_car_breakdown")),
             
-            CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive.Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
+            CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive.Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "conveyancer_deal"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
             
-            CardsDetails(title:"Yummy! Cheaper Takeaway Pizza" , description: "Popular takeaways can't wait to Whoop! You happy", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
+            CardsDetails(title:"Yummy! Cheaper Takeaway Pizza" , description: "Popular takeaways can't wait to Whoop! You happy", userImage: #imageLiteral(resourceName: "using_deal"), bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
             
             
             CardsDetails(title: "Travel Insurande" , description:"Pre exciting medical conditions your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence"))
         ]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CardsCell") as? CardsCell {
+            
+//            if tempIndexStore == 0{
+//                cell.hyperLinkLabel.textColor = UIColor.black
+//                let textToChange = "The deal is unlocked, Unlocked by: Sandip Gopani"
+//                let attributedString    = NSMutableAttributedString(string: textToChange)
+//                let range               = (textToChange as NSString).range(of: "The deal is unlocked, Unlocked by:")
+//                attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.colorWithHexString(hex: "FE8B3A"), range: range)
+//
+//                cell.hyperLinkLabel.attributedText = attributedString
+//            }
             cell.set(data: cardsDetails, selectedIndex: tempIndexStore) { direction, index in
                 self.tempIndexStore = index
                 self.tableView.reloadRows(at: [indexPath], with: direction)
             }
+            cell.unlockHomesDeal.tag = indexPath.section
+            cell.unlockHomesDeal.addTarget(self, action: #selector(self.tapToCardDeals(_:)), for: .touchUpInside)
             return cell
         }
         return UITableViewCell()
     }
     
     func getDealsCell(section: Int) -> UITableViewCell  {
-        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3, 11: 4]
+        let indexHandler: [Int: Int] = [7: 0, 9: 1, 10: 2, 11: 3, 12: 4]
         let imageTextData: [ImageTextTuple] = [
             (#imageLiteral(resourceName: "imsurence_deals"),"Insurance Deals"),
             (#imageLiteral(resourceName: "vehicle_deals"),"Vehicle Deals"),
@@ -211,8 +225,14 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         }
         return UITableViewCell()
     }
+     @IBAction func tapToCardDeals(_ sender: UIButton) {
+        if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingUnlockDealViewController") as? SettingUnlockDealViewController{
+            initVC.isDealToUnlock = true
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
     @IBAction func tapToDeals(_ sender: UIButton) {
-        let indexHandler: [Int: Int] = [6: 0, 8: 1, 9: 2, 10: 3, 11: 4]
+        let indexHandler: [Int: Int] = [7: 0, 9: 1, 10: 2, 11: 3, 12: 4]
         var vcTitle = ""
         if let iPath = indexHandler[sender.tag]{
 //            let indexPathDeal = IndexPath(row:iPath , section: sender.tag)
@@ -254,6 +274,14 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
        
 
         
+    }
+    @IBAction func tapSeeBrandsButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Insurance")
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Insurance")
+            self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
+        }
     }
     
     
