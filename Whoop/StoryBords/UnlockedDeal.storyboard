@@ -56,13 +56,13 @@
                                             <action selector="tapToBack:" destination="QWt-9Y-6rP" eventType="touchUpInside" id="tza-BV-o1l"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-iH-hGs">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TD-iH-hGs">
+                                        <rect key="frame" x="55" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
@@ -420,13 +420,13 @@ code you can boost your savings</string>
                                             <action selector="tapToBack:" destination="OBS-w5-iVq" eventType="touchUpInside" id="gKD-Bs-7iV"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uya-Fj-hUM">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uya-Fj-hUM">
+                                        <rect key="frame" x="55" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
@@ -660,13 +660,13 @@ code you can boost your savings</string>
                                             <action selector="tapToBack:" destination="JfT-RO-M2j" eventType="touchUpInside" id="Wuk-bL-o6D"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhoopMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtn-yS-6UL">
-                                        <rect key="frame" x="55" y="40" width="83.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtn-yS-6UL">
+                                        <rect key="frame" x="55" y="40" width="151.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="WhoopMe"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Whoop! Me Happy"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>

@@ -55,6 +55,7 @@ class Header_Data : NSObject {
     var backgroundImageName : String = ""
     var category : String = ""
     
+    
     override init() {
         
     }
@@ -240,8 +241,8 @@ extension UnlockDealDetailVC: UITableViewDelegate,UITableViewDataSource{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
 //            let dic = headerData
-            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Tradespeople")
-            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Tradespeople")
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Tradespeople", atIndex: sender.tag)
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Tradespeople", data: arrInsuranceData[sender.tag])
             self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
         }
         
