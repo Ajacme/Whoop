@@ -183,8 +183,9 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
             let dic = headerData
-            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: headerData.category)
-            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: headerData.category)
+            print(sender.tag)
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: headerData.category, atIndex: sender.tag)
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: headerData.category, data: arrInsuranceData[sender.tag])
             self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
         }
     }
@@ -371,23 +372,86 @@ extension WebDealDetailVC: UITableViewDelegate,UITableViewDataSource{
 class BrandList {
     
     // Header View Data
-    public func getDataForHeader(dealName:String) ->[String : Any]{
+    public func getDataForHeader(dealName:String, data : Insurance_data) ->[String : Any]{
         var headerData = [String : Any]()
         print(dealName)
         switch dealName {
             
         case "Insurance":
-                headerData = ["title" : "Use a deal you've unlocked"]
+            
+            switch data.title {
+                
+            case "Travel Insurance":
+                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance", "subcategory" : "Travel Insurance"]
+                
+            case "Travel Insurance\n( Medical conditions )":
+                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance","subcategory" : "Travel Insurance\n( Medical conditions )"]
+                
+            case "Car breakdown":
+                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance","subcategory" : "Car breakdown"]
+                
+            default:
+                return headerData
+            }
+            
+//                headerData = ["title" : "Use a deal you've unlocked"]
             
         case "Tradespeople":
-            headerData = ["title" : "Use a deal you've unlocked"]
+
+            switch data.title {
+                
+            case "Plumber":
+                headerData = ["title" : "Use a deal you've unlocked", "category" : "Tradespeople","subcategory" : "Plumber"]
+                
+            default:
+                return headerData
+            }
+            
+//            headerData = ["title" : "Use a deal you've unlocked"]
             
         case "Technology":
-            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+            
+            switch data.title {
+                
+            case "Broadband":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Technology", "subcategory" : "Broadband"]
+                
+            case "Mobile":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Technology", "subcategory" : "Mobile"]
+                
+            default:
+                return headerData
+            
+            }
+//            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+            
         case "Moving Home":
-            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+
+            switch data.title {
+                
+            case "Conveyancer Deal":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Moving Home", "subcategory" : "Conveyancer Deal"]
+                
+            case "Home Removal Deal":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Moving Home", "subcategory" : "Home Removal Deal"]
+            default:
+                return headerData
+            }
+//            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
         case "My Vehicle":
-            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+    
+            switch data.title {
+                
+            case "Car MOT and Services Deal":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "My Vehicle", "subcategory" : "Car MOT and Services Deal"]
+                
+            case "Car Tyres Deal":
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "My Vehicle", "subcategory" : "Car Tyres Deal"]
+                
+            default:
+                return headerData
+            }
+//            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
             
         default:
             return headerData
@@ -395,39 +459,55 @@ class BrandList {
         
         return headerData
     }
-    public func getDataForView(dealName:String) ->[[String : Any]]{
+    public func getDataForView(dealName:String, atIndex:Int) ->[[String : Any]]{
         var arrScrollData = [[String : Any]] ()
         switch dealName {
         case "Insurance":
-           
-            arrScrollData = [
-                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+            
+            switch atIndex {
                 
+            case 0:
+                arrScrollData = [["image" : "coreforyoulogo", "title" : "Cover For You".localized,"desc":"Travel Insurance that is as unique as you are".localized,"bgImage" : "bg_brand_broad", "category":"Insurance"]]
+                break
                 
-                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+            case 1:
+                 arrScrollData = [["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]]
+                break
                 
+            case 2:
+                arrScrollData = [["image" : "whoop!_me_happy_face", "title" : "Start Rescue".localized,"desc":"We have five different levels of cheap breakdown cover for you to choose from".localized,"bgImage" : "orange_banner", "category":"Insurance"]]
+               
+                break
                 
-                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
+            default:
+                break
+            }
+//            arrScrollData = [["image" : "whoop!_me_happy_face", "title" : "Start Rescue".localized,"desc":"We have five different levels of cheap breakdown cover for you to choose from".localized,"bgImage" : "orange_banner", "category":"Insurance"],
+//                             
+//                             ["image" : "coreforyoulogo", "title" : "Cover For You".localized,"desc":"Travel Insurance that is as unique as you are".localized,"bgImage" : "bg_brand_broad", "category":"Insurance"],
+//                             
+//                             ["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]
+//            ]
             
         case "Tradespeople":
             
             arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Start Rescue".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Tradespeople"]]
+                    ["image" : "plumber", "title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Tradespeople"]]
             
         case "Technology":
             arrScrollData = [
-                ["image" : "brand_broadband","selected_image" :"brand_broadband","title" : "Broadband".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_brand_broad", "message" : "Expires in 45 days", "category":"Technology"]]
+                ["image" : "BT_home", "title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
             
         case "My Vehicle":
             arrScrollData = [
-                ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
+                ["image" : "myvehicles", "title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
+                ["image" : "cartyres", "title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
             
         case "Moving Home":
             
             arrScrollData = [
-                ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
+                ["image" : "conveyancer_deal", "title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home", "title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
             
         default:
             return arrScrollData
@@ -435,56 +515,3 @@ class BrandList {
         return arrScrollData
     }
 }
-
-
-/*
- public func getDataForHeader(dealName:String, isDealToUnlock:Bool) ->[String : Any]{
- var headerData = [String : Any]()
- 
- switch dealName {
- 
- case "Insurance":
- if isDealToUnlock{
- 
- headerData = ["image" : "insurance","title" : "Insurance","desc" : "Here are your home's insurance deals. Tap the ones you want to unlock this month","bgImage" : "bg_ins", "category":"Insurance"]
- 
- }else{
- 
- headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Insurance"]
- }
- case "Tradespeople":
- if isDealToUnlock{
- headerData = ["image" : "tradeperson","title" : "Tradesperson","desc" : " Here are your home's tradespeople deals. Tap the ones you want to unlock this month","bgImage" : "bg_tra", "category":"Tradespeople"]
- }else{
- headerData = ["image" : "info_tra","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "category":"Tradespeople"]
- }
- 
- 
- case "Technology":
- if isDealToUnlock{
- headerData = ["image" : "technology","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tec", "category":"Technology"]
- }else{
- headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
- }
- case "My Vehicle":
- if isDealToUnlock{
- headerData = ["image" : "myvehicles","title" : "My Vehicle","desc" : " Here are your home's vehicle deals. Unlock the ones you need","bgImage" : "bg_veh", "category":"My Vehicle"]
- }else{
- headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"My Vehicle"]
- }
- case "Moving Home":
- if isDealToUnlock{
- headerData = ["image" : "moving_home","title" : "Moving Home","desc" : " Here are your home's Moving Home deals. Unlock the ones you need","bgImage" : "bg_mov", "category":"Moving Home"]
- }else{
- headerData = ["image" : "info_white","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Moving Home"]
- }
- 
- default:
- return headerData
- }
- 
- return headerData
- 
- }
- 
- */
