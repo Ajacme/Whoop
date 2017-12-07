@@ -447,6 +447,7 @@ class BrandList {
                 
             case "Car Tyres Deal":
                 headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "My Vehicle", "subcategory" : "Car Tyres Deal"]
+                break
                 
             default:
                 return headerData
@@ -455,6 +456,7 @@ class BrandList {
             
         default:
             return headerData
+//            break
         }
         
         return headerData
@@ -471,7 +473,8 @@ class BrandList {
                 break
                 
             case 1:
-                 arrScrollData = [["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]]
+                arrScrollData = [["image" : "coreforyoulogo", "title" : "Cover For You".localized,"desc":"Travel Insurance that is as unique as you are".localized,"bgImage" : "bg_brand_broad", "category":"Insurance"]]
+//                 arrScrollData = [["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]]
                 break
                 
             case 2:
@@ -495,22 +498,65 @@ class BrandList {
                     ["image" : "plumber", "title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Tradespeople"]]
             
         case "Technology":
-            arrScrollData = [
-                ["image" : "BT_home", "title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
+            
+            switch atIndex {
+            case 0:
+                arrScrollData = [
+                    ["image" : "BT_home", "title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
+                break
+                
+            case 1:
+                arrScrollData = [
+                    ["image" : "vodafone", "title" : "Vodafone".localized,"desc":"".localized,"bgImage" : "bg_mobile", "category":"Technology"]]
+                break
+                
+            default:
+                break
+            }
+            
             
         case "My Vehicle":
-            arrScrollData = [
+            
+            switch atIndex {
+            case 0:
+                arrScrollData = [
+                    ["image" : "autoSaveGarage", "title" : "AutoSave Garage".localized,"desc":"We're your local and approved MOT mechanic ".localized,"bgImage" : "myVehicle_bg", "message" : "Expires in 45 days", "category":"My Vehicle"]]
+                break
+                
+            case 1:
+                arrScrollData = [
+                    ["image" : "autoSaveGarage", "title" : "AutoSave Garage".localized,"desc":"We're your local and approved MOT mechanic ".localized,"bgImage" : "myVehicle_bg", "message" : "Expires in 45 days", "category":"My Vehicle"]]
+                break
+                
+            default:
+                break
+            }
+            /*arrScrollData = [
                 ["image" : "myvehicles", "title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                ["image" : "cartyres", "title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
+                ["image" : "cartyres", "title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]*/
             
         case "Moving Home":
             
-            arrScrollData = [
-                ["image" : "conveyancer_deal", "title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                    ["image" : "moving_home", "title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
+            switch atIndex {
+                
+            case 0:
+                arrScrollData = [
+                    ["image" : "bright&co", "title" : "Bright&Co".localized,"desc":"We're proud to be your local Whoop! conveyancers ".localized,"bgImage" : "movingHome_bg", "message" : "Expires in 45 days", "category":"Moving Home"]]
+                break
+                
+            case 1:
+                arrScrollData = [
+                    ["image" : "bright&co", "title" : "Bright&Co".localized,"desc":"We're proud to be your local Whoop! conveyancers ".localized,"bgImage" : "movingHome_bg", "message" : "Expires in 45 days", "category":"Moving Home"]]
+                break
+                
+            default:
+                break
+            }
+            
             
         default:
             return arrScrollData
+            
         }
         return arrScrollData
     }

@@ -290,6 +290,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         
         var arrScrollData = [[String : Any]]()
         var  arrInsuranceData = [Insurance_data]()
+
         if arrScrollData.count <= 0{
             arrScrollData = [
                 ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
