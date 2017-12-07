@@ -277,9 +277,39 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     }
     @IBAction func tapSeeBrandsButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var arrScrollData = [[String : Any]]()
+        var  arrInsuranceData = [Insurance_data]()
+        
+        
+        if arrScrollData.count <= 0{
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
+            
+        }
+        
+        for dic in arrScrollData
+        {
+            let tableData = Insurance_data()
+            tableData.title = dic["title"] as! String
+            tableData.imageName = dic["image"] as! String
+            tableData.displayMessage = dic["message"] as! String
+            tableData.desc = dic["desc"] as! String
+            tableData.isGetQuotes = false
+            tableData.selectedBGImage = dic["selected_image"] as! String
+            tableData.bgImage = dic["bgImage"] as! String
+            arrInsuranceData.append(tableData)
+        }
+        
         if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
-            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Insurance")
-            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Insurance")
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Insurance", atIndex: 0)
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Insurance", data: arrInsuranceData[0])
             self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
         }
     }

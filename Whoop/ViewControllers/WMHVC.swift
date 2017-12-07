@@ -82,7 +82,7 @@ class WMHVC: UIViewController,UITextFieldDelegate {
         tblDataList.tableHeaderView = viewtblHeader
         
         //settblListData
-        arrtblData  = [["image" : "vodafone","image_bg" : "background","selected_image" :"","title" : "Vodafone","Desc":""],["image" : "goodtogo","image_bg" : "goodtogo_bg","selected_image" :"","title" : "Good to go","Desc":"Travel Insurance that is as unique as you are"],["image" : "coreforyoulogo","image_bg" : "coreforyou_bg","selected_image" :"","title" : "Cover for you","Desc":"Travel Insurance with cover for medical conditions and no age limit"]]
+        arrtblData  = [["image" : "vodafone","image_bg" : "background","selected_image" :"","title" : "Vodafone","Desc":""],["image" : "goodtogo","image_bg" : "goodtogo_bg","selected_image" :"","title" : "Good to go","Desc":"Travel Insurance that is as unique as you are"],["image" : "coverforyou_bg","image_bg" : "coverforyou_bg","selected_image" :"","title" : "Cover for you","Desc":"Travel Insurance with cover for medical conditions and no age limit"]]
         
         let attributesDictionary = [NSAttributedStringKey.foregroundColor: UIColor (red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 0.4)]
         txttblHeader.attributedPlaceholder = NSAttributedString(string: "Search for your favourite brand",attributes:attributesDictionary)
@@ -230,15 +230,9 @@ class PriceList {
             case "Travel Insurance":
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "aspect_co_uk", "bannerImage": "bg_mov", "category": "Insurance", "subcategory": "subcategory"]
-                    break
-                    
-                case 1:
-                    headerData = ["title" : "Use a deal you've unlocked"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "Use a deal you've unlocked"]
+                    /* headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "Rescue_co_uk", "bannerImage": "bg_tec", "category": "Insurance", "subcategory": "Car breakdown"]*/
+//                    coverforyou_bg
+                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "coverforyoulogo", "bannerImage": "coverforyou_bg",  "category": "Insurance", "subcategory": "Travel Insurance"]
                     break
                     
                 default:
@@ -250,16 +244,9 @@ class PriceList {
             case "Travel Insurance\n( Medical conditions )":
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Use a deal you've unlocked"]
+                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "coverforyoulogo", "bannerImage": "coverforyou_bg",  "category": "Insurance", "subcategory": "Travel Insurance\n( Medical conditions )"]
                     break
                     
-                case 1:
-                    headerData = ["title" : "Use a deal you've unlocked"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "Use a deal you've unlocked"]
-                    break
                     
                 default:
                     break
@@ -272,7 +259,8 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "Rescue_co_uk", "bannerImage": "bg_tec", "category": "Insurance", "subcategory": "Car breakdown"]
-                                   
+//                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "category": "Insurance", "subcategory": "Car breakdown"]
+                    
                     break
                     
                 default:
@@ -294,9 +282,8 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "rightArrow", "bannerImage": "yellow_banner", "category": "Tradespeople", "subcategory": "Plumber"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "aspect_co_uk", "bannerImage": "yellow_banner", "category": "Tradespeople", "subcategory": "Plumber"]
                     break
-                    
                     
                 default:
                     break
@@ -317,15 +304,8 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "BT_home", "bannerImage": "bg_tec",  "category": "Technology", "subcategory": "Broadband"]
+//                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
                     break
                     
                 default:
@@ -338,15 +318,7 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "vodafone", "bannerImage": "bg_mobile",  "category": "Technology", "subcategory": "Mobile"]
                     break
                     
                 default:
@@ -368,15 +340,14 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+//                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "bright&co", "bannerImage": "movingHome_bg",  "category": "Moving Home", "subcategory": "Conveyancer Deal"]
+                    
                     break
                     
                 case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+//                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                   headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "bright&co", "bannerImage": "movingHome_bg",  "category": "Moving Home", "subcategory": "Conveyancer Deal"]
                     break
                     
                 default:
@@ -389,15 +360,11 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "bright&co", "bannerImage": "bg_tec",  "category": "Moving Home", "subcategory": "Home Removal Deal"]
                     break
                     
                 case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "category": "Moving Home", "subcategory": "Home Removal Deal"]
                     break
                     
                 default:
@@ -415,18 +382,16 @@ class PriceList {
             
             switch subcategory {
             case "Car MOT and Services Deal":
-                
+//                myVehicle_bg
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "autoSaveGarage", "bannerImage": "myVehicle_bg",  "category": "My Vehicle", "subcategory": "Car MOT and Services Deal"]
+                    
+
                     break
                     
                 case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
-                    
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "category": "My Vehicle", "subcategory": "Car MOT and Services Deal"]
                     break
                     
                 default:
@@ -472,16 +437,7 @@ class PriceList {
         
         print(category)
         print(subcategory)
-        /* Banner Image, Logo Image, Title Text, Number Of Days Label, Number of person, discounted price lable, normal price lable */
-        /*
-            var bannerImage : String = ""
-            var imageName : String = ""
-            var title : String = ""
-            var numberOfDays : String = ""
-            var numberOfAdults : String = ""
-            var price : String = ""
-            var normalPrice : String = ""
-         */
+        
         var arrScrollData = [[String : Any]] ()
         switch category {
         case "Insurance":
@@ -491,7 +447,8 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    arrScrollData = [["imageName" : "whoop!_me_happy_face","title" : "UK breakdown policy".localized,"bannerImage" : "bg_tec", "numberOfDays": "", "numberOfAdults": "1 Car", "price": "£36", "normalPrice": " normal: £47"]]
+                    arrScrollData = [["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
+                                     ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
                     
                     break
                     
@@ -512,11 +469,9 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    arrScrollData = [["imageName" : "whoop!_me_happy_face","title" : "UK breakdown policy".localized,"bannerImage" : "bg_tec", "numberOfDays": "", "numberOfAdults": "1 Car", "price": "£36", "normalPrice": " normal: £47"]]
-    
-                    break
-                    
-                
+                    arrScrollData = [["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
+                                     ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
+                        break
                     
                 default:
                     break
@@ -534,7 +489,7 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     
-                    arrScrollData = [["imageName" : "whoop!_me_happy_face","title" : "UK breakdown policy".localized,"bannerImage" : "bg_tec", "numberOfDays": "", "numberOfAdults": "1 Car", "price": "£36", "normalPrice": " normal: £47"]]
+                    arrScrollData = [["imageName" : "Rescue_co_uk", "title" : "UK breakdown policy".localized,"bannerImage" : "car_breakdown_banner", "numberOfDays": "", "numberOfAdults": "1 Car", "price": "£36", "normalPrice": " normal: £47"]]
                     
                     break
                     
@@ -570,7 +525,7 @@ class PriceList {
             case "Plumber":
                 switch atIndex {
                 case 0:
-                     arrScrollData = [["imageName" : "plumber_thumbnail","title" : "Fixed Fee Boiler Repair".localized,"bannerImage" : "bg_tec", "numberOfDays": "", "numberOfAdults": "includes labour and parts", "price": "£149.00", "normalPrice": " normal: £175"]]
+                     arrScrollData = [["imageName" : "plumber_thumbnail","title" : "Fixed Fee Boiler Repair".localized,"bannerImage" : "yellow_banner", "numberOfDays": "", "numberOfAdults": "includes labour and parts", "price": "£149.00", "normalPrice": " normal: £175"]]
                     break
                     
                 default:
@@ -595,17 +550,8 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
-                    break
+                        ["imageName" : "modem","title" : "BT superfast broadband".localized,"bannerImage" : "bg_tec", "numberOfDays": "", "numberOfAdults": "12,month contract", "price": "£34 per month", "normalPrice": " normal: £45 per month"]]
                     
-                case 1:
-                    arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
-                    break
-                    
-                case 2:
-                    arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
                     break
                     
                 default:
@@ -620,18 +566,11 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
+                        ["imageName" : "iPhone","title" : "iPhone 7".localized,"bannerImage" : "bg_mobile", "numberOfDays": "", "numberOfAdults": "12,month contract", "price": "£34 per month", "normalPrice": " normal: £45 per month"]]
+
                     break
                     
-                case 1:
-                    arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
-                    break
-                    
-                case 2:
-                    arrScrollData = [
-                        ["image" : "BT_home","selected_image" :"BT_home","title" : "Broadband".localized,"desc":"".localized,"bgImage" : "bg_tec", "category":"Technology"]]
-                    break
+                
                     
                 default:
                      return arrScrollData
@@ -656,22 +595,9 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
+                        ["imageName" : "MOT","title" : "MOT".localized,"bannerImage" : "myVehicle_bg", "numberOfDays": "", "numberOfAdults": "", "price": "£25", "normalPrice": " normal: £38"]]
                     break
-                    
-                case 1:
-                    arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
-                    break
-                    
-                case 2:
-                    arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
-                    break
-                    
+
                 default:
                     break
                 }
@@ -683,22 +609,10 @@ class PriceList {
                 switch atIndex {
                 case 0:
                     arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
-                    break
+                        ["imageName" : "MOT","title" : "MOT".localized,"bannerImage" : "myVehicle_bg", "numberOfDays": "", "numberOfAdults": "", "price": "£25", "normalPrice": " normal: £38"]]
                     
-                case 1:
-                    arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
                     break
-                    
-                case 2:
-                    arrScrollData = [
-                        ["image" : "myvehicles","selected_image" :"gray_myvehicles","title" : "Car MOT and Services Deal".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_veh", "message" : "Expires in 45 days", "category":"My Vehicle"],
-                        ["image" : "cartyres","selected_image" :"gray_cartyres","title" : "Car Tyres Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_veh", "message" : "Uses 1 credit", "category":"My Vehicle"]]
-                    break
-                    
+
                 default:
                     break
                 }
@@ -720,23 +634,14 @@ class PriceList {
             case "Conveyancer Deal":
                 switch atIndex {
                 case 0:
-                    arrScrollData = [
-                        ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
-                    break
                     
-                case 1:
-                    arrScrollData = [
-                        ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
-                    break
+                    arrScrollData = [["imageName" : "conveyance", "title" : "Fixed Free Conveyancing".localized,"bannerImage" : "movingHome_bg", "numberOfDays": "", "numberOfAdults": "", "price": "£340", "normalPrice": " normal: £456"]]
                     
-                case 2:
-                    arrScrollData = [
+                    /*arrScrollData = [
                         ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
+                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]*/
                     break
-                    
+        
                 default:
                     break
                 }
@@ -747,22 +652,9 @@ class PriceList {
             case "Home Removal Deal":
                 switch atIndex {
                 case 0:
-                    arrScrollData = [
-                        ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
+                    arrScrollData = [["imageName" : "conveyance", "title" : "Fixed Free Conveyancing".localized,"bannerImage" : "movingHome_bg", "numberOfDays": "", "numberOfAdults": "", "price": "£340", "normalPrice": " normal: £456"]]
                     break
                     
-                case 1:
-                    arrScrollData = [
-                        ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
-                    break
-                    
-                case 2:
-                    arrScrollData = [
-                        ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                        ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]]
-                    break
                     
                 default:
                     break
