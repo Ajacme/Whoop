@@ -478,7 +478,7 @@ class BrandList {
                 break
                 
             case 2:
-                arrScrollData = [["image" : "whoop!_me_happy_face", "title" : "Start Rescue".localized,"desc":"We have five different levels of cheap breakdown cover for you to choose from".localized,"bgImage" : "orange_banner", "category":"Insurance"]]
+                arrScrollData = [["image" : "Rescue_co_uk", "title" : "Start Rescue".localized,"desc":"We have five different levels of cheap breakdown cover for you to choose from".localized,"bgImage" : "orange_banner", "category":"Insurance"]]
                
                 break
                 

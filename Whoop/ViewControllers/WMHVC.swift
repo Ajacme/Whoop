@@ -360,7 +360,7 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "bright&co", "bannerImage": "bg_tec",  "category": "Moving Home", "subcategory": "Home Removal Deal"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "bright&co", "bannerImage": "movingHome_bg",  "category": "Moving Home", "subcategory": "Home Removal Deal"]
                     break
                     
                 case 1:
@@ -391,7 +391,8 @@ class PriceList {
                     break
                     
                 case 1:
-                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "category": "My Vehicle", "subcategory": "Car MOT and Services Deal"]
+                    headerData =  ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "autoSaveGarage", "bannerImage": "myVehicle_bg",  "category": "My Vehicle", "subcategory": "Car MOT and Services Deal"]
+//                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "category": "My Vehicle", "subcategory": "Car MOT and Services Deal"]
                     break
                     
                 default:
@@ -404,16 +405,13 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData =  ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "autoSaveGarage", "bannerImage": "myVehicle_bg",  "category": "My Vehicle", "subcategory": "Car Tyres Deal"]
                     break
                     
                 case 1:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "autoSaveGarage", "bannerImage": "myVehicle_bg",  "category": "My Vehicle", "subcategory": "Car Tyres Deal"]
                     break
                     
-                case 2:
-                    headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
-                    break
                     
                 default:
                     break
@@ -447,8 +445,10 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    arrScrollData = [["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
-                                     ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
+                    arrScrollData = [
+                        ["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
+                        
+                        ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
                     
                     break
                     

@@ -292,14 +292,8 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         var  arrInsuranceData = [Insurance_data]()
 
         if arrScrollData.count <= 0{
-            arrScrollData = [
-                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
-                
-                
-                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
-                
-                
-                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
+           
+            arrScrollData = [["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
             
         }
         
@@ -308,10 +302,10 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             let tableData = Insurance_data()
             tableData.title = dic["title"] as! String
             tableData.imageName = dic["image"] as! String
-            tableData.displayMessage = dic["message"] as! String
+            //            tableData.displayMessage = dic["message"] as! String
             tableData.desc = dic["desc"] as! String
             tableData.isGetQuotes = false
-            tableData.selectedBGImage = dic["selected_image"] as! String
+            //            tableData.selectedBGImage = dic["selected_image"] as! String
             tableData.bgImage = dic["bgImage"] as! String
             arrInsuranceData.append(tableData)
         }
