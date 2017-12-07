@@ -74,11 +74,22 @@ class CardsCell: UITableViewCell {
             bannerViewHeight.constant = 40
         }
         
+        if record.title == "Travel Insurance" && pageIndex == 4 || pageIndex == 9{
+            let textToChange = "( Pre existing medical conditions ) your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions"
+            let attributedString    = NSMutableAttributedString(string: textToChange)
+            let range               = (textToChange as NSString).range(of: "( Pre existing medical conditions )")
+            attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 17), range: range)
+            
+            self.detailsLabel.attributedText = attributedString
+        }else{
+            detailsLabel.text = record.description
+        }
+        
         if record.title == "Big brands and local businesses can't wait to Whoop! You happy with lower prices." && pageIndex == 0{
             self.hyperLinkLabel.textColor = UIColor.black
-            let textToChange = "The deal is unlocked, Unlocked by: Sandip Gopani"
+            let textToChange = "You have added \nUnlocked by: Sandip Gopani"
             let attributedString    = NSMutableAttributedString(string: textToChange)
-            let range               = (textToChange as NSString).range(of: "The deal is unlocked, Unlocked by:")
+            let range               = (textToChange as NSString).range(of: "You have added \nUnlocked by:")
             attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.colorWithHexString(hex: "FE8B3A"), range: range)
             
             self.hyperLinkLabel.attributedText = attributedString

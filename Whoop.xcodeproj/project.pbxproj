@@ -27,6 +27,8 @@
 		082A28951FCDC35600B39D0A /* ViewForCodePopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082A28931FCDC35600B39D0A /* ViewForCodePopUp.xib */; };
 		082A28961FCDC52B00B39D0A /* UnlockDealDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082A286E1FCDAEBE00B39D0A /* UnlockDealDetailVC.swift */; };
 		082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */; };
+		0839C29A1FD958C900507EE8 /* PaymentSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839C2991FD958C900507EE8 /* PaymentSettingViewController.swift */; };
+		0839C29C1FD98BBF00507EE8 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */; };
 		086AA59C1FCD7E6100707528 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5981FCD7E6000707528 /* Localizable.swift */; };
 		086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5991FCD7E6000707528 /* MTUserDefault.swift */; };
 		086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA59A1FCD7E6000707528 /* CustomToolBar.swift */; };
@@ -113,6 +115,8 @@
 		082A28921FCDC35500B39D0A /* ViewForCodePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewForCodePopUp.swift; sourceTree = "<group>"; };
 		082A28931FCDC35600B39D0A /* ViewForCodePopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewForCodePopUp.xib; sourceTree = "<group>"; };
 		082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUnlockDealViewController.swift; sourceTree = "<group>"; };
+		0839C2991FD958C900507EE8 /* PaymentSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSettingViewController.swift; sourceTree = "<group>"; };
+		0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		086AA5941FCD6FF000707528 /* BoostDealDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoostDealDetailVC.swift; sourceTree = "<group>"; };
 		086AA5951FCD6FF800707528 /* SeeCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeCodeVC.swift; sourceTree = "<group>"; };
 		086AA5981FCD7E6000707528 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -276,6 +280,15 @@
 				082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */,
 			);
 			path = "Unlocked Deals";
+			sourceTree = "<group>";
+		};
+		0839C2981FD958A600507EE8 /* Payment Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0839C2991FD958C900507EE8 /* PaymentSettingViewController.swift */,
+				0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */,
+			);
+			path = "Payment Settings";
 			sourceTree = "<group>";
 		};
 		086AA5A61FCD7F8900707528 /* Pulse */ = {
@@ -506,6 +519,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0839C2981FD958A600507EE8 /* Payment Settings */,
 				0896652E1FD8573600C8684F /* Review */,
 				087FB6961FD5AFEB00F934AB /* Whoop Home Button */,
 				08BFA4F81FCF004500294D88 /* Personal Button */,
@@ -737,6 +751,7 @@
 				F3152E451FB22EEC000E03B7 /* OnBoardingViewController.swift in Sources */,
 				8BDAF9281FB8CF1100135FFB /* DealsCell.swift in Sources */,
 				F3152E461FB22EEC000E03B7 /* SignInVC.swift in Sources */,
+				0839C29C1FD98BBF00507EE8 /* CardListViewController.swift in Sources */,
 				08BFA4F11FCEFDE500294D88 /* HomeWhoopOnBoardingVC.swift in Sources */,
 				082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */,
 				089665301FD8576D00C8684F /* UserReviewsViewController.swift in Sources */,
@@ -750,6 +765,7 @@
 				08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */,
 				8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */,
 				F3152E441FB22EEC000E03B7 /* ForgotPasswordVC.swift in Sources */,
+				0839C29A1FD958C900507EE8 /* PaymentSettingViewController.swift in Sources */,
 				089665321FD857C100C8684F /* WriteReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,7 +908,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -915,7 +931,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

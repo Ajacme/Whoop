@@ -13,7 +13,7 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
 
     @IBOutlet weak var dealsStackView: UIStackView!
     @IBOutlet weak var whoopButtonImageView: UIImageView!
-    @IBOutlet weak var descriptionStackView: UIStackView!
+ 
     @IBOutlet var yourHomeLabel: UILabel!
     @IBOutlet var secondLineLabel: UILabel!
     @IBOutlet weak var buttonsStackView: UIStackView!
@@ -22,6 +22,8 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     @IBOutlet var lockedUnlockedLabel: UILabel!
     @IBOutlet var circleViews: [UIView]!
 
+    @IBOutlet var inviteIconText: UILabel!
+    @IBOutlet var lockIconText: UILabel!
     
     @IBOutlet var addPhotoButton: UIButton!
     @IBOutlet var boostDealLbl: UILabel!
@@ -82,6 +84,9 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         
         if isRed{
             
+            lockIconText.text = "Your home's button is locked"
+            inviteIconText.text = "Invite the people you live with"
+            
             inviteIcon.setImage(#imageLiteral(resourceName: "invite_grey"), for: .normal)
             inviteIcon.tintColor = UIColor.groupTableViewBackground
             whiteTickIcon.tintColor =  UIColor.groupTableViewBackground
@@ -89,18 +94,23 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
             notificationView.backgroundColor = UIColor.colorWithHexString(hex: "F52404")
             lockedUnlockedLabel.text = "Locked"
             
-            labelText = "Unlock your home's Whoop! Button \nYou save more money"
-//            secondLineLabel.text = "You save more money"
-            secondLabelHeight.constant = -5
-            yourHomeLabel.textColor = UIColor.white
-//            secondLineLabel.textColor = UIColor.white
-
+            labelText = "Verify address to unlock your button"
+            
+            attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.white, range: range)
             yourHomeLabel.text = labelText
+            secondLineLabel.attributedText = attributedString
+            
+            secondLineLabel.textColor = UIColor.white
+            yourHomeLabel.textColor = UIColor.white
+
             boostDealLbl.text = "0"
             unlockedDealLbl.text = "0"
             dealLeftToUnlocklbl.text = "3"
         }
         if isGreen{
+            
+            inviteIconText.text = "Invite the people you live with"
+            
             inviteIcon.tintColor = UIColor.colorWithHexString(hex: "FE8B3A")
             addPhotoButton.isHidden = false
             addPhotoButtonText.isHidden = false
@@ -120,6 +130,11 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
            
         }
         if isYellow{
+            
+            lockIconText.text = "Your home's button is locked"
+            inviteIconText.text = "Invite the people you live with"
+            
+            inviteIcon.setImage(#imageLiteral(resourceName: "invite_grey"), for: .normal)
             inviteIcon.tintColor = UIColor.groupTableViewBackground
             whiteTickIcon.setImage(#imageLiteral(resourceName: "tick-white"), for: .normal)
             whiteTickIcon.tintColor =  UIColor.groupTableViewBackground

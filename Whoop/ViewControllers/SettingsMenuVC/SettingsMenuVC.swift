@@ -73,6 +73,11 @@ class SettingsMenuVC: UIViewController {
                                                                  imgDropDown: #imageLiteral(resourceName: "DropDownRight"),
                                                                  imgDropDownBottom: #imageLiteral(resourceName: "DropDownBottom"),
                                                                  isSectionselected: false))
+        modelData.append(ModelSectionDataSettingMenuSection.init(strSectionTitle: "Wallet".localized,
+                                                                 imgSectionImage: #imageLiteral(resourceName: "wallet"),
+                                                                 imgDropDown: #imageLiteral(resourceName: "DropDownRight"),
+                                                                 imgDropDownBottom: #imageLiteral(resourceName: "DropDownBottom"),
+                                                                 isSectionselected: false))
 
 }
     
@@ -81,6 +86,7 @@ class SettingsMenuVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        tableViewSettingMenu.reloadData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -186,6 +192,11 @@ extension SettingsMenuVC: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(initVC, animated: true)
         }
 
+        if sender.tag == 6 {
+            let Profile = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let initVC = Profile.instantiateViewController(withIdentifier: "CardListViewController") as! CardListViewController
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
         
         //Open Section with animation
         if sender.tag == 0 {

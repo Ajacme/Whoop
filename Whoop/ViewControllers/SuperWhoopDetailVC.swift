@@ -100,7 +100,12 @@ class SuperWhoopDetailVC: UIViewController {
          dic1.updateValue("add_yourself", forKey: "imageName")
          dic1.updateValue("Is now Added", forKey: "lockText")
     */
-        arrScrollData  = [["imageName" : "blue-travel-insurance","title" : "Travel Insurance deal".localized,"desc":"This deal is unlocked. Add yourself to \nunlock an extra saving if you use it in the future".localized,"displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : true, "lockText" : "Unlocked", "isLock":"true"],["imageName" : "add_yourself","title" : "Jakie Hughes".localized,"desc":"", "displayMessage" : "", "isAddedSuper" : true, "lockText" : "Is now Added", "isLock":"true"],["imageName" : "add","title" : "Add Yourself".localized,"desc":"Add 3 deals to activate\nyour Super Whoop! Saving".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"]]
+        arrScrollData  = [
+            ["imageName" : "blue-travel-insurance","title" : "Travel Insurance deal".localized,"desc":"This deal is unlocked. Add yourself to \nunlock an extra saving if you use it in the future".localized,"displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : true, "lockText" : "Unlocked", "isLock":"true"],
+            
+            ["imageName" : "add_yourself","title" : "Jakie Hughes".localized,"desc":"", "displayMessage" : "", "isAddedSuper" : true, "lockText" : "Is now Added", "isLock":"true"],
+            
+            ["imageName" : "add","title" : "Add Yourself".localized,"desc":"Tap + to add yourself ".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"]]
         tableViewMain.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
         
         for dic in arrScrollData

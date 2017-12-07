@@ -172,7 +172,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     
     func getCardsBannerCell(indexPath: IndexPath) -> UITableViewCell  {
         let cardsDetails: [CardsDetails] = [
-            CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "brand_broadband"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
+            CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
             CardsDetails(title: "Car Breakdown insurance", description: "There are 96000 cars deals left in London 4600 have been unlocked there.", userImage: #imageLiteral(resourceName: "blue_car_break"), bannerImage: #imageLiteral(resourceName: "save_money_on_car_breakdown")),
             
             CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive.Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "conveyancer_deal"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
@@ -180,7 +180,17 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             CardsDetails(title:"Yummy! Cheaper Takeaway Pizza" , description: "Popular takeaways can't wait to Whoop! You happy", userImage: #imageLiteral(resourceName: "using_deal"), bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
             
             
-            CardsDetails(title: "Travel Insurande" , description:"Pre exciting medical conditions your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence"))
+            CardsDetails(title: "Travel Insurance" , description:"( Pre existing medical conditions ) your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence")),CardsDetails(title: "Big brands and local businesses can't wait to Whoop! You happy with lower prices.", description: "Swipe to see some of your home's deals", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "unlockFirstdeal")),
+            
+            
+            CardsDetails(title: "Save big on Travel Insurance", description: "Annual, Single trip/nGoing away? Unlock your home's travel insurance deal. Big insurance can't wait to Whoop You Happy", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "save_money_on_car_breakdown")),
+            
+            CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive. Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "conveyancer_deal"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
+            
+            CardsDetails(title:"Takeaway Pizza offer" , description: "Popular takeaways can't wait to Whoop! You happy", userImage: #imageLiteral(resourceName: "using_deal"), bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
+            
+            
+            CardsDetails(title: "Travel Insurance" , description:"Pre existing medical conditions your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "medical_insurence"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence"))
         ]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CardsCell") as? CardsCell {
@@ -212,7 +222,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             (#imageLiteral(resourceName: "vehicle_deals"),"Vehicle Deals"),
             (#imageLiteral(resourceName: "tradesperson_deals"),"Tradesperson Deals"),
             (#imageLiteral(resourceName: "moving_home_deals"),"Moving Home Deals"),
-            (#imageLiteral(resourceName: "whoop!_me_happy_face"),"Technology Deals ( Mobile / Broadband )")
+            (#imageLiteral(resourceName: "broadband"),"Technology Deals ( Mobile / Broadband )")
         ]
         
         let currentData = imageTextData[indexHandler[section]!]
@@ -277,9 +287,37 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     }
     @IBAction func tapSeeBrandsButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var arrScrollData = [[String : Any]]()
+        var  arrInsuranceData = [Insurance_data]()
+        if arrScrollData.count <= 0{
+            arrScrollData = [
+                ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+                
+                
+                ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]]
+            
+        }
+        
+        for dic in arrScrollData
+        {
+            let tableData = Insurance_data()
+            tableData.title = dic["title"] as! String
+            tableData.imageName = dic["image"] as! String
+            tableData.displayMessage = dic["message"] as! String
+            tableData.desc = dic["desc"] as! String
+            tableData.isGetQuotes = false
+            tableData.selectedBGImage = dic["selected_image"] as! String
+            tableData.bgImage = dic["bgImage"] as! String
+            arrInsuranceData.append(tableData)
+        }
+        
         if let objSeeCodeVC = storyboard.instantiateViewController(withIdentifier: "WMHVC") as? WMHVC{
-            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Insurance")
-            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Insurance")
+            objSeeCodeVC.arrScrollData = BrandList().getDataForView(dealName: "Insurance", atIndex: 0)
+            objSeeCodeVC.headerViewData = BrandList().getDataForHeader(dealName: "Insurance", data: arrInsuranceData[0])
             self.navigationController?.pushViewController(objSeeCodeVC, animated: true)
         }
     }
