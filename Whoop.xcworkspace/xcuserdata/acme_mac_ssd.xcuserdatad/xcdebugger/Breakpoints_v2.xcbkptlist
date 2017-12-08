@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365520.91906"
+            timestampString = "534441249.470678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlocked Deals/SettingUnlockDealViewController.swift"
-            timestampString = "534365521.125727"
+            timestampString = "534441249.470938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlocked Deals/SettingUnlockDealViewController.swift"
-            timestampString = "534365521.173464"
+            timestampString = "534441249.497212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "260"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.173826"
+            timestampString = "534441249.4982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "374"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.174246"
+            timestampString = "534441249.498374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "378"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.181447"
+            timestampString = "534441249.498536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "380"
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.182217"
+            timestampString = "534441249.499033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "setUpHeader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.182663"
+            timestampString = "534441249.499237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "391"
@@ -207,8 +207,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
             endingLineNumber = "116"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.183017"
+            timestampString = "534441249.499437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "btnOurWhoopMeHappy(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.183366"
+            timestampString = "534441249.499586"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "btnOurWhoopMeHappy(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.183719"
+            timestampString = "534441249.499755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "438"
-            endingLineNumber = "438"
+            startingLineNumber = "454"
+            endingLineNumber = "454"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,13 +266,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.184081"
+            timestampString = "534441249.499873"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "PriceList"
-            landmarkType = "3">
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "WMHVC"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.PriceList.__allocating_init() -&gt; Whoop.PriceList"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/WMHVC.swift"
+                  timestampString = "534441254.622368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.PriceList.deinit"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/WMHVC.swift"
+                  timestampString = "534441254.625357"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.PriceList.__deallocating_deinit"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/WMHVC.swift"
+                  timestampString = "534441254.628744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.PriceList.init() -&gt; Whoop.PriceList"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/WMHVC.swift"
+                  timestampString = "534441254.632076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -282,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.184392"
+            timestampString = "534441249.5"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "446"
-            endingLineNumber = "446"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +360,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.184681"
+            timestampString = "534441249.500176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,11 +376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.184978"
+            timestampString = "534441249.500325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "450"
-            endingLineNumber = "450"
+            startingLineNumber = "466"
+            endingLineNumber = "466"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,7 +392,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.185344"
+            timestampString = "534441249.500455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "186"
@@ -346,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.185704"
+            timestampString = "534441249.500583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
+            startingLineNumber = "505"
+            endingLineNumber = "505"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.18607"
+            timestampString = "534441249.500717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "494"
-            endingLineNumber = "494"
+            startingLineNumber = "510"
+            endingLineNumber = "510"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,7 +440,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.186443"
+            timestampString = "534441249.500882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "481"
@@ -394,7 +456,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.186844"
+            timestampString = "534441249.501025"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "471"
@@ -410,7 +472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.187159"
+            timestampString = "534441249.501168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "466"
@@ -426,7 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/Unlock deal/WebDealDetailVC.swift"
-            timestampString = "534365521.18749"
+            timestampString = "534441249.501294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "469"
@@ -442,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.187826"
+            timestampString = "534441249.501438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "getDataForHeader(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.188131"
+            timestampString = "534441249.501607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "getDataForHeader(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.188417"
+            timestampString = "534441249.501718"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
             landmarkName = "getDataForHeader(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.188735"
+            timestampString = "534441249.501827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "642"
-            endingLineNumber = "642"
+            startingLineNumber = "658"
+            endingLineNumber = "658"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.189037"
+            timestampString = "534441249.501969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "643"
-            endingLineNumber = "643"
+            startingLineNumber = "659"
+            endingLineNumber = "659"
             landmarkName = "getDataForView(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/WMHVC.swift"
-            timestampString = "534365521.189338"
+            timestampString = "534441249.502134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "getDataForHeader(category:subcategory:atIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -543,8 +605,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
             endingLineNumber = "134"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -559,8 +621,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -575,8 +637,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
             endingLineNumber = "118"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -591,7 +653,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
             endingLineNumber = "131"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Whoop/ViewControllers/WMHVC.swift"
+            timestampString = "534441249.502426"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
