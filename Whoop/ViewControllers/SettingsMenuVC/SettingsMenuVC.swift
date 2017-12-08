@@ -224,6 +224,13 @@ extension SettingsMenuVC: UITableViewDelegate, UITableViewDataSource {
             }
            
         }
+        
+        if sender.tag == 3 {
+            if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SuperWhoopDetailVC") as? SuperWhoopDetailVC{
+                self.navigationController?.pushViewController(initVC, animated: true)
+            }
+        }
+        
         if sender.tag == 4 {
             let UnlockedDeal = UIStoryboard(name: "UnlockedDeal", bundle: Bundle.main)
             if let initVC = UnlockedDeal.instantiateViewController(withIdentifier: "SeeCodeVC") as? SeeCodeVC{

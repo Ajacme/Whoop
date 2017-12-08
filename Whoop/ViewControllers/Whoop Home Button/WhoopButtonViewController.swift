@@ -63,10 +63,7 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         addPhotoButton.layer.borderColor = UIColor.lightGray.cgColor
         
         buttonRGY.isUserInteractionEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-            self.customChatView()
-        })
-       
+      
         
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
@@ -179,7 +176,18 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         for circleView in circleViews {
             circleView.layer.cornerRadius = circleView.frame.width/2
         }
+        if CoreConfig.sharedInstance.isFirstEnter() == false{
+            animateTheSwipeUp()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.customChatView(invite: false)
+            })
+            
+            UserDefaults.standard.set(true, forKey: "isFirstEnter")
+        }
+       
         
+    }
+    func animateTheSwipeUp(){
         let animator1 = JHChainableAnimator(view: whoopButtonImageView)
         animator1?.moveY()(300)?.thenAfter()(0.01)?.moveY()(-300)?.makeOpacity()(1)?.animate()(0.37)
         
@@ -194,14 +202,24 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         
         let animator4 = JHChainableAnimator(view: buttonsStackView)
         animator4?.moveY()(200)?.thenAfter()(0.2)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
-        
     }
     
     // MARK: - Click events..
     @IBAction func tapRedNotificationBar(_ sender: Any) {
-        customChatView()
+        customChatView(invite: false)
     }
     
+    @IBAction func tapInviteIcon(_ sender: Any) {
+        if isRed || isYellow {
+            customChatView(invite: true)
+        }else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let objHomeVC = storyboard.instantiateViewController(withIdentifier: "InviteViewController") as?   InviteViewController{
+                self.navigationController?.pushViewController(objHomeVC, animated: true)
+            }
+            
+        }
+    }
     @IBAction func tapAddPhotoButton(_ sender: Any) {
       
         if let title = addPhotoButtonText.titleLabel?.text, title == "Add Photo"{
@@ -243,26 +261,31 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     
     
     // MARK: - CustumeView Design For PopUp
-    func customChatView()  {
+    func customChatView(invite:Bool)  {
         buttonRGY.isUserInteractionEnabled = false
         objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
         self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
         
         objCodePopUp.lblTitle.textAlignment = NSTextAlignment.center
-        if isGreen {
-            objCodePopUp.lblTitle.text = "Unlocked!"
-            objCodePopUp.lblDesc.text = "Your home's button is now unlocked. You can now access all of your home’s deals and invite the people you live with.\nRemember to add a photo to your button so the people you live with know it's you. Tap a profile to start. "
+        if invite{
+            objCodePopUp.lblTitle.text = "Invite"
+            objCodePopUp.lblDesc.text = "You can only invite the people you live with once you've verified your address"
         }else{
-            
-            if isYellow{
-                objCodePopUp.lblTitle.text = "Unique code"
-                objCodePopUp.lblDesc.text = "You've just requested a unique code to verify your address. It will arrive in 2 or 3 days. In the meantime you can use the deals we've added to your button."
+            if isGreen {
+                objCodePopUp.lblTitle.text = "Unlocked!"
+                objCodePopUp.lblDesc.text = "Your home's button is now unlocked. You can now access all of your home’s deals and invite the people you live with.\nRemember to add a photo to your button so the people you live with know it's you. Tap a profile to start."
             }else{
-                objCodePopUp.lblTitle.text = "Your home's Whoop! Button."
-                 objCodePopUp.lblDesc.text = "Verify your address to finishing unlocking your home's button and access all of your deals. If you've received an invite code enter it to join. For a quick start we’ve added 3 deals now to use straight away."
+                
+                if isYellow{
+                    objCodePopUp.lblTitle.text = "Unique code"
+                    objCodePopUp.lblDesc.text = "You've just requested a unique code to verify your address. It will arrive in 2 or 3 days. In the meantime you can use the deals we've added to your button."
+                }else{
+                    objCodePopUp.lblTitle.text = "Your home's Whoop! Button."
+                    objCodePopUp.lblDesc.text = "Verify your address to finishing unlocking your home's button and access all of your deals. If you've received an invite code enter it to join. For a quick start we’ve added 3 deals now to use straight away."
+                }
             }
-           
         }
+        
         
         objCodePopUp.backgroundColor = UIColor.clear
         self.view.addSubview(objCodePopUp)

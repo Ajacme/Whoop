@@ -91,6 +91,7 @@ class EmailPasswordVC: UIViewController, CustomToolBarDelegate, UITextFieldDeleg
     }
     
     // MARK: - Textfield tap Event
+    
     @objc func txtFieldUserNameOn(_ textField: UITextField) {
         self.view.endEditing(true)
         let initVC = self.storyboard?.instantiateViewController(withIdentifier: "NewEmailVC") as! NewEmailVC

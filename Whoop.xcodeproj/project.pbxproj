@@ -55,6 +55,8 @@
 		08BFA4F51FCEFDE500294D88 /* HomeWhoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BFA4EE1FCEFDE300294D88 /* HomeWhoopVC.swift */; };
 		08BFA4F71FCEFDE500294D88 /* EnterCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BFA4F01FCEFDE400294D88 /* EnterCodeVC.swift */; };
 		08BFA4FA1FCF005800294D88 /* WhoopHappyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BFA4F91FCF005700294D88 /* WhoopHappyViewController.swift */; };
+		08D140E61FDAD490001837E4 /* ViewFor3xPopUpHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D140E41FDAD48E001837E4 /* ViewFor3xPopUpHome.xib */; };
+		08D140E71FDAD490001837E4 /* ViewFor3xPopUpHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */; };
 		4DBB64EF492A101D1D37376B /* Pods_Whoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3B0AB2F669B61019252E9C /* Pods_Whoop.framework */; };
 		8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B084ABE1FB760ED0076FD70 /* ListingCell.swift */; };
 		8BDAF9281FB8CF1100135FFB /* DealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAF9271FB8CF1100135FFB /* DealsCell.swift */; };
@@ -148,6 +150,8 @@
 		08BFA4EE1FCEFDE300294D88 /* HomeWhoopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWhoopVC.swift; sourceTree = "<group>"; };
 		08BFA4F01FCEFDE400294D88 /* EnterCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterCodeVC.swift; sourceTree = "<group>"; };
 		08BFA4F91FCF005700294D88 /* WhoopHappyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoopHappyViewController.swift; sourceTree = "<group>"; };
+		08D140E41FDAD48E001837E4 /* ViewFor3xPopUpHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewFor3xPopUpHome.xib; sourceTree = "<group>"; };
+		08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFor3xPopUpHome.swift; sourceTree = "<group>"; };
 		0A3B0AB2F669B61019252E9C /* Pods_Whoop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whoop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA0F0BAF9CD9B79462BE206 /* Pods-ZaeemTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaeemTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaeemTest/Pods-ZaeemTest.release.xcconfig"; sourceTree = "<group>"; };
 		81082D69F141C8BC40712DF8 /* Pods-Whoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whoop/Pods-Whoop.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 		082A28911FCDC33800B39D0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */,
+				08D140E41FDAD48E001837E4 /* ViewFor3xPopUpHome.xib */,
 				087AD0091FCE9A4C000DD17D /* ViewFor3xPopUp.swift */,
 				087AD0061FCE9A26000DD17D /* ViewFor3xPopUp.xib */,
 				082A28921FCDC35500B39D0A /* ViewForCodePopUp.swift */,
@@ -630,6 +636,7 @@
 				F3152E2F1FB22EEC000E03B7 /* LatoLatin-Black.ttf in Resources */,
 				F3152E2D1FB22EEC000E03B7 /* Main.storyboard in Resources */,
 				086AA5B11FCD820B00707528 /* GothamBook.ttf in Resources */,
+				08D140E61FDAD490001837E4 /* ViewFor3xPopUpHome.xib in Resources */,
 				082A28951FCDC35600B39D0A /* ViewForCodePopUp.xib in Resources */,
 				F3152E2B1FB22EEC000E03B7 /* Assets.xcassets in Resources */,
 				F3152E391FB22EEC000E03B7 /* LatoLatin-LightItalic.ttf in Resources */,
@@ -757,6 +764,7 @@
 				089665301FD8576D00C8684F /* UserReviewsViewController.swift in Sources */,
 				F3152E2A1FB22EEC000E03B7 /* AppDelegate.swift in Sources */,
 				082A288D1FCDC2B800B39D0A /* SettingsMenuVC.swift in Sources */,
+				08D140E71FDAD490001837E4 /* ViewFor3xPopUpHome.swift in Sources */,
 				087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */,
 				086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */,
 				04AB239C1FC6B9E7002A628F /* WMHVC.swift in Sources */,
