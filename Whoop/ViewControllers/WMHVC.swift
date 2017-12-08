@@ -55,6 +55,9 @@ class WMHtblCellVC: UITableViewCell
     @IBOutlet weak var lblDesc: UILabel!
     
     @IBOutlet weak var btnOurWhoopMeHappy: UIButton!
+    
+    @IBOutlet weak var btnSeeOurReviews: UIButton!
+    
 }
 
 class WMHVC: UIViewController,UITextFieldDelegate {
@@ -170,6 +173,14 @@ class WMHVC: UIViewController,UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
+    
+    //MARK :- See Our Review Button Click Action
+    @objc func btnSeeOurReviewClicked(sender: UIButton) {
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "UserReviewsViewController") as! UserReviewsViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 //MARK: - Tableview Delegates And Datasource
@@ -190,7 +201,7 @@ extension WMHVC: UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "WMHtblCell") as! WMHtblCellVC
         
         let dic = arrInsuranceData[indexPath.row]
-        
+        print(dic)
         //set Cell Value
         cell.lblTitle.text = dic.title//dic["title"] as? String
         cell.lblDesc.text = dic.desc//dic["Desc"] as? String
@@ -199,6 +210,14 @@ extension WMHVC: UITableViewDelegate,UITableViewDataSource{
         cell.updateConstraintsIfNeeded()
         
         cell.btnOurWhoopMeHappy.tag = indexPath.row
+        
+        cell.btnSeeOurReviews.tag = indexPath.row
+        cell.btnSeeOurReviews.addTarget(self, action: #selector(WMHVC.btnSeeOurReviewClicked(sender:)), for: .touchUpInside)
+        if dic.title == "Plumber" {
+                cell.btnSeeOurReviews.isHidden = false
+        }else{
+            cell.btnSeeOurReviews.isHidden = true
+        }
         
         return cell
     }
@@ -244,7 +263,7 @@ class PriceList {
             case "Travel Insurance\n( Medical conditions )":
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "coverforyoulogo", "bannerImage": "coverforyou_bg",  "category": "Insurance", "subcategory": "Travel Insurance\n( Medical conditions )"]
+                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "goodtogo", "bannerImage": "goodtogo_bg",  "category": "Insurance", "subcategory": "Travel Insurance\n( Medical conditions )"]
                     break
                     
                     
@@ -469,8 +488,8 @@ class PriceList {
                 
                 switch atIndex {
                 case 0:
-                    arrScrollData = [["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
-                                     ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "coverforyou_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
+                    arrScrollData = [["imageName" : "brand1","title" : "Annual Multi Trip Policy".localized,"bannerImage" : "goodtogo_bg", "numberOfDays": "", "numberOfAdults": "1 adult", "price": "£57.86", "normalPrice": " normal: £75.00"],
+                                     ["imageName" : "brand2","title" : "Europe Single Trip Policy".localized,"bannerImage" : "goodtogo_bg", "numberOfDays": "", "numberOfAdults": "7 days, 1 adult", "price": "£34.00", "normalPrice": " normal: £39.90"]]
                         break
                     
                 default:
