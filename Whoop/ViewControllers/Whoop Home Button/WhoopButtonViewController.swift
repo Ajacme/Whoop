@@ -33,6 +33,7 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     @IBOutlet var addPhotoButtonText: UIButton!
     
     
+    @IBOutlet weak var whoopMeHappyButton: UIButton!
     @IBOutlet var buttonRGY: UIButton!
     @IBOutlet var inviteLabel: UILabel!
     @IBOutlet var inviteIcon: UIButton!
@@ -47,6 +48,8 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     var isYellow = false
     
     var isTakeImage = Bool()
+    
+    var pulseEffect : PulsingHaloLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -254,6 +257,36 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         
     }
 
+    @IBAction func tapToWhoopMeHappy(_ sender: Any) {
+        
+        if self.pulseEffect != nil {
+            self.pulseEffect.removeFromSuperlayer()
+        }
+        
+        self.pulseEffect = PulsingHaloLayer()
+        self.pulseEffect.haloLayerNumber = 7
+        self.pulseEffect.animationDuration = 3
+        self.pulseEffect.radius = 125.0
+        self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+        
+        
+        let verticalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.height / 2.0
+        let horizontalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.width / 2.0
+        let buttoncenter = CGPoint(x: horizontalCenter, y: verticalCenter)
+        self.pulseEffect.position = buttoncenter//cell.imgMiddleblue.center
+        self.whoopButtonImageView.layer.addSublayer(self.pulseEffect)
+        
+        self.pulseEffect.start()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+            self.pulseEffect.removeFromSuperlayer()
+        })
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

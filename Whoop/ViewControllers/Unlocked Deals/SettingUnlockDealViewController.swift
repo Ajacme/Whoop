@@ -168,7 +168,7 @@ class DealsToUnlockData{
             
         case "Technology":
             if isDealToUnlock{
-                headerData = ["image" : "technology","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tec", "category":"Technology"]
+                headerData = ["image" : "broadband","title" : "Technology","desc" : " Here are your home's exclusive Technology deals. Tap the ones you want to unlock this month","bgImage" : "bg_tec", "category":"Technology"]
             }else{
                 headerData = ["image" : "info_ins","title" : "Use a deal you've unlocked","desc" : "If you have Whoop! Me Happy\ncode you can boost your savings", "message":"Expires in 45 days", "category":"Technology"]
             }
@@ -225,7 +225,7 @@ class DealsToUnlockData{
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's Plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
                 ]
             }
             
@@ -264,8 +264,8 @@ class DealsToUnlockData{
                 ]
             }else{
                 arrScrollData = [
-                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"This is your home's local Conveyancer  deal".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
-                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_mov", "message" : "Uses 1 credit", "category":"Moving Home"]
+                    ["image" : "conveyancer_deal","selected_image" :"gray_conveyancer_deal","title" : "Conveyancer Deal".localized,"desc":"Our trusted local Conveyancing partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"],
+                    ["image" : "moving_home","selected_image" :"geay_home_removal_deal","title" : "Home Removal Deal".localized,"desc":"Our fully Insured Removal partners are ready to\nWhoop! You Happy".localized,"bgImage" : "bg_mov", "message" : "Expires in 45 days", "category":"Moving Home"]
                     
                 ]
             }

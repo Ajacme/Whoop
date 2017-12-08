@@ -109,13 +109,13 @@ class WebDealDetailVC: UIViewController,CustomToolBarDelegate,UITextFieldDelegat
         unlockHeaderView.headerTitleLabel.text = dic.title
         unlockHeaderView.headerDescriptionLabel.text = dic.desc
         unlockHeaderView.headerLogoImage.setImage(UIImage(named:dic.imageName), for: .normal)
+        unlockHeaderView.headerDescriptionLabel.textColor = UIColor.colorWithHexString(hex: "FD5612")
         
-        
-        if dic.imageName == "info_tra" {
+        /*if dic.imageName == "info_tra" {
             unlockHeaderView.headerDescriptionLabel.textColor = UIColor.green
         }else{
             unlockHeaderView.headerDescriptionLabel.textColor = UIColor.colorWithHexString(hex: "FD5612")
-        }
+        }*/
     }
 //    override func viewDidDisappear(_ animated: Bool) {
 //        self.navigationController?.isNavigationBarHidden = false
@@ -382,32 +382,32 @@ class BrandList {
             switch data.title {
                 
             case "Travel Insurance":
-                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance", "subcategory" : "Travel Insurance"]
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Insurance", "subcategory" : "Travel Insurance"]
                 
             case "Travel Insurance\n( Medical conditions )":
-                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance","subcategory" : "Travel Insurance\n( Medical conditions )"]
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Insurance","subcategory" : "Travel Insurance\n( Medical conditions )"]
                 
             case "Car breakdown":
-                headerData = ["title" : "Use a deal you've unlocked", "category" : "Insurance","subcategory" : "Car breakdown"]
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Insurance","subcategory" : "Car breakdown"]
                 
             default:
                 return headerData
             }
             
-//                headerData = ["title" : "Use a deal you've unlocked"]
+//                headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
             
         case "Tradespeople":
 
             switch data.title {
                 
             case "Plumber":
-                headerData = ["title" : "Use a deal you've unlocked", "category" : "Tradespeople","subcategory" : "Plumber"]
+                headerData = ["title" : "These brands can't wait to Whoop! You Happy", "category" : "Tradespeople","subcategory" : "Plumber"]
                 
             default:
                 return headerData
             }
             
-//            headerData = ["title" : "Use a deal you've unlocked"]
+//            headerData = ["title" : "These brands can't wait to Whoop! You Happy"]
             
         case "Technology":
             
@@ -473,8 +473,8 @@ class BrandList {
                 break
                 
             case 1:
-                arrScrollData = [["image" : "coreforyoulogo", "title" : "Cover For You".localized,"desc":"Travel Insurance that is as unique as you are".localized,"bgImage" : "bg_brand_broad", "category":"Insurance"]]
-//                 arrScrollData = [["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]]
+//                arrScrollData = [["image" : "coreforyoulogo", "title" : "Cover For You".localized,"desc":"Travel Insurance that is as unique as you are".localized,"bgImage" : "bg_brand_broad", "category":"Insurance"]]
+                 arrScrollData = [["image" : "goodtogo", "title" : "Good Go Insurence".localized,"desc":"Travel Insurance with cover for medical conditions and no age limit".localized,"bgImage" : "goodtogo_bg", "category":"Insurance"]]
                 break
                 
             case 2:
@@ -495,7 +495,7 @@ class BrandList {
         case "Tradespeople":
             
             arrScrollData = [
-                    ["image" : "plumber", "title" : "Plumber".localized,"desc":"You'll only use this credit/deal if you buy a policy".localized,"bgImage" : "bg_tec", "message" : "Uses 1 credit", "category":"Tradespeople"]]
+                ["image" : "aspect_co_uk", "title" : "Plumber".localized,"desc":"We’re proud to be your Whoop! Me Happy Plumber".localized,"bgImage" : "yellow_banner", "message" : "Uses 1 credit", "category":"Tradespeople"]]
             
         case "Technology":
             
