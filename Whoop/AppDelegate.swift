@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for:UIBarMetrics.default)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.darkGray]
 
+        UserDefaults.standard.set(false, forKey: "isFirstEnter")
         IQKeyboardManager.sharedManager().enable = true
         self.setupAppearance()
        

@@ -30,6 +30,8 @@ class NewPasswordVC: UIViewController, CustomToolBarDelegate, UITextFieldDelegat
 
         txtFieldNewPwd.setPlaceholderTextColor(color: UIColor(red: 153.00/255.00, green: 154.00/255.00, blue: 155.00/255.00, alpha: 1))
         txtFieldConfirmPwd.setPlaceholderTextColor(color: UIColor(red: 153.00/255.00, green: 154.00/255.00, blue: 155.00/255.00, alpha: 1))
+        
+        
 
     }
 

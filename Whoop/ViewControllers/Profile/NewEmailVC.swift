@@ -51,7 +51,12 @@ class NewEmailVC: UIViewController, CustomToolBarDelegate {
     
     //MARK: - Tapped Events
     @IBAction func tappedOnSaveBtn(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        closeKeyBoard()
+//        self.navigationController?.popViewController(animated: true)
+        let initVC = self.storyboard?.instantiateViewController(withIdentifier: "EmailPasswordVC") as! EmailPasswordVC
+        initVC.closeKeyBoard()
+        self.navigationController?.popToViewController(initVC, animated:true)
+        
 
     }
     
