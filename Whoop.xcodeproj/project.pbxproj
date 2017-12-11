@@ -29,6 +29,10 @@
 		082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */; };
 		0839C29A1FD958C900507EE8 /* PaymentSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839C2991FD958C900507EE8 /* PaymentSettingViewController.swift */; };
 		0839C29C1FD98BBF00507EE8 /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */; };
+		083D49D71FDE8EB600648EAE /* WayToBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49D61FDE8EB600648EAE /* WayToBookingViewController.swift */; };
+		083D49D91FDEAD0200648EAE /* WriteForJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49D81FDEAD0200648EAE /* WriteForJobViewController.swift */; };
+		083D49DB1FDEAD2E00648EAE /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49DA1FDEAD2E00648EAE /* SelectTimeViewController.swift */; };
+		083D49DD1FDEAD5300648EAE /* BookedApointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */; };
 		086AA59C1FCD7E6100707528 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5981FCD7E6000707528 /* Localizable.swift */; };
 		086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5991FCD7E6000707528 /* MTUserDefault.swift */; };
 		086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA59A1FCD7E6000707528 /* CustomToolBar.swift */; };
@@ -119,6 +123,10 @@
 		082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUnlockDealViewController.swift; sourceTree = "<group>"; };
 		0839C2991FD958C900507EE8 /* PaymentSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSettingViewController.swift; sourceTree = "<group>"; };
 		0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
+		083D49D61FDE8EB600648EAE /* WayToBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayToBookingViewController.swift; sourceTree = "<group>"; };
+		083D49D81FDEAD0200648EAE /* WriteForJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteForJobViewController.swift; sourceTree = "<group>"; };
+		083D49DA1FDEAD2E00648EAE /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedApointmentViewController.swift; sourceTree = "<group>"; };
 		086AA5941FCD6FF000707528 /* BoostDealDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoostDealDetailVC.swift; sourceTree = "<group>"; };
 		086AA5951FCD6FF800707528 /* SeeCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeCodeVC.swift; sourceTree = "<group>"; };
 		086AA5981FCD7E6000707528 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -280,12 +288,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		082EA7D71FCEC73200F21D89 /* Unlocked Deals */ = {
+		082EA7D71FCEC73200F21D89 /* Settings Lock & Unlocked Deals */ = {
 			isa = PBXGroup;
 			children = (
 				082EA7D81FCEC77000F21D89 /* SettingUnlockDealViewController.swift */,
 			);
-			path = "Unlocked Deals";
+			path = "Settings Lock & Unlocked Deals";
 			sourceTree = "<group>";
 		};
 		0839C2981FD958A600507EE8 /* Payment Settings */ = {
@@ -295,6 +303,17 @@
 				0839C29B1FD98BBF00507EE8 /* CardListViewController.swift */,
 			);
 			path = "Payment Settings";
+			sourceTree = "<group>";
+		};
+		083D49D51FDE8E6C00648EAE /* Booking plumber */ = {
+			isa = PBXGroup;
+			children = (
+				083D49D61FDE8EB600648EAE /* WayToBookingViewController.swift */,
+				083D49D81FDEAD0200648EAE /* WriteForJobViewController.swift */,
+				083D49DA1FDEAD2E00648EAE /* SelectTimeViewController.swift */,
+				083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */,
+			);
+			path = "Booking plumber";
 			sourceTree = "<group>";
 		};
 		086AA5A61FCD7F8900707528 /* Pulse */ = {
@@ -525,12 +544,13 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				083D49D51FDE8E6C00648EAE /* Booking plumber */,
 				0839C2981FD958A600507EE8 /* Payment Settings */,
 				0896652E1FD8573600C8684F /* Review */,
 				087FB6961FD5AFEB00F934AB /* Whoop Home Button */,
 				08BFA4F81FCF004500294D88 /* Personal Button */,
 				08BFA4E51FCEFD5E00294D88 /* OnBoarding */,
-				082EA7D71FCEC73200F21D89 /* Unlocked Deals */,
+				082EA7D71FCEC73200F21D89 /* Settings Lock & Unlocked Deals */,
 				082A288B1FCDC2A600B39D0A /* SettingsMenuVC */,
 				082A28841FCDC22800B39D0A /* Profile */,
 				082A287F1FCDC1FB00B39D0A /* ButtonManagementSettings */,
@@ -732,6 +752,7 @@
 				0824BBF01FCFEA500015811E /* SeeCodeVC.swift in Sources */,
 				082A28891FCDC23700B39D0A /* NewPasswordVC.swift in Sources */,
 				08BFA4F41FCEFDE500294D88 /* HomeVC.swift in Sources */,
+				083D49DD1FDEAD5300648EAE /* BookedApointmentViewController.swift in Sources */,
 				04DAB4F11FC57F20002CC0FD /* InviteViewController.swift in Sources */,
 				F3152E411FB22EEC000E03B7 /* GradientView.swift in Sources */,
 				08BFA4E81FCEFD8300294D88 /* FirstIndexingVC.swift in Sources */,
@@ -749,6 +770,8 @@
 				04AB239E1FC6BF86002A628F /* brandPriceListVC.swift in Sources */,
 				F3152E481FB22EEC000E03B7 /* ViewController.swift in Sources */,
 				08AB6D4E1FD145D400A97161 /* CityListVC.swift in Sources */,
+				083D49D71FDE8EB600648EAE /* WayToBookingViewController.swift in Sources */,
+				083D49DB1FDEAD2E00648EAE /* SelectTimeViewController.swift in Sources */,
 				08BFA4F71FCEFDE500294D88 /* EnterCodeVC.swift in Sources */,
 				F3D565271FB882DA00707207 /* MessageCentreViewController.swift in Sources */,
 				F376C6801FB8E2D700132683 /* NewMessageCentreViewController.swift in Sources */,
@@ -774,6 +797,7 @@
 				8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */,
 				F3152E441FB22EEC000E03B7 /* ForgotPasswordVC.swift in Sources */,
 				0839C29A1FD958C900507EE8 /* PaymentSettingViewController.swift in Sources */,
+				083D49D91FDEAD0200648EAE /* WriteForJobViewController.swift in Sources */,
 				089665321FD857C100C8684F /* WriteReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

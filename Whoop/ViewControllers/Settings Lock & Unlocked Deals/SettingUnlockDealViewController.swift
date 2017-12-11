@@ -221,7 +221,12 @@ class DealsToUnlockData{
         case "Tradespeople":
             if isDealToUnlock{
                 arrScrollData = [
-                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Plumber".localized,"desc":"This is your home's local plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"],
+                    ["image" : "plumber","selected_image" :"plumber_white","title" : "Carpenter".localized,"desc":"This is your home's Carpenter deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"],
+                    ["image" : "locksmith","selected_image" :"plumber_white","title" : "Locksmith".localized,"desc":"This is your home's Locksmith deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"],
+                    ["image" : "roofing","selected_image" :"plumber_white","title" : "Roofing".localized,"desc":"This is your home's Roofing deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"],
+                    ["image" : "electrician","selected_image" :"plumber_white","title" : "Electrician".localized,"desc":"This is your home's Electrician deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"],
+                    ["image" : "boiler","selected_image" :"plumber_white","title" : "New Boiler & Repair".localized,"desc":"This is your home's Plumber deal".localized,"bgImage" : "bg_tra", "message" : "Expires in 45 days", "category":"Tradespeople"]
                 ]
             }else{
                 arrScrollData = [
