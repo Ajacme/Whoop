@@ -167,7 +167,7 @@ class WMHVC: UIViewController,UITextFieldDelegate {
         if title == "Plumber"{
             print("That's it")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            if let controller = storyBoard.instantiateViewController(withIdentifier: "UserReviewsViewController") as? UserReviewsViewController{
+            if let controller = storyBoard.instantiateViewController(withIdentifier: "WayToBookingViewController") as? WayToBookingViewController{
                 self.navigationController?.pushViewController(controller, animated: true)
                 
             }

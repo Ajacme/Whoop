@@ -10,9 +10,12 @@ import UIKit
 
 class WriteForJobViewController: UIViewController {
 
+    @IBOutlet var jobsTextField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        jobsTextField.layer.borderWidth = 1
+        jobsTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         // Do any additional setup after loading the view.
     }
 

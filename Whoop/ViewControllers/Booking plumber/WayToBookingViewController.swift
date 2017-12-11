@@ -10,9 +10,13 @@ import UIKit
 
 class WayToBookingViewController: UIViewController {
 
+    @IBOutlet var shadowView: ShadowView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        shadowView.layer.shadowColor = UIColor.groupTableViewBackground.cgColor
+        shadowView.layer.shadowOpacity = 1
+        shadowView.layer.shadowOffset = CGSize.zero
         // Do any additional setup after loading the view.
     }
 
