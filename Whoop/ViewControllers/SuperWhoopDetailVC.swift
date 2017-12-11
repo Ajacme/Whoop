@@ -21,12 +21,14 @@ class Insurance_data :  NSObject {
     var lockText : String = ""
     var isLocked : Bool = false
     var bgImage : String = ""
+    var price : String = ""
+    var numberOfDealLeft : String = ""
     
     override init() {
         
     }
     
-    init(title: String, desc: String, imageName: String, isLocked: Bool, isAddedSuper: Bool , UnlockedimageName :String,isGetQuotes: Bool, selectedBGImage : String,displayMessage : String, lockText : String,bgImage : String)
+    init(title: String, desc: String, imageName: String, isLocked: Bool, isAddedSuper: Bool , UnlockedimageName :String,isGetQuotes: Bool, selectedBGImage : String,displayMessage : String, lockText : String,bgImage : String, price: String, numberOfDealLeft:String)
     {
         self.title = title
         self.desc = desc
@@ -39,6 +41,8 @@ class Insurance_data :  NSObject {
         self.selectedBGImage = selectedBGImage
         self.isLocked = isLocked
         self.bgImage = bgImage
+        self.price = price
+        self.numberOfDealLeft = numberOfDealLeft
     }
 }
 
@@ -65,6 +69,9 @@ class CellForTickets: UITableViewCell {
     
     @IBOutlet weak var btnWhoop: UIButton!
     
+    @IBOutlet weak var lblNumberOfDeals: UILabel!
+    @IBOutlet weak var btnJobInfo: UIButton!
+    @IBOutlet weak var lblPrice: UILabel!
     var pulseEffect : PulsingHaloLayer!
     
 }

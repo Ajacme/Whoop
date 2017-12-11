@@ -62,6 +62,7 @@
 		08BFA4FA1FCF005800294D88 /* WhoopHappyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BFA4F91FCF005700294D88 /* WhoopHappyViewController.swift */; };
 		08D140E61FDAD490001837E4 /* ViewFor3xPopUpHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D140E41FDAD48E001837E4 /* ViewFor3xPopUpHome.xib */; };
 		08D140E71FDAD490001837E4 /* ViewFor3xPopUpHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */; };
+		1F73C4281FDECDB400F403CE /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73C4271FDECDB400F403CE /* QuoteViewController.swift */; };
 		4DBB64EF492A101D1D37376B /* Pods_Whoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3B0AB2F669B61019252E9C /* Pods_Whoop.framework */; };
 		8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B084ABE1FB760ED0076FD70 /* ListingCell.swift */; };
 		8BDAF9281FB8CF1100135FFB /* DealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAF9271FB8CF1100135FFB /* DealsCell.swift */; };
@@ -163,6 +164,7 @@
 		08D140E41FDAD48E001837E4 /* ViewFor3xPopUpHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewFor3xPopUpHome.xib; sourceTree = "<group>"; };
 		08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFor3xPopUpHome.swift; sourceTree = "<group>"; };
 		0A3B0AB2F669B61019252E9C /* Pods_Whoop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whoop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F73C4271FDECDB400F403CE /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		3AA0F0BAF9CD9B79462BE206 /* Pods-ZaeemTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaeemTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaeemTest/Pods-ZaeemTest.release.xcconfig"; sourceTree = "<group>"; };
 		81082D69F141C8BC40712DF8 /* Pods-Whoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whoop/Pods-Whoop.release.xcconfig"; sourceTree = "<group>"; };
 		8B084ABE1FB760ED0076FD70 /* ListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 				04AB239D1FC6BF86002A628F /* brandPriceListVC.swift */,
 				082A286E1FCDAEBE00B39D0A /* UnlockDealDetailVC.swift */,
 				08AB6D471FD13CD700A97161 /* SuperWhoopDetailVC.swift */,
+				1F73C4271FDECDB400F403CE /* QuoteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				F3152E471FB22EEC000E03B7 /* SignUpVC.swift in Sources */,
 				08BFA4FA1FCF005800294D88 /* WhoopHappyViewController.swift in Sources */,
 				082A288A1FCDC23700B39D0A /* EmailPasswordVC.swift in Sources */,
+				1F73C4281FDECDB400F403CE /* QuoteViewController.swift in Sources */,
 				082A28821FCDC21D00B39D0A /* HomeButtonVC.swift in Sources */,
 				086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */,
 				0824BBF01FCFEA500015811E /* SeeCodeVC.swift in Sources */,
@@ -944,7 +948,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -967,7 +971,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acmeuniversemacmini-2/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
