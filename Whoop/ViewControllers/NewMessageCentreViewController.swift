@@ -92,7 +92,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     */
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 13
+        return 14
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -128,8 +128,10 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             return tableView.dequeueReusableCell(withIdentifier: "CityCellWithNote")!
         case 6:
             return tableView.dequeueReusableCell(withIdentifier: "PlumberReviewCell")!
+        case 7:
+            return tableView.dequeueReusableCell(withIdentifier: "PlumberQuoteCell")!
             
-        case 8:
+        case 9:
             return getCardsBannerCell(indexPath: indexPath)
         default:
             return getDealsCell(section: indexPath.section)
@@ -218,7 +220,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
     }
     
     func getDealsCell(section: Int) -> UITableViewCell  {
-        let indexHandler: [Int: Int] = [7: 0, 9: 1, 10: 2, 11: 3, 12: 4]
+        let indexHandler: [Int: Int] = [8: 0, 10: 1, 11: 2, 12: 3, 13: 4]
         let imageTextData: [ImageTextTuple] = [
             (#imageLiteral(resourceName: "imsurence_deals"),"Insurance Deals"),
             (#imageLiteral(resourceName: "myvehicles"),"Vehicle Deals"),
@@ -244,7 +246,7 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         }
     }
     @IBAction func tapToDeals(_ sender: UIButton) {
-        let indexHandler: [Int: Int] = [7: 0, 9: 1, 10: 2, 11: 3, 12: 4]
+        let indexHandler: [Int: Int] = [8: 0, 10: 1, 11: 2, 12: 3, 13: 4]
         var vcTitle = ""
         if let iPath = indexHandler[sender.tag]{
 //            let indexPathDeal = IndexPath(row:iPath , section: sender.tag)

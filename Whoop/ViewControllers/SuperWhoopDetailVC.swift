@@ -62,6 +62,9 @@ class CellForTickets: UITableViewCell {
     @IBOutlet weak var lblUsesCredit: UILabel!
     @IBOutlet weak var lblDealBoosted: UILabel!
     @IBOutlet weak var lblGetQuotes: UILabel!
+    
+    @IBOutlet weak var btnWhoop: UIButton!
+    
     var pulseEffect : PulsingHaloLayer!
     
 }

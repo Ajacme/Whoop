@@ -51,13 +51,12 @@ class WMHtblCellVC: UITableViewCell
     @IBOutlet weak var imgLogo: UIImageView!
     
     @IBOutlet weak var imgbgLogo: UIImageView!
-    
     @IBOutlet weak var lblDesc: UILabel!
     
     @IBOutlet weak var btnOurWhoopMeHappy: UIButton!
-    
     @IBOutlet weak var btnSeeOurReviews: UIButton!
     
+    @IBOutlet var tapOurWhoopButton: UIControl!
 }
 
 class WMHVC: UIViewController,UITextFieldDelegate {
@@ -161,6 +160,22 @@ class WMHVC: UIViewController,UITextFieldDelegate {
 //        }
         
     }
+    @objc func btnTapOurWhoopButton(sender: UIButton) {
+        
+        let dic = arrInsuranceData[sender.tag]
+        let title = dic.title
+        if title == "Plumber"{
+            print("That's it")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            if let controller = storyBoard.instantiateViewController(withIdentifier: "UserReviewsViewController") as? UserReviewsViewController{
+                self.navigationController?.pushViewController(controller, animated: true)
+                
+            }
+            
+        }
+        
+    }
+
     
     @IBAction func btnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -214,6 +229,8 @@ extension WMHVC: UITableViewDelegate,UITableViewDataSource{
         cell.btnSeeOurReviews.tag = indexPath.row
         cell.btnSeeOurReviews.addTarget(self, action: #selector(WMHVC.btnSeeOurReviewClicked(sender:)), for: .touchUpInside)
         if dic.title == "Plumber" {
+            cell.tapOurWhoopButton.tag = indexPath.row
+            cell.tapOurWhoopButton.addTarget(self, action: #selector(WMHVC.btnTapOurWhoopButton(sender:)), for: .touchUpInside)
                 cell.btnSeeOurReviews.isHidden = false
         }else{
             cell.btnSeeOurReviews.isHidden = true
@@ -221,6 +238,16 @@ extension WMHVC: UITableViewDelegate,UITableViewDataSource{
         
         return cell
     }
+    @IBAction func tapToDeals(_ sender: UIButton) {
+        
+        if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "UnlockDealDetailVC") as? UnlockDealDetailVC{
+//            initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: vcTitle, isDealToUnlock: true)
+//            initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: vcTitle, isDealToUnlock: true)
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+        
+    }
+    
 }
 
 class PriceList {
