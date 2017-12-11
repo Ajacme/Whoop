@@ -251,7 +251,7 @@ class PriceList {
                 case 0:
                     /* headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "Rescue_co_uk", "bannerImage": "bg_tec", "category": "Insurance", "subcategory": "Car breakdown"]*/
 //                    coverforyou_bg
-                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "coverforyoulogo", "bannerImage": "coverforyou_bg",  "category": "Insurance", "subcategory": "Travel Insurance"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "coverforyoulogo", "bannerImage": "coverforyou_bg",  "category": "Insurance", "subcategory": "Travel Insurance"]
                     break
                     
                 default:
@@ -263,7 +263,7 @@ class PriceList {
             case "Travel Insurance\n( Medical conditions )":
                 switch atIndex {
                 case 0:
-                    headerData = ["title" : "Use a deal you've unlocked", "imageName": "goodtogo", "bannerImage": "goodtogo_bg",  "category": "Insurance", "subcategory": "Travel Insurance\n( Medical conditions )"]
+                    headerData = ["title" : "Here are some of our Whoop! Me Happy Prices", "imageName": "goodtogo", "bannerImage": "goodtogo_bg",  "category": "Insurance", "subcategory": "Travel Insurance\n( Medical conditions )"]
                     break
                     
                     

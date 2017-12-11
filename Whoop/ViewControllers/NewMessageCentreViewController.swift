@@ -183,11 +183,13 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
             CardsDetails(title: "Travel Insurance" , description:"( Pre existing medical conditions ) your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "blue_travel_medical"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence")),
             
             
+            CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive. Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "conveyancer_deal"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
+             
             CardsDetails(title: "Save big on Travel Insurance", description: "Annual, Single trip\nGoing away? Unlock your home's travel insurance deal. Big insurance can't wait to Whoop You Happy", userImage: #imageLiteral(resourceName: "whoop!_me_happy_face"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence")),
             
-            CardsDetails(title:"Conveyancing Deal" , description: "Moving home is expensive. Unlock your home's conveyancing deal now to save money on expert local conveyancing", userImage: #imageLiteral(resourceName: "conveyancer_deal"), bannerImage:#imageLiteral(resourceName: "save_money_on_conveyncing_deal") ),
+           
             
-            CardsDetails(title:"Takeaway Pizza offer" , description: "Popular takeaways can't wait to Whoop! You happy", userImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence"), bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
+            CardsDetails(title:"Yummy! Cheaper Takeaway Pizza" , description: "Popular takeaways can't wait to Whoop! You happy", userImage:#imageLiteral(resourceName: "whoop!_me_happy_face") , bannerImage: #imageLiteral(resourceName: "save_money_on_pizza")),
             
             
             CardsDetails(title: "Travel Insurance" , description:"Pre existing medical conditions your home's Whoop! Button include an exclusive travel insurance deal for tavellers with pre existing medical conditions", userImage: #imageLiteral(resourceName: "blue_travel_medical"), bannerImage: #imageLiteral(resourceName: "save_on_medical_holiday_insurence"))

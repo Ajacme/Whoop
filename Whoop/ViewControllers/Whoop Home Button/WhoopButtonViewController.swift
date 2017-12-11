@@ -9,7 +9,7 @@
 import UIKit
 import JHChainableAnimations
 
-class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIScrollViewDelegate {
 
     @IBOutlet weak var dealsStackView: UIStackView!
     @IBOutlet weak var whoopButtonImageView: UIImageView!
@@ -40,6 +40,7 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     @IBOutlet var lockedButtonIcon: UIButton!
     @IBOutlet var whiteTickIcon: UIButton!
     var objCodePopUp = ViewForCodePopUp()
+    var objCodeSwipePopUp = ViewFor3xPopUpHome()
     var config = CoreConfig.sharedInstance
     private var cameraController = UIImagePickerController()
     
@@ -57,15 +58,22 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
      
     }
     func setUpView(){
-        whoopButtonImageView.alpha = 0
-        dealsStackView.alpha = 0
-        buttonsStackView.alpha = 0
-        addPhotoButton.alpha = 0
-        addPhotoButtonText.alpha = 0
+        
+        
+        if CoreConfig.sharedInstance.isFirstEnter() == false{
+            whoopButtonImageView.alpha = 0
+            dealsStackView.alpha = 0
+            buttonsStackView.alpha = 0
+            addPhotoButton.alpha = 0
+            addPhotoButtonText.alpha = 0
+        }
+        
+        
+        
         addPhotoButton.layer.borderWidth = 1
         addPhotoButton.layer.borderColor = UIColor.lightGray.cgColor
         
-        buttonRGY.isUserInteractionEnabled = false
+//        buttonRGY.isUserInteractionEnabled = false
       
         
         let paragraph = NSMutableParagraphStyle()
@@ -108,7 +116,9 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
             dealLeftToUnlocklbl.text = "3"
         }
         if isGreen{
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.customChatView(invite: false)
+            })
             inviteIconText.text = "Invite the people you live with"
             
             inviteIcon.tintColor = UIColor.colorWithHexString(hex: "FE8B3A")
@@ -130,6 +140,10 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
            
         }
         if isYellow{
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.customChatView(invite: false)
+            })
             
             lockIconText.text = "Your home's button is locked"
             inviteIconText.text = "Invite the people you live with"
@@ -181,8 +195,9 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         }
         if CoreConfig.sharedInstance.isFirstEnter() == false{
             animateTheSwipeUp()
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.customChatView(invite: false)
+                self.customCodeViewPopupSwipe()//self.customChatView(invite: false)
             })
             
             UserDefaults.standard.set(true, forKey: "isFirstEnter")
@@ -209,7 +224,22 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
     
     // MARK: - Click events..
     @IBAction func tapRedNotificationBar(_ sender: Any) {
-        customChatView(invite: false)
+        if isRed {
+            self.customCodeViewPopupSwipe()
+        }else{
+            customChatView(invite: false)
+        }
+        
+    }
+    @IBAction func tapToClose3xPopUp(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.buttonRGY.isUserInteractionEnabled = true
+            self.objCodeSwipePopUp.Cons_ViewTop.constant = 1000
+            self.objCodeSwipePopUp.isWorking = false
+            self.objCodeSwipePopUp.removeFromSuperview()
+        }
+        
     }
     
     @IBAction func tapInviteIcon(_ sender: Any) {
@@ -259,37 +289,76 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
 
     @IBAction func tapToWhoopMeHappy(_ sender: Any) {
         
-        if self.pulseEffect != nil {
-            self.pulseEffect.removeFromSuperlayer()
-        }
         
-        self.pulseEffect = PulsingHaloLayer()
-        self.pulseEffect.haloLayerNumber = 7
-        self.pulseEffect.animationDuration = 3
-        self.pulseEffect.radius = 125.0
-        self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+        //compressed animation
+//        UIView.animate(withDuration: 0.6,
+//                       animations: {
+//                        self.whoopMeHappyButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//                        self.whoopButtonImageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//        },
+//                       completion: { _ in
+//                        UIView.animate(withDuration: 0.6) {
+//                            self.whoopMeHappyButton.transform = CGAffineTransform.identity
+//                            self.whoopButtonImageView.transform = CGAffineTransform.identity
         
+                            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
+                            self.navigationController?.pushViewController(controller, animated: true)
+//                        }
+//        })
         
-        let verticalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.height / 2.0
-        let horizontalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.width / 2.0
-        let buttoncenter = CGPoint(x: horizontalCenter, y: verticalCenter)
-        self.pulseEffect.position = buttoncenter//cell.imgMiddleblue.center
-        self.whoopButtonImageView.layer.addSublayer(self.pulseEffect)
-        
-        self.pulseEffect.start()
+//
+//        if self.pulseEffect != nil {
+//            self.pulseEffect.removeFromSuperlayer()
+//        }
+//
+//        self.pulseEffect = PulsingHaloLayer()
+//        self.pulseEffect.haloLayerNumber = 7
+//        self.pulseEffect.animationDuration = 3
+//        self.pulseEffect.radius = 125.0
+//        self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+//
+//
+//        let verticalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.height / 2.0
+//        let horizontalCenter: CGFloat = self.whoopMeHappyButton.bounds.size.width / 2.0
+//        let buttoncenter = CGPoint(x: horizontalCenter, y: verticalCenter)
+//        self.pulseEffect.position = buttoncenter//cell.imgMiddleblue.center
+//        self.whoopButtonImageView.layer.addSublayer(self.pulseEffect)
+//
+//        self.pulseEffect.start()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
-            self.navigationController?.pushViewController(controller, animated: true)
-            self.pulseEffect.removeFromSuperlayer()
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+//            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//            let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
+//            self.navigationController?.pushViewController(controller, animated: true)
+//            self.pulseEffect.removeFromSuperlayer()
+//        })
         
         
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - CustumeView Design For PopUp 3x Swipe
+    func customCodeViewPopupSwipe()  {
+        objCodeSwipePopUp = Bundle.main.loadNibNamed("ViewFor3xPopUpHome", owner: self, options: nil)?.first as! ViewFor3xPopUpHome
+        self.objCodeSwipePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
+        objCodeSwipePopUp.scrollView.delegate = self
+        objCodeSwipePopUp.isWorking = true
+        objCodeSwipePopUp.backgroundColor = UIColor.clear
+        
+        self.view.addSubview(objCodeSwipePopUp)
+        UIView.animate(withDuration: 0.5) {
+            //self.objCodePopUp.alpha = 0.5
+            self.objCodeSwipePopUp.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+            self.objCodeSwipePopUp.Cons_ViewTop.constant = 80
+            self.view.layoutIfNeeded()
+        }
+        self.objCodeSwipePopUp.btnCancel.addTarget(self, action: #selector(self.tapToClose3xPopUp(_:)), for: .touchUpInside)
+        
     }
     
     
@@ -355,7 +424,13 @@ class WhoopButtonViewController: UIViewController,UIScrollViewDelegate,UIImagePi
         actionSheetController.addAction(takePictureAction)
     }
     
-    
+    // MARK: - ScrollView Delegate
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
+    {
+        if self.objCodeSwipePopUp.isWorking{
+            objCodeSwipePopUp.pageControl.currentPage = Int(floor((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width)) + 1
+        }
+    }
     
     //MARK: - ImagePicker Delegate Action
     
