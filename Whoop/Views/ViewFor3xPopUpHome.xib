@@ -15,6 +15,12 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
+        <array key="LatoLatin-Regular.ttf">
+            <string>LatoLatin-Regular</string>
+        </array>
+        <array key="LatoLatin-Semibold.ttf">
+            <string>LatoLatin-Semibold</string>
+        </array>
         <array key="VerdanaBold.ttf">
             <string>Verdana-Bold</string>
         </array>
@@ -27,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogr-xJ-Y5n">
-                    <rect key="frame" x="10" y="20" width="355" height="501"/>
+                    <rect key="frame" x="10" y="1000" width="355" height="501"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39v-MZ-1Gn">
                             <rect key="frame" x="0.0" y="0.0" width="355" height="500.5"/>
@@ -38,13 +44,11 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8B-6y-xJX" userLabel="View 1">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="500.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-Rk-qmJ" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your home's button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-Rk-qmJ" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
                                                     <rect key="frame" x="18" y="155" width="320" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="DMT-1O-lCr"/>
                                                     </constraints>
-                                                    <string key="text">Verify your home's button
-</string>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -53,16 +57,16 @@
                                                     <rect key="frame" x="0.0" y="250.5" width="355" height="250"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6L-PV-fo6" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
-                                                            <rect key="frame" x="17" y="18" width="320" height="82"/>
+                                                            <rect key="frame" x="17" y="18" width="320" height="90"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="82" id="o7U-D9-vXF"/>
+                                                                <constraint firstAttribute="height" constant="90" id="o7U-D9-vXF"/>
                                                             </constraints>
                                                             <string key="text">You're about to see your home's Whoop! 
 Button for the first time. You’ll need to verify your 
 address to unlock or join your home's 
 Whoop! Button.
 </string>
-                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="LatoLatin-Semibold" family="LatoLatin" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -73,7 +77,7 @@ Whoop! Button.
                                                         <constraint firstAttribute="trailing" secondItem="b6L-PV-fo6" secondAttribute="trailing" constant="18" id="rmA-JZ-mFh"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_Arrow_Popup" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-m5-S33">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_Unlock_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-m5-S33">
                                                     <rect key="frame" x="136" y="54" width="83" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="83" id="69l-5s-egB"/>
@@ -81,8 +85,8 @@ Whoop! Button.
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJJ-vN-rVO">
-                                                    <rect key="frame" x="141.5" y="23" width="71" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="142" y="24" width="71" height="20"/>
+                                                    <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -107,45 +111,66 @@ Whoop! Button.
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1XK-dM-Ykd" userLabel="View 2">
                                             <rect key="frame" x="355" y="0.0" width="355" height="500.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the icon and enter a Whoop! Me Happier Code if you have one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppl-RA-Xrl" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="140.5" width="355" height="33"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your home's exclusive deals " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppl-RA-Xrl" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="155" width="355" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="zOX-tL-iX9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLK-qd-Fdu">
                                                     <rect key="frame" x="0.0" y="250" width="355" height="250"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-yd-LoH">
+                                                            <rect key="frame" x="17" y="18" width="320" height="172"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="172" id="3fz-n3-CB0"/>
+                                                            </constraints>
+                                                            <string key="text">Once you've verified your address you’ll be able to unlock all of your home’s deals and invite the people you live with. It's easy to 
+verify but we’ve added 3 deals to your button
+so you can start straight away,</string>
+                                                            <fontDescription key="fontDescription" name="LatoLatin-Semibold" family="LatoLatin" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="iAT-yd-LoH" secondAttribute="trailing" constant="18" id="5iV-bf-2Uw"/>
+                                                        <constraint firstItem="iAT-yd-LoH" firstAttribute="leading" secondItem="hLK-qd-Fdu" secondAttribute="leading" constant="17" id="hhK-TX-eY9"/>
+                                                        <constraint firstItem="iAT-yd-LoH" firstAttribute="top" secondItem="hLK-qd-Fdu" secondAttribute="top" constant="18" id="z4J-MW-S1a"/>
+                                                    </constraints>
                                                 </view>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KLk-72-oov">
-                                                    <rect key="frame" x="136" y="15" width="83" height="83"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="saveMoneyIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KLk-72-oov">
+                                                    <rect key="frame" x="136" y="54" width="83" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="KLk-72-oov" secondAttribute="height" multiplier="1:1" id="DUo-Pd-IIA"/>
                                                         <constraint firstAttribute="height" constant="83" id="YM7-N3-m6l"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whoop! Me Happy Code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyv-pG-nL8" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="115" width="355" height="17"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to access your..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyv-pG-nL8" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                    <rect key="frame" x="95.5" y="24" width="164" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.12941176469999999" green="0.63921568630000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.99607843137254903" green="0.50196078431372548" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="wyv-pG-nL8" firstAttribute="top" secondItem="KLk-72-oov" secondAttribute="bottom" constant="17" id="9Hj-TT-uaL"/>
-                                                <constraint firstItem="ppl-RA-Xrl" firstAttribute="top" secondItem="wyv-pG-nL8" secondAttribute="bottom" constant="8" id="CpM-o7-8sw"/>
                                                 <constraint firstItem="ppl-RA-Xrl" firstAttribute="leading" secondItem="1XK-dM-Ykd" secondAttribute="leading" id="E7X-yC-KyW"/>
-                                                <constraint firstItem="wyv-pG-nL8" firstAttribute="centerX" secondItem="1XK-dM-Ykd" secondAttribute="centerX" id="Gw8-xc-eUM"/>
-                                                <constraint firstItem="wyv-pG-nL8" firstAttribute="leading" secondItem="1XK-dM-Ykd" secondAttribute="leading" id="KQ4-ZM-w7j"/>
                                                 <constraint firstAttribute="trailing" secondItem="ppl-RA-Xrl" secondAttribute="trailing" id="PkA-vG-bfR"/>
+                                                <constraint firstItem="wyv-pG-nL8" firstAttribute="centerX" secondItem="1XK-dM-Ykd" secondAttribute="centerX" id="Qrg-Fs-T8M"/>
                                                 <constraint firstItem="ppl-RA-Xrl" firstAttribute="centerX" secondItem="1XK-dM-Ykd" secondAttribute="centerX" id="S7a-8b-gEl"/>
                                                 <constraint firstAttribute="trailing" secondItem="hLK-qd-Fdu" secondAttribute="trailing" id="Toh-64-lqH"/>
                                                 <constraint firstItem="KLk-72-oov" firstAttribute="centerX" secondItem="1XK-dM-Ykd" secondAttribute="centerX" id="Wco-jN-9oe"/>
-                                                <constraint firstItem="KLk-72-oov" firstAttribute="top" secondItem="1XK-dM-Ykd" secondAttribute="top" constant="15" id="WeB-Vc-WA9"/>
+                                                <constraint firstItem="KLk-72-oov" firstAttribute="top" secondItem="1XK-dM-Ykd" secondAttribute="top" constant="54" id="WeB-Vc-WA9"/>
                                                 <constraint firstItem="hLK-qd-Fdu" firstAttribute="leading" secondItem="1XK-dM-Ykd" secondAttribute="leading" id="Xmj-c3-rww"/>
-                                                <constraint firstAttribute="trailing" secondItem="wyv-pG-nL8" secondAttribute="trailing" id="d1b-BN-xYe"/>
+                                                <constraint firstItem="KLk-72-oov" firstAttribute="top" secondItem="wyv-pG-nL8" secondAttribute="bottom" constant="10" id="cS6-JB-HAV"/>
+                                                <constraint firstItem="ppl-RA-Xrl" firstAttribute="top" secondItem="KLk-72-oov" secondAttribute="bottom" constant="18" id="lLH-FN-2MJ"/>
                                                 <constraint firstItem="hLK-qd-Fdu" firstAttribute="height" secondItem="1XK-dM-Ykd" secondAttribute="height" multiplier="0.5" id="oUc-ah-HbJ"/>
+                                                <constraint firstItem="hLK-qd-Fdu" firstAttribute="top" secondItem="ppl-RA-Xrl" secondAttribute="bottom" constant="53" id="xmB-R7-Sf8"/>
                                                 <constraint firstAttribute="bottom" secondItem="hLK-qd-Fdu" secondAttribute="bottom" id="z9Q-0J-K1N"/>
                                             </constraints>
                                         </view>
@@ -200,7 +225,7 @@ Whoop! Button.
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_Arrow_Popup" translatesAutoresizingMaskIntoConstraints="NO" id="LhQ-Pk-D2f">
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="LhQ-Pk-D2f">
                             <rect key="frame" x="136" y="54" width="83" height="83"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="83" id="M1i-9l-atJ"/>
@@ -230,8 +255,8 @@ Whoop! Button.
                         </mask>
                     </variation>
                 </view>
-                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-ae-Odi">
-                    <rect key="frame" x="168" y="238.5" width="39" height="37"/>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-ae-Odi">
+                    <rect key="frame" x="176" y="1218.5" width="23" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="pageIndicatorTintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="currentPageIndicatorTintColor" red="0.48627450979999998" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,7 +266,7 @@ Whoop! Button.
             <constraints>
                 <constraint firstItem="4pl-ae-Odi" firstAttribute="centerX" secondItem="ogr-xJ-Y5n" secondAttribute="centerX" id="9M6-4i-4Rb"/>
                 <constraint firstItem="ogr-xJ-Y5n" firstAttribute="leading" secondItem="JdX-Jo-tgS" secondAttribute="leading" constant="10" id="PlP-KY-j0d"/>
-                <constraint firstItem="ogr-xJ-Y5n" firstAttribute="top" secondItem="jlV-iJ-AiP" secondAttribute="top" constant="20" id="QCc-At-5fU"/>
+                <constraint firstItem="ogr-xJ-Y5n" firstAttribute="top" secondItem="jlV-iJ-AiP" secondAttribute="top" constant="1000" id="QCc-At-5fU"/>
                 <constraint firstItem="ogr-xJ-Y5n" firstAttribute="leading" secondItem="JdX-Jo-tgS" secondAttribute="leading" constant="10" id="g7k-bg-DbY"/>
                 <constraint firstItem="JdX-Jo-tgS" firstAttribute="trailing" secondItem="ogr-xJ-Y5n" secondAttribute="trailing" constant="10" id="lIt-Bn-LFb"/>
                 <constraint firstItem="5Vm-tI-ITM" firstAttribute="top" secondItem="4pl-ae-Odi" secondAttribute="bottom" constant="-5" id="ye5-0g-dQb"/>
@@ -258,6 +283,8 @@ Whoop! Button.
         </view>
     </objects>
     <resources>
-        <image name="up_Arrow_Popup" width="88" height="88"/>
+        <image name="blue_Unlock_Icon" width="301" height="301"/>
+        <image name="messageIcon" width="301" height="301"/>
+        <image name="saveMoneyIcon" width="301" height="301"/>
     </resources>
 </document>

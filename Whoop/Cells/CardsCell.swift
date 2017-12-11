@@ -85,15 +85,24 @@ class CardsCell: UITableViewCell {
             detailsLabel.text = record.description
         }
         
-        if record.title == "Big brands and local businesses can't wait to Whoop! You happy with lower prices." && pageIndex == 0{
+        
+        if   (record.title == "Travel Insurance" && pageIndex == 8)
+            || (record.title == "Yummy! Cheaper Takeaway Pizza" && pageIndex == 7)
+            || ( record.title == "Save big on Travel Insurance" && pageIndex == 6)
+            || (record.title == "Conveyancing Deal" && pageIndex == 5){
+            
             self.hyperLinkLabel.textColor = UIColor.black
-            let textToChange = "You have added \nUnlocked by: Sandip Gopani"
+            
+            let textToChange = "This deal is unlocked. \nUnlocked by: Sandip Gopani"
             let attributedString    = NSMutableAttributedString(string: textToChange)
-            let range               = (textToChange as NSString).range(of: "You have added \nUnlocked by:")
+            let range               = (textToChange as NSString).range(of: "This deal is unlocked. \nUnlocked by:")
             attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.colorWithHexString(hex: "FE8B3A"), range: range)
             
             self.hyperLinkLabel.attributedText = attributedString
-        }else{
+        }else if (record.title == "Big brands and local businesses can't wait to Whoop! You happy with lower prices." && pageIndex == 0 ){
+            hyperLinkLabel.text = ""
+        }else
+        {
             self.hyperLinkLabel.textColor = UIColor.blue
             let textToChange = "Unlock your home's deal for free"
             let attributedString    = NSMutableAttributedString(string: textToChange)

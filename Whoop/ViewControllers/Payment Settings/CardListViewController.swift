@@ -53,9 +53,9 @@ class CardListViewController: UIViewController, UITableViewDataSource,UITableVie
         return true
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
+//        if editingStyle == .delete {
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
     }
 
     // MARK: - Click events..
