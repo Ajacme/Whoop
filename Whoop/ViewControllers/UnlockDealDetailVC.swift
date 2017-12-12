@@ -226,6 +226,16 @@ extension UnlockDealDetailVC: UITableViewDelegate,UITableViewDataSource{
                
             }, completion: { (result) in
                 if self.headerData.category == "Tradespeople" {
+                    
+                    cell.btnMeetYourPlumber.titleLabel?.textColor = UIColor.blue
+                    let textToChange = "Meet your home's \(dic.title)"
+                    let attributedString    = NSMutableAttributedString(string: textToChange)
+                    let range               = (textToChange as NSString).range(of: textToChange)
+                    
+                    attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSNumber(value: 1), range: range)
+                    attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.blue, range: range)
+                    
+                    cell.btnMeetYourPlumber.setAttributedTitle(attributedString, for: .normal)
                     cell.btnMeetYourPlumber.isHidden = false
                 }else{
                     cell.btnMeetYourPlumber.isHidden = true
