@@ -9,7 +9,7 @@
 import UIKit
 import CVCalendar
 
-class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalendarMenuViewDelegate,CVCalendarViewAppearanceDelegate  {
+class SelectTimeViewController: UIViewController {
    
     
     
@@ -26,27 +26,48 @@ class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalen
     @IBOutlet var lblMonthAndDate: UILabel!
     @IBOutlet var lblDayName: UILabel!
     @IBOutlet var calendarBookOnline: CVCalendarView!
+    @IBOutlet weak var menuView: CVCalendarMenuView!
     
+    @IBOutlet weak var monthLabel: UILabel!
     var selectedSlot = ""
     var year = "2017"
     var day = ""
     var dayOfWeek = ""
     
     
+    // MARK: - Properties
+    
+    struct Color {
+        static let selectedText = UIColor.white
+        static let text = UIColor.colorWithHexString(hex: "ED6C32")
+        static let textDisabled = UIColor.colorWithHexString(hex: "ED6C32")
+        static let selectionBackground = UIColor.darkGray
+        static let sundayText = UIColor.colorWithHexString(hex: "ED6C32")
+        static let sundayTextDisabled = UIColor.green
+        static let sundaySelectionBackground = UIColor.darkGray
+    }
+    var animationFinished = true
+    var currentCalendar: Calendar?
+    
+    override func awakeFromNib() {
+        let timeZoneBias = 480 // (UTC+08:00)
+        currentCalendar = Calendar.init(identifier: .gregorian)
+        currentCalendar?.locale = Locale(identifier: "fr_FR")
+        if let timeZone = TimeZone.init(secondsFromGMT: -timeZoneBias * 60) {
+            currentCalendar?.timeZone = timeZone
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        calendarBookOnline.dataSource = self
+
+        if let currentCalendar = currentCalendar {
+            monthLabel.text = CVDate(date: Date(), calendar: currentCalendar).globalDescription
+        }
         self.calendarBookOnline.calendarAppearanceDelegate = self
-        
-        // Animator delegate [Unnecessary]
         self.calendarBookOnline.animatorDelegate = self
-        // Menu delegate [Required]
-//        self.menuView.menuViewDelegate = self
-        
-        // Calendar delegate [Required]
         self.calendarBookOnline.calendarDelegate = self
-        calendarBookOnline.delegate = self
-//      calendarBookOnline.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
+        self.menuView.delegate = self
         
         btnMorning.layer.borderWidth    = 2
         btnMorning.layer.borderColor    = UIColor.white.cgColor
@@ -78,7 +99,11 @@ class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalen
         
         // Do any additional setup after loading the view.
     }
+    
 
+  
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -87,152 +112,8 @@ class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalen
         super.viewDidLayoutSubviews()
         
         calendarBookOnline.commitCalendarViewUpdate()
-//        menuView.commitMenuViewUpdate()
+        menuView.commitMenuViewUpdate()
     }
-    
-    /// Required method to implement!
-    func presentationMode() -> CalendarMode {
-        return .monthView
-    }
-    
-    /// Required method to implement!
-    func firstWeekday() -> Weekday {
-        return .sunday
-    }
-    func didSelectRange(from startDayView: DayView, to endDayView: DayView) {
-        print("RANGE SELECTED: \(startDayView.date.commonDescription) to \(endDayView.date.commonDescription)")
-    }
-    
-    
-    /*
-    // MARK:- FSCalendarDataSource
-    
-    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
-        let cell = calendar.dequeueReusableCell(withIdentifier: "cell", for: date, at: position)
-        return cell
-    }
-    
-    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at position: FSCalendarMonthPosition) {
-        self.configure(cell: cell, for: date, at: position)
-    }
-    
-    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
-//        if self.gregorian.isDateInToday(date) {
-//            return "Today"
-//        }
-        return nil
-    }
-    
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 0
-    }
-    
-    // MARK:- FSCalendarDelegate
-    
-    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        self.calendarBookOnline.frame.size.height = bounds.height
-//        self.eventLabel.frame.origin.y = calendarBookOnline.frame.maxY + 10
-    }
-    
-    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition)   -> Bool {
-        let currentPageDate = calendar.currentPage
-        
-        if let monthName = date.monthName(){
-            print(date.day)
-            lblMonthAndDate.text = "\(date.day) " + monthName
-        }
-        year = "\(NSCalendar.current.component(.year, from: date))"
-        
-        if let dayOfWeekItem = date.dayOfWeek(){
-            lblDayName.text = "\(dayOfWeekItem)"
-        }
-        
-        print(lblDayName.text)
-        print(lblMonthAndDate.text)
-        print(year)
-        
-        
-        return monthPosition == .current
-    }
-    
-    func calendar(_ calendar: FSCalendar, shouldDeselect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-        
-        return monthPosition == .current
-    }
-    
-    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print("did select date \(self.formatter.string(from: date))")
-        
-        self.configureVisibleCells()
-    }
-    
-    func calendar(_ calendar: FSCalendar, didDeselect date: Date) {
-        print("did deselect date \(self.formatter.string(from: date))")
-        
-        self.configureVisibleCells()
-    }
-    
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, eventDefaultColorsFor date: Date) -> [UIColor]? {
-        if self.gregorian.isDateInToday(date) {
-            return [UIColor.orange]
-        }
-        return [appearance.eventDefaultColor]
-    }
-    
-    // MARK: - Private functions
-    
-    private func configureVisibleCells() {
-        calendarBookOnline.visibleCells().forEach { (cell) in
-            let date = calendarBookOnline.date(for: cell)
-            let position = calendarBookOnline.monthPosition(for: cell)
-            self.configure(cell: cell, for: date!, at: position)
-        }
-    }
-    
-    private func configure(cell: FSCalendarCell, for date: Date, at position: FSCalendarMonthPosition) {
-        
-        let diyCell = (cell as! DIYCalendarCell)
-        // Custom today circle
-//        diyCell.circleImageView.isHidden = !self.gregorian.isDateInToday(date)
-        // Configure selection layer
-        if position == .current {
-            
-            var selectionType = SelectionType.none
-            
-            if calendarBookOnline.selectedDates.contains(date) {
-                let previousDate = self.gregorian.date(byAdding: .day, value: -1, to: date)!
-                let nextDate = self.gregorian.date(byAdding: .day, value: 1, to: date)!
-                if calendarBookOnline.selectedDates.contains(date) {
-                    if calendarBookOnline.selectedDates.contains(previousDate) && calendarBookOnline.selectedDates.contains(nextDate) {
-                        selectionType = .middle
-                    }
-                    else if calendarBookOnline.selectedDates.contains(previousDate) && calendarBookOnline.selectedDates.contains(date) {
-                        selectionType = .rightBorder
-                    }
-                    else if calendarBookOnline.selectedDates.contains(nextDate) {
-                        selectionType = .leftBorder
-                    }
-                    else {
-                        selectionType = .single
-                    }
-                }
-            }
-            else {
-                selectionType = .none
-            }
-            if selectionType == .none {
-                diyCell.selectionLayer.isHidden = true
-                return
-            }
-            diyCell.selectionLayer.isHidden = false
-            diyCell.selectionType = selectionType
-            
-        } else {
-//            diyCell.circleImageView.isHidden = true
-            diyCell.selectionLayer.isHidden = true
-        }
-    }
-    */
     
     
     // MARK: - Clicks
@@ -289,9 +170,87 @@ class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalen
     */
 
 }
+extension SelectTimeViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate  {
+    
+    /// Required method to implement!
+    func presentationMode() -> CalendarMode {
+        return .monthView
+    }
+    
+    /// Required method to implement!
+    func firstWeekday() -> Weekday {
+        return .sunday
+    }
+    func calendar() -> Calendar? {
+        return currentCalendar
+    }
+    
+    func dayOfWeekTextColor(by weekday: Weekday) -> UIColor {
+        return weekday == .sunday ? UIColor(red: 1.0, green: 0, blue: 0, alpha: 1.0) : UIColor.darkGray
+    }
+    func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
+        
+        if let currentDate = calendarBookOnline.presentedDate.convertedDate()
+        {
+            if let monthName = currentDate.monthName(){
+                print(currentDate.day)
+                lblMonthAndDate.text = "\(currentDate.day) " + monthName
+            }
+            if let dayOfWeekItem = currentDate.dayOfWeek(){
+                lblDayName.text = "\(dayOfWeekItem)"
+            }
+            year = "\(currentDate.year)"
+
+        }
+        
+    }
+    
+    func weekdaySymbolType() -> WeekdaySymbolType {
+        return .short
+    }
+    
+    func presentedDateUpdated(_ date: CVDate) {
+        if monthLabel.text != date.globalDescription && self.animationFinished {
+            let updatedMonthLabel = UILabel()
+            updatedMonthLabel.textColor = monthLabel.textColor
+            updatedMonthLabel.font = monthLabel.font
+            updatedMonthLabel.textAlignment = .center
+            updatedMonthLabel.text = date.globalDescription
+            updatedMonthLabel.sizeToFit()
+            updatedMonthLabel.alpha = 0
+            updatedMonthLabel.center = self.monthLabel.center
+            
+            let offset = CGFloat(48)
+            updatedMonthLabel.transform = CGAffineTransform(translationX: 0, y: offset)
+            updatedMonthLabel.transform = CGAffineTransform(scaleX: 1, y: 0.1)
+            
+            UIView.animate(withDuration: 0.35, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                self.animationFinished = false
+                self.monthLabel.transform = CGAffineTransform(translationX: 0, y: -offset)
+                self.monthLabel.transform = CGAffineTransform(scaleX: 1, y: 0.1)
+                self.monthLabel.alpha = 0
+                
+                updatedMonthLabel.alpha = 1
+                updatedMonthLabel.transform = CGAffineTransform.identity
+                
+            }) { _ in
+                
+                self.animationFinished = true
+                self.monthLabel.frame = updatedMonthLabel.frame
+                self.monthLabel.text = updatedMonthLabel.text
+                self.monthLabel.transform = CGAffineTransform.identity
+                self.monthLabel.alpha = 1
+                updatedMonthLabel.removeFromSuperview()
+            }
+            
+            self.view.insertSubview(updatedMonthLabel, aboveSubview: self.monthLabel)
+        }
+    }
+}
+
 // MARK: - CVCalendarViewAppearanceDelegate
 
-extension ViewController: CVCalendarViewAppearanceDelegate {
+extension SelectTimeViewController: CVCalendarViewAppearanceDelegate {
     
     func dayLabelWeekdayDisabledColor() -> UIColor {
         return UIColor.lightGray
@@ -305,6 +264,25 @@ extension ViewController: CVCalendarViewAppearanceDelegate {
         return 0
     }
     
+    func dayLabelFont(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIFont { return UIFont.systemFont(ofSize: 14) }
+    
+    func dayLabelColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
+        switch (weekDay, status, present) {
+        case (_, .selected, _), (_, .highlighted, _): return Color.selectedText
+        case (.sunday, .in, _): return Color.sundayText
+        case (.sunday, _, _): return Color.sundayTextDisabled
+        case (_, .in, _): return Color.text
+        default: return Color.textDisabled
+        }
+    }
+    
+    func dayLabelBackgroundColor(by weekDay: Weekday, status: CVStatus, present: CVPresent) -> UIColor? {
+        switch (weekDay, status, present) {
+        case (.sunday, .selected, _), (.sunday, .highlighted, _): return Color.sundaySelectionBackground
+        case (_, .selected, _), (_, .highlighted, _): return Color.selectionBackground
+        default: return nil
+        }
+    }
 }
 extension Date{
     var day:Int {return Calendar.current.component(.day, from:self)}

@@ -340,6 +340,13 @@ extension WebDealDetailVC: UITableViewDelegate,UITableViewDataSource{
         cell.lblDesc.text = dic.desc
         cell.btnTopIcon.tag = indexPath.row
         cell.lblUsesCredit.text = dic.displayMessage
+        
+        if dic.title == "Plumber" && indexPath.row == 0{
+            cell.tapGetAQuote.isUserInteractionEnabled = true
+        }else{
+            cell.tapGetAQuote.isUserInteractionEnabled = false
+        }
+        
         if dic.isGetQuotes
         {
             self.setCellcolorAndImage(cell: cell, dic: dic)
@@ -495,7 +502,7 @@ class BrandList {
         case "Tradespeople":
             
             arrScrollData = [
-                ["image" : "aspect_co_uk", "title" : "Plumber".localized,"desc":"We’re proud to be your Whoop! Me Happy Plumber".localized,"bgImage" : "yellow_banner", "message" : "Uses 1 credit", "category":"Tradespeople"]]
+                ["image" : "aspect_co_uk", "title" : "Aspect Property".localized,"desc":"We’re proud to be your Whoop! Me Happy Plumber".localized,"bgImage" : "yellow_banner", "message" : "Uses 1 credit", "category":"Tradespeople"]]
             
         case "Technology":
             
