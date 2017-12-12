@@ -34,6 +34,8 @@
 		083D49D91FDEAD0200648EAE /* WriteForJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49D81FDEAD0200648EAE /* WriteForJobViewController.swift */; };
 		083D49DB1FDEAD2E00648EAE /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49DA1FDEAD2E00648EAE /* SelectTimeViewController.swift */; };
 		083D49DD1FDEAD5300648EAE /* BookedApointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */; };
+		0842CD661FDFEC3B00ABEF78 /* AddSuperWhoopDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842CD641FDFEC3A00ABEF78 /* AddSuperWhoopDetailVC.swift */; };
+		0842CD671FDFEC3B00ABEF78 /* AddSuperWhoopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0842CD651FDFEC3A00ABEF78 /* AddSuperWhoopVC.swift */; };
 		086AA59C1FCD7E6100707528 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5981FCD7E6000707528 /* Localizable.swift */; };
 		086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5991FCD7E6000707528 /* MTUserDefault.swift */; };
 		086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA59A1FCD7E6000707528 /* CustomToolBar.swift */; };
@@ -130,6 +132,8 @@
 		083D49D81FDEAD0200648EAE /* WriteForJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteForJobViewController.swift; sourceTree = "<group>"; };
 		083D49DA1FDEAD2E00648EAE /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedApointmentViewController.swift; sourceTree = "<group>"; };
+		0842CD641FDFEC3A00ABEF78 /* AddSuperWhoopDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuperWhoopDetailVC.swift; sourceTree = "<group>"; };
+		0842CD651FDFEC3A00ABEF78 /* AddSuperWhoopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuperWhoopVC.swift; sourceTree = "<group>"; };
 		086AA5941FCD6FF000707528 /* BoostDealDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoostDealDetailVC.swift; sourceTree = "<group>"; };
 		086AA5951FCD6FF800707528 /* SeeCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeCodeVC.swift; sourceTree = "<group>"; };
 		086AA5981FCD7E6000707528 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -319,6 +323,15 @@
 				083D49DC1FDEAD5300648EAE /* BookedApointmentViewController.swift */,
 			);
 			path = "Booking plumber";
+			sourceTree = "<group>";
+		};
+		0842CD631FDFEC1A00ABEF78 /* Super Whoop */ = {
+			isa = PBXGroup;
+			children = (
+				0842CD641FDFEC3A00ABEF78 /* AddSuperWhoopDetailVC.swift */,
+				0842CD651FDFEC3A00ABEF78 /* AddSuperWhoopVC.swift */,
+			);
+			path = "Super Whoop";
 			sourceTree = "<group>";
 		};
 		086AA5A61FCD7F8900707528 /* Pulse */ = {
@@ -549,6 +562,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0842CD631FDFEC1A00ABEF78 /* Super Whoop */,
 				083D49D51FDE8E6C00648EAE /* Booking plumber */,
 				0839C2981FD958A600507EE8 /* Payment Settings */,
 				0896652E1FD8573600C8684F /* Review */,
@@ -757,6 +771,7 @@
 				082A28821FCDC21D00B39D0A /* HomeButtonVC.swift in Sources */,
 				086AA59D1FCD7E6100707528 /* MTUserDefault.swift in Sources */,
 				0824BBF01FCFEA500015811E /* SeeCodeVC.swift in Sources */,
+				0842CD661FDFEC3B00ABEF78 /* AddSuperWhoopDetailVC.swift in Sources */,
 				082A28891FCDC23700B39D0A /* NewPasswordVC.swift in Sources */,
 				08BFA4F41FCEFDE500294D88 /* HomeVC.swift in Sources */,
 				083D49DD1FDEAD5300648EAE /* BookedApointmentViewController.swift in Sources */,
@@ -790,6 +805,7 @@
 				F3152E461FB22EEC000E03B7 /* SignInVC.swift in Sources */,
 				0839C29C1FD98BBF00507EE8 /* CardListViewController.swift in Sources */,
 				08BFA4F11FCEFDE500294D88 /* HomeWhoopOnBoardingVC.swift in Sources */,
+				0842CD671FDFEC3B00ABEF78 /* AddSuperWhoopVC.swift in Sources */,
 				082EA7D91FCEC77000F21D89 /* SettingUnlockDealViewController.swift in Sources */,
 				089665301FD8576D00C8684F /* UserReviewsViewController.swift in Sources */,
 				F3152E2A1FB22EEC000E03B7 /* AppDelegate.swift in Sources */,

@@ -22,11 +22,11 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
     @IBOutlet var btnMorning: UIButton!
     @IBOutlet var btnAfternoon: UIButton!
     @IBOutlet var lblMonthAndDate: UILabel!
-    @IBOutlet var lblYear: UILabel!
+    @IBOutlet var lblDayName: UILabel!
     @IBOutlet var calendarBookOnline: FSCalendar!
     
     var selectedSlot = ""
-    var year = ""
+    var year = "2017"
     var day = ""
     var dayOfWeek = ""
     override func viewDidLoad() {
@@ -49,6 +49,18 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
 
         btnAfternoon.backgroundColor = UIColor.white
         selectedSlot = "Afternoon 12pm - 18pm"
+        
+        if let monthName = Date().monthName(){
+            print(Date().day)
+            lblMonthAndDate.text = "\(Date().day) " + monthName
+        }
+        if let dayOfWeekItem = Date().dayOfWeek(){
+            lblDayName.text = "\(dayOfWeekItem)"
+        }
+        
+        calendarBookOnline.select(Date(), scrollToDate: true)
+//        calendarBookOnline.ty
+        
         // Do any additional setup after loading the view.
     }
 
@@ -69,14 +81,14 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
     }
     
     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
-        if self.gregorian.isDateInToday(date) {
-            return "Today"
-        }
+//        if self.gregorian.isDateInToday(date) {
+//            return "Today"
+//        }
         return nil
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        return 2
+        return 0
     }
     
     // MARK:- FSCalendarDelegate
@@ -90,16 +102,18 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
         let currentPageDate = calendar.currentPage
         
         if let monthName = date.monthName(){
-            
-//                    let dayItem = "\(NSCalendar.current.component(.day, from: currentPageDate))"
             print(date.day)
-                lblMonthAndDate.text = "\(date.day) " + monthName
+            lblMonthAndDate.text = "\(date.day) " + monthName
         }
-        year = "\(NSCalendar.current.component(.year, from: currentPageDate))"
+        year = "\(NSCalendar.current.component(.year, from: date))"
         
-        if let dayOfWeekItem = currentPageDate.dayOfWeek(){
-            lblYear.text = "\(dayOfWeekItem)"
+        if let dayOfWeekItem = date.dayOfWeek(){
+            lblDayName.text = "\(dayOfWeekItem)"
         }
+        
+        print(lblDayName.text)
+        print(lblMonthAndDate.text)
+        print(year)
         
         
         return monthPosition == .current
@@ -188,7 +202,7 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
     // MARK: - Clicks
     @IBAction func tapSubmitData(_ sender: Any) {
         if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "BookedApointmentViewController") as? BookedApointmentViewController{
-            if let year = lblYear.text{
+            if let year = lblDayName.text{
               initVC.day = year
             }
             if let dateandMonth = lblMonthAndDate.text{
@@ -211,7 +225,7 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
             btnMorning.backgroundColor = UIColor.white
             btnEvening.backgroundColor = UIColor.red
             btnAfternoon.backgroundColor = UIColor.red
-            selectedSlot = "Morning 8am - 10am"
+            selectedSlot = "Morning 8am - 12pm"
             
         }else if sender.tag == 2{//Aft
             btnMorning.backgroundColor = UIColor.red

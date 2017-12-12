@@ -14,7 +14,7 @@ class WayToBookingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        shadowView.layer.shadowColor = UIColor.groupTableViewBackground.cgColor
+        shadowView.layer.shadowColor = UIColor.lightGray.withAlphaComponent(0.12).cgColor//groupTableViewBackground.cgColor
         shadowView.layer.shadowOpacity = 1
         shadowView.layer.shadowOffset = CGSize.zero
         // Do any additional setup after loading the view.
@@ -26,6 +26,8 @@ class WayToBookingViewController: UIViewController {
     }
     
     @IBAction func tapByPhone(_ sender: Any) {
+        guard let number = URL(string: "tel://" + "0800 577356") else { return }
+        UIApplication.shared.open(number)
     }
     
     

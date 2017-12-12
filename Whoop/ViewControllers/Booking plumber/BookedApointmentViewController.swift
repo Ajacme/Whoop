@@ -19,6 +19,9 @@ class BookedApointmentViewController: UIViewController {
     var year = ""
     var monthAndDate = ""
     var slot = ""
+    
+    var objCodePopUp = ViewForCodePopUp()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,14 +37,48 @@ class BookedApointmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // MARK: - Click Events
     @IBAction func tapSubmitData(_ sender: Any) {
+        customChatView()
+        
+    }
+    @IBAction func tapBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func tapToPopupClose(_ sender: UIButton) {
+        
+        self.objCodePopUp.removeFromSuperview()
+        self.objCodePopUp.Cons_ViewTop.constant = 1000
+        
         if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as? NewMessageCentreViewController{
             self.navigationController?.pushViewController(initVC, animated: true)
         }
     }
-    @IBAction func tapBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    
+    
+    // MARK: - CustumeView Design For PopUp
+    func customChatView()  {
+        
+        objCodePopUp = Bundle.main.loadNibNamed("ViewForCodePopUp", owner: self, options: nil)?.first as! ViewForCodePopUp
+        self.objCodePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
+        
+//        objCodePopUp.lblTitle.textAlignment = NSTextAlignment.center
+        
+        objCodePopUp.lblTitle.text = "Booking pending"
+        objCodePopUp.lblDesc.text = "Thanks for choosing to get a quote from your Whoop! tradesman.\nWe'll confirm the timeslot right away."
+        
+        
+        objCodePopUp.backgroundColor = UIColor.clear
+        self.view.addSubview(objCodePopUp)
+        UIView.animate(withDuration: 0.5) {
+            //self.objCodePopUp.alpha = 0.5
+            self.objCodePopUp.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+            self.objCodePopUp.Cons_ViewTop.constant = 40
+            self.view.layoutIfNeeded()
+        }
+        self.objCodePopUp.btnClose.addTarget(self, action: #selector(self.tapToPopupClose(_:)), for: .touchUpInside)
+        self.objCodePopUp.btnCancel.addTarget(self, action: #selector(self.tapToPopupClose(_:)), for: .touchUpInside)
     }
 
     /*

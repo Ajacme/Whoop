@@ -226,7 +226,7 @@ extension SettingsMenuVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         if sender.tag == 3 {
-            if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SuperWhoopDetailVC") as? SuperWhoopDetailVC{
+            if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "AddSuperWhoopDetailVC") as? AddSuperWhoopDetailVC{
                 self.navigationController?.pushViewController(initVC, animated: true)
             }
         }
