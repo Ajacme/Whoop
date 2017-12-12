@@ -12,6 +12,7 @@ class QuoteViewController: UIViewController {
     @IBOutlet var headerView: UnlockHeaderView!
     @IBOutlet weak var tableView: UITableView!
     
+    var objCodePopUp = SuperWhoopPopUp()
     
     var arrScrollData = [[String : Any]]()
     var  arrInsuranceData = [Insurance_data]()
@@ -23,14 +24,6 @@ class QuoteViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        /*
- 
-         ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized, "bgImage" : "bg"],
- */
-        /*
- 
-         ["imageName" : "add","title" : "Add Yourself".localized,"desc":"Tap + to add yourself ".localized, "displayMessage" : "Expires in 45 days".localized, "isAddedSuper" : false, "lockText" : "Not Added", "isLock":"false"]
- */
         arrScrollData  = [
             ["imageName" : "plumber_profile", "selected_image" :"plumber_profile", "title" : "Jake Hughes, your plumber".localized,"desc":"Here's the normal price. Tap to your Whoop! Button to reveal the Whoop! Me Happy price".localized,"displayMessage" : "Boiler repair".localized, "isAddedSuper" : true, "lockText" : "Whoop! Me Happy deals left", "isLock":"true", "price":"£578.00 normal price", "numberOfDealLeft":"103", "bgImage" : "bg_tra"],
         
@@ -64,7 +57,36 @@ class QuoteViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func tapToClosePopUp(_ sender: UIButton) {
+        self.objCodePopUp.removeFromSuperview()
+        self.objCodePopUp.Cons_ViewMiddle.constant = 1000
+    }
+    
+    // MARK: - CustumeView Design For PopUp
+    func customCodeView()  {
+        objCodePopUp = Bundle.main.loadNibNamed("SuperWhoopPopUp", owner: self, options: nil)?.first as! SuperWhoopPopUp
+        self.objCodePopUp.frame = CGRect(x: 0, y:89, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT - 89)
+        
+        objCodePopUp.labelTitle.text = "Job description"
+        objCodePopUp.labelDiscription.text = "We'll replace or fix your boiler. If necessary we'll take your old boiler away too."
+        objCodePopUp.backgroundColor = UIColor.clear
+        self.view.addSubview(objCodePopUp)
+        UIView.animate(withDuration: 0.5) {
+            //self.objCodePopUp.alpha = 0.5
+            self.objCodePopUp.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+            self.objCodePopUp.Cons_ViewMiddle.constant = 0
+            self.view.layoutIfNeeded()
+        }
+        
+        //Buttons Click Events..
+        self.objCodePopUp.btnClose.addTarget(self, action: #selector(self.tapToClosePopUp(_:)), for: .touchUpInside)
+        self.objCodePopUp.btnCross.addTarget(self, action: #selector(self.tapToClosePopUp(_:)), for: .touchUpInside)
+    }
    
+    @objc func jobInfoClicked(sender: UIButton){
+        self.customCodeView()
+    }
     @IBAction func tapBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -86,16 +108,7 @@ class QuoteViewController: UIViewController {
                 self.pulseEffect.removeFromSuperlayer()
             }
             
-//            self.pulseEffect = PulsingHaloLayer()
-//            self.pulseEffect.haloLayerNumber = 7
-//            self.pulseEffect.animationDuration = 3
-//            self.pulseEffect.radius = 125.0
-//            self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
-//            self.pulseEffect.position = cell.imgMiddleblue.center
-//            cell.imgMiddleblue.layer.addSublayer(self.pulseEffect)
-//
-//            self.pulseEffect.start()
-//            cell.imgTopBG.backgroundColor = UIColor(red: 141.0 / 255.0, green: 142.0 / 255.0, blue: 143.0 / 255.0, alpha: 1.0)
+
             
             //compressed animation
             UIView.animate(withDuration: 0.6,
@@ -108,7 +121,7 @@ class QuoteViewController: UIViewController {
                                 
                                 //ripple animation
                                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                                    UIView.animate(withDuration: 1.5, animations: {
+                                    UIView.animate(withDuration: 0.1, animations: {
                                         
                                         var dic1 = self.arrScrollData[(indexPath?.row)!]
                                         dic1.updateValue("true", forKey: "isLock")
@@ -116,34 +129,18 @@ class QuoteViewController: UIViewController {
                                         dic1.updateValue("true", forKey: "isAddedSuper")
                                         dic1.updateValue("£475.00", forKey: "price")
                                         
-                                        /*if indexPath?.row == 1 {
-                                         dic1.updateValue("Jakie Hughes", forKey: "title")
-                                         dic1.updateValue("add_yourself", forKey: "imageName")
-                                         dic1.updateValue("Is now Added", forKey: "lockText")
-                                         }else{
-                                         dic1.updateValue("", forKey: "title")
-                                         dic1.updateValue("rightArrow", forKey: "imageName")
-                                         dic1.updateValue("You have Added yourself", forKey: "lockText")
-                                         }*/
+                                       
                                         
-//                                        self.addedDeal += 1
                                         self.arrScrollData .remove(at: (indexPath?.row)!)
                                         self.arrScrollData.insert(dic1, at: (indexPath?.row)!)
-//                                        self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
                                         
                                         self.tableView.reloadData()
                                         
-//                                        if self.addedDeal == self.arrScrollData.count
-//                                        {
-//                                            self.cons_lblHeaderMiddle.constant = 10
-//                                            self.lblHeaderTitle.text = "Your unlocked deals. Upgrade\none to a Super Whoop! Deal"
-//                                            self.lblHeaderSubDesc.text = ""
-//                                            self.setInLastFullTheme()
-//                                        }
-                                        //                                        self.rippleEffectMethod()
+
                                         
                                     }, completion: { (result) in
 //                                        self.pulseEffect.removeFromSuperlayer()
+                                        
                                     })
                                 }
                             }
@@ -184,7 +181,7 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
         cell.lblPrice.text = dic["price"] as! String
         cell.lblNumberOfDeals.text = dic["numberOfDealLeft"] as! String
         cell.btnJobInfo.tag = indexPath.row
-        
+        cell.btnJobInfo.addTarget(self, action: #selector(QuoteViewController.jobInfoClicked(sender:)), for: .touchUpInside)
     
         let strislock = dic["isLock"] as! String
         if strislock == "true"

@@ -10,12 +10,25 @@ import UIKit
 
 class BookedApointmentViewController: UIViewController {
 
+    @IBOutlet var lblMonday: UILabel!
+    @IBOutlet var lblDateandMonth: UILabel!
+    @IBOutlet var lblyear: UILabel!
+    @IBOutlet var lblSlot: UILabel!
+    
+    var day = ""
+    var year = ""
+    var monthAndDate = ""
+    var slot = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        lblMonday.text = day
+        lblyear.text = year
+        lblDateandMonth.text = monthAndDate
+        lblSlot.text = slot
+        
         // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

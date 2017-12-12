@@ -24,7 +24,30 @@ struct WebURL {
     
     
 }
-
+// Weekday
+extension Date {
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self).capitalized
+        // or capitalized(with: locale)
+    }
+    func monthName() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
+        return dateFormatter.string(from: self).capitalized
+        // or capitalized(with: locale)
+    }
+    func dayName() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: self).capitalized
+        // or capitalized(with: locale)
+    }
+    func dayNumberOfWeek() -> Int? {
+        return Calendar.current.dateComponents([.weekday], from: self).weekday
+    }
+}
 extension UIColor{
     class func AppTheme() -> UIColor{
         return UIColor(red: 253.0 / 255.0, green: 89.0 / 255.0, blue: 24.0 / 255.0, alpha: 1.0)
