@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WriteForJobViewController: UIViewController {
+class WriteForJobViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var jobsTextField: UITextView!
     override func viewDidLoad() {
@@ -17,11 +17,36 @@ class WriteForJobViewController: UIViewController {
         jobsTextField.layer.borderWidth = 1
         jobsTextField.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         // Do any additional setup after loading the view.
+        
+        jobsTextField.delegate = self
+        jobsTextField.text = "Please write about your job here."
+        jobsTextField.textColor = .lightGray
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK :- Textview Delegate Methods
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Please write about your job here.")
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Please write about your job here."
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
     }
     
     @IBAction func tapSelectDate(_ sender: Any) {
