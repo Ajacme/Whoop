@@ -164,7 +164,7 @@ class WMHVC: UIViewController,UITextFieldDelegate {
         
         let dic = arrInsuranceData[sender.tag]
         let title = dic.title
-        if title == "Plumber"{
+        if title == "Aspect Property"{
             print("That's it")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             if let controller = storyBoard.instantiateViewController(withIdentifier: "WayToBookingViewController") as? WayToBookingViewController{
@@ -228,7 +228,7 @@ extension WMHVC: UITableViewDelegate,UITableViewDataSource{
         
         cell.btnSeeOurReviews.tag = indexPath.row
         cell.btnSeeOurReviews.addTarget(self, action: #selector(WMHVC.btnSeeOurReviewClicked(sender:)), for: .touchUpInside)
-        if dic.title == "Plumber" {
+        if dic.title == "Aspect Property" {
             cell.tapOurWhoopButton.tag = indexPath.row
             cell.tapOurWhoopButton.addTarget(self, action: #selector(WMHVC.btnTapOurWhoopButton(sender:)), for: .touchUpInside)
                 cell.btnSeeOurReviews.isHidden = false

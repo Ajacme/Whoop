@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WriteReviewViewController: UIViewController {
+class WriteReviewViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var textView: UITextView!
     override func viewDidLoad() {
@@ -16,11 +16,37 @@ class WriteReviewViewController: UIViewController {
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.lightGray.cgColor
         // Do any additional setup after loading the view.
+        
+//
+        textView.delegate = self
+        textView.text = "Please write about my work here."
+        textView.textColor = .lightGray
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK :- Textview Delegate Methods
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Please write about my work here.")
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = "Please write about my work here."
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
     }
     
 
