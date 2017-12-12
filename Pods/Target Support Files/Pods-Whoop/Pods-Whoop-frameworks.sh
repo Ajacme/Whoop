@@ -90,16 +90,16 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AASegmentedControl/AASegmentedControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DLRadioButton/DLRadioButton.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FSCalendar/FSCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ImageSlideshow/ImageSlideshow.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JHChainableAnimations/JHChainableAnimations.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AASegmentedControl/AASegmentedControl.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CVCalendar/CVCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DLRadioButton/DLRadioButton.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FSCalendar/FSCalendar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ImageSlideshow/ImageSlideshow.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JHChainableAnimations/JHChainableAnimations.framework"

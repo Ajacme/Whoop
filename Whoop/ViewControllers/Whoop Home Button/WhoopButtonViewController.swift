@@ -287,6 +287,28 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         
     }
 
+    @IBAction func tapBoostDeal(_ sender: Any) {
+        let UnlockedDeal = UIStoryboard(name: "UnlockedDeal", bundle: Bundle.main)
+        if let initVC = UnlockedDeal.instantiateViewController(withIdentifier: "SeeCodeVC") as? SeeCodeVC{
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
+    @IBAction func tapUnlockDeal(_ sender: Any) {
+        if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingUnlockDealViewController") as?   SettingUnlockDealViewController{
+            initVC.isDealToUnlock = false
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
+
+    @IBAction func tapDealsLeft(_ sender: Any) {
+        if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingUnlockDealViewController") as?   SettingUnlockDealViewController{
+            initVC.isDealToUnlock = true
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
+
+    
+    
     @IBAction func tapToWhoopMeHappy(_ sender: Any) {
         
         
