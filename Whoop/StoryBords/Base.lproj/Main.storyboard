@@ -86,7 +86,7 @@
                                                         <rect key="frame" x="31.666666666666664" y="63.333333333333343" width="68.333333333333343" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN4-lC-KSO">
-                                                                <rect key="frame" x="30" y="24" width="10" height="20.666666666666671"/>
+                                                                <rect key="frame" x="29.333333333333329" y="24" width="10" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="0.37647058820000001" blue="0.074509803920000006" alpha="1" colorSpace="deviceRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                                                 <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="219"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlocked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1EC-Ay-esD">
-                                                        <rect key="frame" x="31.333333333333307" y="69" width="70.333333333333314" height="20.666666666666671"/>
+                                                        <rect key="frame" x="30.66666666666665" y="69" width="70.333333333333314" height="20.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -146,7 +146,7 @@
                                                         <rect key="frame" x="31.66666666666665" y="122.33333333333334" width="68.333333333333314" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBX-8U-GvJ">
-                                                                <rect key="frame" x="24.666666666666657" y="24" width="20" height="20.666666666666671"/>
+                                                                <rect key="frame" x="25" y="24" width="20" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                                                 <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="219"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-Qk-chq">
-                                                        <rect key="frame" x="44.666666666666629" y="10.000000000000002" width="43.666666666666657" height="20.666666666666671"/>
+                                                        <rect key="frame" x="44" y="10.000000000000002" width="43.666666666666657" height="20.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                                                         <rect key="frame" x="31.666666666666622" y="64.666666666666686" width="68.333333333333314" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R55-wA-vxj">
-                                                                <rect key="frame" x="29.666666666666686" y="23.999999999999972" width="10" height="20.666666666666671"/>
+                                                                <rect key="frame" x="30" y="23.999999999999972" width="10" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -6431,7 +6431,7 @@ saving the same amount.</string>
                                                         <rect key="frame" x="27.333333333333329" y="63.333333333333314" width="75" height="75"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCP-fE-GOe">
-                                                                <rect key="frame" x="32.666666666666671" y="27.333333333333371" width="10" height="20.666666666666671"/>
+                                                                <rect key="frame" x="33" y="27.333333333333371" width="10" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="0.37647058820000001" blue="0.074509803920000006" alpha="1" colorSpace="deviceRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -6466,7 +6466,7 @@ saving the same amount.</string>
                                                 <rect key="frame" x="141.33333333333331" y="0.0" width="131.33333333333331" height="248.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlocked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SO8-24-XSR">
-                                                        <rect key="frame" x="30.66666666666665" y="88.333333333333314" width="70.333333333333314" height="20.666666666666671"/>
+                                                        <rect key="frame" x="30.999999999999993" y="88.333333333333314" width="70.333333333333314" height="20.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -6481,7 +6481,7 @@ saving the same amount.</string>
                                                         <rect key="frame" x="28.333333333333314" y="141" width="75" height="75"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRq-aq-Hvt">
-                                                                <rect key="frame" x="27.666666666666686" y="27.333333333333314" width="20" height="20.666666666666671"/>
+                                                                <rect key="frame" x="28" y="27.333333333333314" width="20" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -6516,7 +6516,7 @@ saving the same amount.</string>
                                                 <rect key="frame" x="282.66666666666669" y="0.0" width="131.33333333333331" height="248.66666666666666"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XC4-x3-BdU">
-                                                        <rect key="frame" x="44.333333333333314" y="9.9999999999999982" width="43.666666666666657" height="21.333333333333329"/>
+                                                        <rect key="frame" x="44.666666666666629" y="9.9999999999999982" width="43.666666666666657" height="21.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -6531,7 +6531,7 @@ saving the same amount.</string>
                                                         <rect key="frame" x="28.333333333333314" y="63.333333333333314" width="75" height="75"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-IR-53l">
-                                                                <rect key="frame" x="33" y="27.333333333333371" width="10" height="20.666666666666671"/>
+                                                                <rect key="frame" x="33.333333333333314" y="27.333333333333371" width="10" height="20.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -6646,7 +6646,7 @@ saving the same amount.</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WE-Zh-qZD">
-                                                        <rect key="frame" x="77.333333333333329" y="54.999999999999993" width="52.333333333333329" height="20.666666666666664"/>
+                                                        <rect key="frame" x="77.666666666666671" y="54.999999999999993" width="52.333333333333329" height="20.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -6681,7 +6681,7 @@ saving the same amount.</string>
                                                 <rect key="frame" x="207" y="0.0" width="207" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Left ( ? )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sg-VT-Xvj">
-                                                        <rect key="frame" x="54.333333333333314" y="55.666666666666622" width="100" height="20.666666666666664"/>
+                                                        <rect key="frame" x="54.666666666666686" y="55.666666666666622" width="100" height="20.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -9961,19 +9961,19 @@ dG8geW91LiBIb3cgZG8geW91IHdhbnQgdG8gZ2V0IGluIHRvdWNoID8
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZDI-hZ-vlQ">
-                                        <rect key="frame" x="17" y="118" width="381" height="36"/>
+                                        <rect key="frame" x="17" y="118.33333333333334" width="381" height="36"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Light" family="LatoLatin" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plR-ca-YF0">
-                                        <rect key="frame" x="17" y="202.66666666666669" width="381" height="36"/>
+                                        <rect key="frame" x="17" y="203" width="381" height="36"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Light" family="LatoLatin" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 JAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtM-5A-6Cv">
-                                        <rect key="frame" x="17" y="155.33333333333334" width="381" height="47"/>
+                                        <rect key="frame" x="17" y="155.66666666666666" width="381" height="47"/>
                                         <fontDescription key="fontDescription" name="LatoLatin-Light" family="LatoLatin" pointSize="39"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -10321,28 +10321,10 @@ dG8geW91LiBIb3cgZG8geW91IHdhbnQgdG8gZ2V0IGluIHRvdWNoID8
                                     <constraint firstItem="X4n-YJ-4W2" firstAttribute="leading" secondItem="sDF-ax-HKg" secondAttribute="leading" constant="10" id="ytg-1t-jaV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-tq-54R" customClass="FSCalendar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-tq-54R" customClass="CVCalendarView" customModule="CVCalendar">
                                 <rect key="frame" x="0.0" y="91" width="414" height="311"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.99771410230000002" green="0.15394422739999999" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" red="0.98946446180000003" green="0.4055175781" blue="0.084015391770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
-                                        <color key="value" red="0.99771410230000002" green="0.29578993059999997" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -10364,7 +10346,7 @@ dG8geW91LiBIb3cgZG8geW91IHdhbnQgdG8gZ2V0IGluIHRvdWNoID8
                         <outlet property="btnAfternoon" destination="Ek8-k3-tc9" id="bBB-ZW-YWa"/>
                         <outlet property="btnEvening" destination="fAk-3S-eF4" id="nJB-OT-OFO"/>
                         <outlet property="btnMorning" destination="SYX-gn-qHM" id="Sdp-X4-Vm0"/>
-                        <outlet property="calendarBookOnline" destination="Ka9-tq-54R" id="SGX-A2-EP5"/>
+                        <outlet property="calendarBookOnline" destination="Ka9-tq-54R" id="jO3-Re-be0"/>
                         <outlet property="lblDayName" destination="YNt-t8-qsO" id="1mb-Pp-hfa"/>
                         <outlet property="lblMonthAndDate" destination="DMy-Ke-PL8" id="Jyr-0I-fGL"/>
                     </connections>
@@ -33180,7 +33162,7 @@ AAAAAAAAAAAAAAAEk94
         <image name="reviewer1" width="117" height="117"/>
         <image name="reviewer2" width="118" height="117"/>
         <image name="scan_card" width="10" height="10"/>
-        <image name="setting" width="341" height="341"/>
+        <image name="setting" width="77" height="117"/>
         <image name="settingIconClose" width="7" height="7"/>
         <image name="share" width="101" height="101"/>
         <image name="smiley_icon" width="58" height="57"/>

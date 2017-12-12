@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import FSCalendar
+import CVCalendar
 
-class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate, FSCalendarDelegateAppearance  {
+class SelectTimeViewController: UIViewController,CVCalendarViewDelegate, CVCalendarMenuViewDelegate,CVCalendarViewAppearanceDelegate  {
+   
+    
     
     fileprivate let gregorian = Calendar(identifier: .gregorian)
     fileprivate let formatter: DateFormatter = {
@@ -23,21 +25,32 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
     @IBOutlet var btnAfternoon: UIButton!
     @IBOutlet var lblMonthAndDate: UILabel!
     @IBOutlet var lblDayName: UILabel!
-    @IBOutlet var calendarBookOnline: FSCalendar!
+    @IBOutlet var calendarBookOnline: CVCalendarView!
     
     var selectedSlot = ""
     var year = "2017"
     var day = ""
     var dayOfWeek = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        calendarBookOnline.dataSource = self
-        calendarBookOnline.delegate = self
-        calendarBookOnline.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
+//        calendarBookOnline.dataSource = self
+        self.calendarBookOnline.calendarAppearanceDelegate = self
         
-        btnMorning.layer.borderWidth = 2
-        btnMorning.layer.borderColor = UIColor.white.cgColor
-        btnMorning.backgroundColor = UIColor.red
+        // Animator delegate [Unnecessary]
+        self.calendarBookOnline.animatorDelegate = self
+        // Menu delegate [Required]
+//        self.menuView.menuViewDelegate = self
+        
+        // Calendar delegate [Required]
+        self.calendarBookOnline.calendarDelegate = self
+        calendarBookOnline.delegate = self
+//      calendarBookOnline.register(DIYCalendarCell.self, forCellReuseIdentifier: "cell")
+        
+        btnMorning.layer.borderWidth    = 2
+        btnMorning.layer.borderColor    = UIColor.white.cgColor
+        btnMorning.backgroundColor      = UIColor.red
         
         btnEvening.layer.borderWidth = 2
         btnEvening.layer.borderColor = UIColor.white.cgColor
@@ -50,6 +63,8 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
         btnAfternoon.backgroundColor = UIColor.white
         selectedSlot = "Afternoon 12pm - 18pm"
         
+        
+        
         if let monthName = Date().monthName(){
             print(Date().day)
             lblMonthAndDate.text = "\(Date().day) " + monthName
@@ -58,7 +73,7 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
             lblDayName.text = "\(dayOfWeekItem)"
         }
         
-        calendarBookOnline.select(Date(), scrollToDate: true)
+//        calendarBookOnline.select(Date(), scrollToDate: true)
 //        calendarBookOnline.ty
         
         // Do any additional setup after loading the view.
@@ -68,7 +83,28 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        calendarBookOnline.commitCalendarViewUpdate()
+//        menuView.commitMenuViewUpdate()
+    }
     
+    /// Required method to implement!
+    func presentationMode() -> CalendarMode {
+        return .monthView
+    }
+    
+    /// Required method to implement!
+    func firstWeekday() -> Weekday {
+        return .sunday
+    }
+    func didSelectRange(from startDayView: DayView, to endDayView: DayView) {
+        print("RANGE SELECTED: \(startDayView.date.commonDescription) to \(endDayView.date.commonDescription)")
+    }
+    
+    
+    /*
     // MARK:- FSCalendarDataSource
     
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
@@ -196,7 +232,7 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
             diyCell.selectionLayer.isHidden = true
         }
     }
-    
+    */
     
     
     // MARK: - Clicks
@@ -252,6 +288,23 @@ class SelectTimeViewController: UIViewController,FSCalendarDataSource,FSCalendar
     }
     */
 
+}
+// MARK: - CVCalendarViewAppearanceDelegate
+
+extension ViewController: CVCalendarViewAppearanceDelegate {
+    
+    func dayLabelWeekdayDisabledColor() -> UIColor {
+        return UIColor.lightGray
+    }
+    
+    func dayLabelPresentWeekdayInitallyBold() -> Bool {
+        return false
+    }
+    
+    func spaceBetweenDayViews() -> CGFloat {
+        return 0
+    }
+    
 }
 extension Date{
     var day:Int {return Calendar.current.component(.day, from:self)}

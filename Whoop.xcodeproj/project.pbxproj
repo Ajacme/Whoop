@@ -12,7 +12,6 @@
 		04DAB4F11FC57F20002CC0FD /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAB4F01FC57F20002CC0FD /* InviteViewController.swift */; };
 		0824BBF01FCFEA500015811E /* SeeCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086AA5951FCD6FF800707528 /* SeeCodeVC.swift */; };
 		0824BBF21FD01D2F0015811E /* CoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0824BBF11FD01D2E0015811E /* CoreConfig.swift */; };
-		0828EFB11FDED1EA0009635A /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828EFB01FDED1E90009635A /* DIYCalendarCell.swift */; };
 		082A28731FCDBEA000B39D0A /* ButtonManagementInSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A28701FCDBE9F00B39D0A /* ButtonManagementInSetting.storyboard */; };
 		082A28741FCDBEA000B39D0A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A28711FCDBE9F00B39D0A /* Profile.storyboard */; };
 		082A28751FCDBEA000B39D0A /* UnlockedDeal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082A28721FCDBEA000B39D0A /* UnlockedDeal.storyboard */; };
@@ -814,7 +813,6 @@
 				087AD00B1FCE9A4C000DD17D /* ViewFor3xPopUp.swift in Sources */,
 				086AA59E1FCD7E6100707528 /* CustomToolBar.swift in Sources */,
 				04AB239C1FC6B9E7002A628F /* WMHVC.swift in Sources */,
-				0828EFB11FDED1EA0009635A /* DIYCalendarCell.swift in Sources */,
 				087FB6981FD5B00500F934AB /* WhoopButtonViewController.swift in Sources */,
 				086AA59F1FCD7E6100707528 /* Helper.swift in Sources */,
 				08AB6D481FD13CD800A97161 /* SuperWhoopDetailVC.swift in Sources */,
