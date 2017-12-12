@@ -21,14 +21,14 @@ class Insurance_data :  NSObject {
     var lockText : String = ""
     var isLocked : Bool = false
     var bgImage : String = ""
-    var price : String = ""
-    var numberOfDealLeft : String = ""
+    var totalSaving: String = ""
+   
     
     override init() {
         
     }
     
-    init(title: String, desc: String, imageName: String, isLocked: Bool, isAddedSuper: Bool , UnlockedimageName :String,isGetQuotes: Bool, selectedBGImage : String,displayMessage : String, lockText : String,bgImage : String, price: String, numberOfDealLeft:String)
+    init(title: String, desc: String, imageName: String, isLocked: Bool, isAddedSuper: Bool , UnlockedimageName :String,isGetQuotes: Bool, selectedBGImage : String,displayMessage : String, lockText : String,bgImage : String, totalSaving: String)
     {
         self.title = title
         self.desc = desc
@@ -41,8 +41,7 @@ class Insurance_data :  NSObject {
         self.selectedBGImage = selectedBGImage
         self.isLocked = isLocked
         self.bgImage = bgImage
-        self.price = price
-        self.numberOfDealLeft = numberOfDealLeft
+        self.totalSaving = totalSaving
     }
 }
 
@@ -68,10 +67,13 @@ class CellForTickets: UITableViewCell {
     @IBOutlet weak var lblGetQuotes: UILabel!
     
     @IBOutlet weak var btnWhoop: UIButton!
+    @IBOutlet weak var lockTextTopConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var lblNumberOfDeals: UILabel!
+    @IBOutlet weak var cellMainViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lblTotalSaving: UILabel!
+    @IBOutlet weak var seeJobInfoHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnJobInfo: UIButton!
-    @IBOutlet weak var lblPrice: UILabel!
     var pulseEffect : PulsingHaloLayer!
     
 }
