@@ -33,6 +33,7 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet var addPhotoButtonText: UIButton!
     
     
+    @IBOutlet weak var btnCompressionButton: UIButton!
     @IBOutlet weak var whoopMeHappyButton: UIButton!
     @IBOutlet var buttonRGY: UIButton!
     @IBOutlet var inviteLabel: UILabel!
@@ -66,6 +67,7 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
             buttonsStackView.alpha = 0
             addPhotoButton.alpha = 0
             addPhotoButtonText.alpha = 0
+            btnCompressionButton.alpha = 0
         }
         
         
@@ -185,8 +187,12 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         let imageFromData = UIImage(data: imageAdd)
         addPhotoButton.setImage(imageFromData, for: .normal)
         addPhotoButtonText.setTitle("Change Photo", for: .normal)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -208,6 +214,9 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
     func animateTheSwipeUp(){
         let animator1 = JHChainableAnimator(view: whoopButtonImageView)
         animator1?.moveY()(300)?.thenAfter()(0.01)?.moveY()(-300)?.makeOpacity()(1)?.animate()(0.37)
+        
+        let animatorCompression = JHChainableAnimator(view: btnCompressionButton)
+        animatorCompression?.moveY()(300)?.thenAfter()(0.01)?.moveY()(-300)?.makeOpacity()(1)?.animate()(0.37)
         
         let animator2 = JHChainableAnimator(view: dealsStackView)
         animator2?.moveY()(200)?.thenAfter()(0.1)?.moveY()(-200)?.makeOpacity()(1)?.animate()(0.37)
@@ -265,6 +274,32 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         }
         
        
+        
+    }
+    @IBAction func tapCrompressionHomeWhoop(_ sender: Any) {
+        
+               UIView.animate(withDuration: 0.6,
+                                                       animations: {
+                                self.btnCompressionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//                                self.btnCompressionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                },
+                               completion: { _ in
+                                UIView.animate(withDuration: 0.6) {
+                                    self.btnCompressionButton.transform = CGAffineTransform.identity
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) {
+                                        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                                        let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
+                                        self.navigationController?.pushViewController(controller, animated: true)
+//                                        UIView.animate(withDuration: 1.5, animations: {
+//                                        }, completion: { (result) in
+//                                            self.pulseEffect.removeFromSuperlayer()
+//                                        })
+                                    }
+        
+                                    
+                                }
+                })
         
     }
     

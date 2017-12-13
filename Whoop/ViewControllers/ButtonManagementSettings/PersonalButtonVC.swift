@@ -38,6 +38,12 @@ class PersonalButtonVC: UIViewController {
     @IBAction func tappedOnBtnSave(_ sender: Any) {
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
     
     @IBAction func tappedOnBtnFinish(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

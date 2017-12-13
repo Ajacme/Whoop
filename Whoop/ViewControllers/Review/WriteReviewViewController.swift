@@ -10,6 +10,8 @@ import UIKit
 
 class WriteReviewViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var lblPostReview: UILabel!
+    @IBOutlet weak var btnPostReview: UIButton!
     @IBOutlet var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +37,23 @@ class WriteReviewViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = ""
             textView.textColor = .black
+            lblPostReview.textColor = UIColor.black
+            btnPostReview.isUserInteractionEnabled = true
         }
         textView.becomeFirstResponder() //Optional
     }
     
+    @IBAction func tapPostReview(_ sender: Any) {
+       
+    }
     func textViewDidEndEditing(_ textView: UITextView)
     {
         if (textView.text == "")
         {
             textView.text = "Please write about my work here."
             textView.textColor = .lightGray
+            lblPostReview.textColor = UIColor.darkGray
+            btnPostReview.isUserInteractionEnabled = false
         }
         textView.resignFirstResponder()
     }

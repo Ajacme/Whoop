@@ -219,11 +219,12 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
             cell.btnJobInfo.isHidden = true
             cell.bottomViewHeightConstraint.constant = 50
             
-            let button:UIButton = UIButton(frame: CGRect(x: 0, y: 13, width: 303, height: 27))
-            button.backgroundColor = .clear
+            let button:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 10, height: 50))//UIButton(frame:
+            button.backgroundColor = UIColor.clear
+//            button.backgroundColor = .clear
             button.titleLabel?.font =  UIFont(name: "Lato-Semibold", size: 20)
             button.setTitle("Accept", for: .normal)
-            button.titleLabel?.textAlignment = .center//NSTextAlignment.Center
+//            button.titleLabel?.textAlignment = .center//NSTextAlignment.Center
             button.setTitleColor(UIColor(red: 253.0/255.0, green: 86.0/255.0, blue: 18.0/255.0, alpha: 1.0), for: .normal)
             button.addTarget(self, action: #selector(QuoteViewController.tapToAcceptDeal(sender:)), for: .touchUpInside)
 

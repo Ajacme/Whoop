@@ -37,6 +37,12 @@ class HomeWhoopOnBoardingVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
     // MARK:- Status Bar Set Light Content
     override var prefersStatusBarHidden: Bool {
         return false

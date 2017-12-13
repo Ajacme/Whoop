@@ -26,7 +26,11 @@ class WayToBookingViewController: UIViewController {
     }
     
     @IBAction func tapByPhone(_ sender: Any) {
-        guard let number = URL(string: "tel://" + "0800 577356") else { return }
+        guard let number = URL(string: "tel://0800577356") else {
+            print("failed to open")
+            return
+            
+        }
         UIApplication.shared.open(number)
     }
     

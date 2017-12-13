@@ -66,7 +66,7 @@ class BookedApointmentViewController: UIViewController {
 //        objCodePopUp.lblTitle.textAlignment = NSTextAlignment.center
         
         objCodePopUp.lblTitle.text = "Booking pending"
-        objCodePopUp.lblDesc.text = "Thanks for choosing to get a quote from your Whoop! tradesman.\nWe'll confirm the timeslot right away."
+        objCodePopUp.lblDesc.text = "Thanks for choosing to get a quote from your Whoop! tradesman.\nWe'll confirm the time slot right away."
         
         
         objCodePopUp.backgroundColor = UIColor.clear

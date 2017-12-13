@@ -20,7 +20,12 @@ class SignInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
     // MARK: - Buuton Click Events
     @IBAction func tapSignInButton(_ sender: Any) {
         
