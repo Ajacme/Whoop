@@ -48,6 +48,7 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
     var isRed = false
     var isGreen = false
     var isYellow = false
+    var isFromChangeAddress = false
     
     var isTakeImage = Bool()
     
@@ -199,13 +200,13 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         for circleView in circleViews {
             circleView.layer.cornerRadius = circleView.frame.width/2
         }
-        if CoreConfig.sharedInstance.isFirstEnter() == false{
+        if CoreConfig.sharedInstance.isFirstEnter() == false || isFromChangeAddress{
             animateTheSwipeUp()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 self.customCodeViewPopupSwipe()//self.customChatView(invite: false)
             })
-            
+//            isFromChangeAddress = false
             UserDefaults.standard.set(true, forKey: "isFirstEnter")
         }
        
@@ -278,27 +279,20 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
     }
     @IBAction func tapCrompressionHomeWhoop(_ sender: Any) {
         
-               UIView.animate(withDuration: 0.6,
-                                                       animations: {
+               UIView.animate(withDuration: 0.3, animations: {
                                 self.btnCompressionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-//                                self.btnCompressionButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-                },
-                               completion: { _ in
-                                UIView.animate(withDuration: 0.6) {
-                                    self.btnCompressionButton.transform = CGAffineTransform.identity
-                                    
-                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) {
-                                        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                                        let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
-                                        self.navigationController?.pushViewController(controller, animated: true)
-//                                        UIView.animate(withDuration: 1.5, animations: {
-//                                        }, completion: { (result) in
-//                                            self.pulseEffect.removeFromSuperlayer()
-//                                        })
-                                    }
-        
-                                    
-                                }
+                }, completion: { _ in
+                    UIView.animate(withDuration: 0.3) {
+                    
+                        self.btnCompressionButton.transform = CGAffineTransform.identity
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+                            
+                            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            let controller = storyboard.instantiateViewController(withIdentifier: "NewMessageCentreViewController") as! NewMessageCentreViewController
+                            self.navigationController?.pushViewController(controller, animated: true)
+                            
+                        }
+                    }
                 })
         
     }
@@ -405,6 +399,16 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         self.objCodeSwipePopUp.frame = CGRect(x: 0, y:0, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT)
         objCodeSwipePopUp.scrollView.delegate = self
         objCodeSwipePopUp.isWorking = true
+        if isFromChangeAddress == false{
+            objCodeSwipePopUp.lblFirstTitle.text = "Welcome"
+            objCodeSwipePopUp.firstShortDescription.text = "Verify Your home's button"
+            objCodeSwipePopUp.firstDetailDescription.text = "You're about to see your home's Whoop! Button for the first time. You’ll need to verify your address to unlock or join your home's Whoop! Button."
+        }else{
+            isFromChangeAddress = false
+             objCodeSwipePopUp.lblFirstTitle.text = "Verify"
+            objCodeSwipePopUp.firstShortDescription.text = "New Address"
+            objCodeSwipePopUp.firstDetailDescription.text = "You've updated your address. Please verify it to unlock your home's button"
+        }
         objCodeSwipePopUp.backgroundColor = UIColor.clear
         
         self.view.addSubview(objCodeSwipePopUp)

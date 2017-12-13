@@ -99,9 +99,8 @@ class QuoteViewController: UIViewController {
             //compressed animation
             UIView.animate(withDuration: 0.4,
                            animations: {
-                            cell.btnWhoop.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            },
-                           completion: { _ in
+                cell.btnWhoop.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            },completion: { _ in
                             UIView.animate(withDuration: 0.4) {
                                 cell.btnWhoop.transform = CGAffineTransform.identity
                                 
@@ -115,15 +114,19 @@ class QuoteViewController: UIViewController {
                                         dic1.updateValue("£100 saved!", forKey: "totalSaving")
                                         dic1.updateValue("true", forKey: "isAddedSuper")
                                         
-                                         self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+                                        self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
                                         
                                         self.arrScrollData .remove(at: (indexPath?.row)!)
                                         self.arrScrollData.insert(dic1, at: (indexPath?.row)!)
-//                                         self.tableView.reloadRows(at: [indexPath!], with: .bottom)
+                                        
+                                        UIView.performWithoutAnimation {
+                                            self.tableView.reloadRows(at: [indexPath!], with: .none)
+                                        }
+                                        
                                        
-                                        self.tableView.beginUpdates()
-                                        self.tableView.reloadData()
-                                        self.tableView.endUpdates()
+//                                        self.tableView.beginUpdates()
+//                                        self.tableView.reloadData()
+//                                        self.tableView.endUpdates()
                                  
                                         
                                     }, completion: { (result) in

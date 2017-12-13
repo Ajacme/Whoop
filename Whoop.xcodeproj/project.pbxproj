@@ -962,7 +962,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
@@ -986,7 +986,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop Me Happy/whoop/Whoop/Whoop-bridge-header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_VERSION = 4.0;
 				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};

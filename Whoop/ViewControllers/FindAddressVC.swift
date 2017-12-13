@@ -27,7 +27,16 @@ class FindAddressVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.clear
     }
     
-
+    @IBAction func tapChangeAddress(_ sender: Any) {
+        
+        let UnlockedDeal = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let initVC = UnlockedDeal.instantiateViewController(withIdentifier: "WhoopButtonViewController") as? WhoopButtonViewController{
+            initVC.isRed = true
+            initVC.isFromChangeAddress = true
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

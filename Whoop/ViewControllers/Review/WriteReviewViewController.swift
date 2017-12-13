@@ -37,8 +37,8 @@ class WriteReviewViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = ""
             textView.textColor = .black
-            lblPostReview.textColor = UIColor.black
-            btnPostReview.isUserInteractionEnabled = true
+//            lblPostReview.textColor = UIColor.black
+//            btnPostReview.isUserInteractionEnabled = true
         }
         textView.becomeFirstResponder() //Optional
     }
@@ -52,8 +52,8 @@ class WriteReviewViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = "Please write about my work here."
             textView.textColor = .lightGray
-            lblPostReview.textColor = UIColor.darkGray
-            btnPostReview.isUserInteractionEnabled = false
+//            lblPostReview.textColor = UIColor.darkGray
+//            btnPostReview.isUserInteractionEnabled = false
         }
         textView.resignFirstResponder()
     }
