@@ -29,6 +29,7 @@ class CardsCell: UITableViewCell {
     
     @IBOutlet weak var detailsLabel: UILabel!
     
+    @IBOutlet weak var btnTapToSeeHow: UIButton!
     @IBOutlet weak var hyperLinkLabel: UILabel!
     @IBOutlet var unlockHomesDeal: UIButton!
     override func awakeFromNib() {
@@ -79,9 +80,10 @@ class CardsCell: UITableViewCell {
             let attributedString    = NSMutableAttributedString(string: textToChange)
             let range               = (textToChange as NSString).range(of: "( Pre existing medical conditions )")
             attributedString.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 17), range: range)
-            
+             btnTapToSeeHow.isHidden = false
             self.detailsLabel.attributedText = attributedString
         }else{
+            btnTapToSeeHow.isHidden = true
             detailsLabel.text = record.description
         }
         
@@ -99,6 +101,7 @@ class CardsCell: UITableViewCell {
             attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.colorWithHexString(hex: "FE8B3A"), range: range)
             
             self.hyperLinkLabel.attributedText = attributedString
+           
         }else if (record.title == "Big brands and local businesses can't wait to Whoop! You happy with lower prices." && pageIndex == 0 ){
             hyperLinkLabel.text = ""
         }else
@@ -110,7 +113,7 @@ class CardsCell: UITableViewCell {
             
             attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSNumber(value: 1), range: range)
             attributedString.addAttribute(NSAttributedStringKey.underlineColor, value: UIColor.blue, range: range)
- 
+            
             self.hyperLinkLabel.attributedText = attributedString
         }
     }

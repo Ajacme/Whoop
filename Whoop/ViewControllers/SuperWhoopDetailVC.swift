@@ -44,7 +44,7 @@ class Insurance_data :  NSObject {
         self.totalSaving = totalSaving
     }
 }
-
+// imgTopBG  lblDesc  imgMiddleblue lblMainTitle
 class CellForTickets: UITableViewCell {
     @IBOutlet weak var cntrolTapImage: UIControl!
     @IBOutlet weak var cntrolAddDeal: UIControl!
@@ -66,6 +66,7 @@ class CellForTickets: UITableViewCell {
     @IBOutlet weak var lblDealBoosted: UILabel!
     @IBOutlet weak var lblGetQuotes: UILabel!
     
+    @IBOutlet weak var lblDealStep: UILabel!
     @IBOutlet weak var btnWhoop: UIButton!
     @IBOutlet weak var lockTextTopConstraint: NSLayoutConstraint!
     

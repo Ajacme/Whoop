@@ -65,6 +65,7 @@
 		08D140E71FDAD490001837E4 /* ViewFor3xPopUpHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D140E51FDAD48E001837E4 /* ViewFor3xPopUpHome.swift */; };
 		1F73C4281FDECDB400F403CE /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F73C4271FDECDB400F403CE /* QuoteViewController.swift */; };
 		4DBB64EF492A101D1D37376B /* Pods_Whoop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3B0AB2F669B61019252E9C /* Pods_Whoop.framework */; };
+		84583C2E1FE17CD200D4D328 /* DealsFromMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84583C2D1FE17CD200D4D328 /* DealsFromMessageViewController.swift */; };
 		8B084ABF1FB760ED0076FD70 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B084ABE1FB760ED0076FD70 /* ListingCell.swift */; };
 		8BDAF9281FB8CF1100135FFB /* DealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAF9271FB8CF1100135FFB /* DealsCell.swift */; };
 		8BDAF92A1FB8D42700135FFB /* NotificationsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDAF9291FB8D42700135FFB /* NotificationsHeaderCell.swift */; };
@@ -170,6 +171,7 @@
 		1F73C4271FDECDB400F403CE /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		3AA0F0BAF9CD9B79462BE206 /* Pods-ZaeemTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaeemTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaeemTest/Pods-ZaeemTest.release.xcconfig"; sourceTree = "<group>"; };
 		81082D69F141C8BC40712DF8 /* Pods-Whoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whoop/Pods-Whoop.release.xcconfig"; sourceTree = "<group>"; };
+		84583C2D1FE17CD200D4D328 /* DealsFromMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsFromMessageViewController.swift; sourceTree = "<group>"; };
 		8B084ABE1FB760ED0076FD70 /* ListingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
 		8B18480C1FB0E148009F40F6 /* Whoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BDAF9271FB8CF1100135FFB /* DealsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsCell.swift; sourceTree = "<group>"; };
@@ -414,6 +416,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84583C2C1FE17CA800D4D328 /* Deals From Message */ = {
+			isa = PBXGroup;
+			children = (
+				84583C2D1FE17CD200D4D328 /* DealsFromMessageViewController.swift */,
+			);
+			path = "Deals From Message";
+			sourceTree = "<group>";
+		};
 		8B084ABD1FB760C40076FD70 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +571,7 @@
 		F3152E231FB22EEC000E03B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84583C2C1FE17CA800D4D328 /* Deals From Message */,
 				0842CD631FDFEC1A00ABEF78 /* Super Whoop */,
 				083D49D51FDE8E6C00648EAE /* Booking plumber */,
 				0839C2981FD958A600507EE8 /* Payment Settings */,
@@ -758,6 +769,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84583C2E1FE17CD200D4D328 /* DealsFromMessageViewController.swift in Sources */,
 				082A28961FCDC52B00B39D0A /* UnlockDealDetailVC.swift in Sources */,
 				082A28831FCDC21D00B39D0A /* PersonalButtonVC.swift in Sources */,
 				082A287E1FCDC15F00B39D0A /* WebDealDetailVC.swift in Sources */,

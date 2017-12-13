@@ -106,7 +106,8 @@ class UnlockDealDetailVC: UIViewController {
                     arrScrollData  = [
                         ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Travel Insurance".localized,"desc":"This is your home's travel insurance deal".localized, "bgImage" : "bg"],
                         ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Travel Insurance\n( Medical conditions )".localized,"desc":"This is your home's travel insurance (Medical conditions) deal".localized, "bgImage" : "bg"],
-                        ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized, "bgImage" : "bg"]]
+                        ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "Car breakdown".localized,"desc":"This is your home's Car breakdown deal".localized, "bgImage" : "bg"]
+                        ]
         }
         
         for dic in arrScrollData

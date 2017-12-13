@@ -234,7 +234,10 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         if let cell = tableView.dequeueReusableCell(withIdentifier: "DealsCell") as? DealsCell {
             cell.set(image: currentData.image, text: currentData.text)
             cell.actionButtonDeals.tag = section
+            cell.btnDealsInfo.tag = section
             cell.actionButtonDeals.addTarget(self, action: #selector(self.tapToDeals(_:)), for: .touchUpInside)
+            cell.btnDealsInfo.addTarget(self, action: #selector(self.tapToDealsInfo(_:)), for: .touchUpInside)
+            
             return cell
         }
         return UITableViewCell()
@@ -243,6 +246,20 @@ extension NewMessageCentreViewController: UITableViewDataSource, UITableViewDele
         if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SettingUnlockDealViewController") as? SettingUnlockDealViewController{
             initVC.isDealToUnlock = true
             self.navigationController?.pushViewController(initVC, animated: true)
+        }
+    }
+    @IBAction func tapToDealsInfo(_ sender: UIButton) {
+        let indexHandler: [Int: Int] = [8: 0, 10: 1, 11: 2, 12: 3, 13: 4]
+        if let iPath = indexHandler[sender.tag]{
+            
+            if iPath == 0{
+                if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "DealsFromMessageViewController") as? DealsFromMessageViewController{
+//                    initVC.headerViewData = DealsToUnlockData().getDataForHeader(dealName: vcTitle, isDealToUnlock: true)
+//                    initVC.arrScrollData = DealsToUnlockData().getDataForView(dealName: vcTitle, isDealToUnlock: true)
+                    self.navigationController?.pushViewController(initVC, animated: true)
+                }
+                
+            }
         }
     }
     @IBAction func tapToDeals(_ sender: UIButton) {
