@@ -10611,7 +10611,7 @@ price.</string>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To unlock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rd8-lB-5GW">
-                                                                    <rect key="frame" x="10" y="255.33333333333329" width="374" height="33.666666666666657"/>
+                                                                    <rect key="frame" x="10" y="255.33333333333334" width="374" height="59.333333333333343"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -10638,8 +10638,8 @@ price.</string>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Jake Huges"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZN-v0-JTU">
-                                                                    <rect key="frame" x="172" y="305.33333333333331" width="51.666666666666657" height="25.666666666666686"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZN-v0-JTU">
+                                                                    <rect key="frame" x="198" y="331" width="0.0" height="0.0"/>
                                                                     <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="22"/>
                                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
