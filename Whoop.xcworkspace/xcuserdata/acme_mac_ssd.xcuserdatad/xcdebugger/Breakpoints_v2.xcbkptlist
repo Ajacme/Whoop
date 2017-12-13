@@ -81,6 +81,68 @@
             endingLineNumber = "378"
             landmarkName = "getDataForHeader(dealName:data:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.BrandList.__allocating_init() -&gt; Whoop.BrandList"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/Unlock%20deal/WebDealDetailVC.swift"
+                  timestampString = "534864705.788445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.BrandList.init() -&gt; Whoop.BrandList"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/Unlock%20deal/WebDealDetailVC.swift"
+                  timestampString = "534864705.790246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "379"
+                  endingLineNumber = "379"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.BrandList.deinit"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/Unlock%20deal/WebDealDetailVC.swift"
+                  timestampString = "534864705.791943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Whoop.BrandList.__deallocating_deinit"
+                  moduleName = "Whoop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme_mac_ssd/Documents/Ajay/PROJECTS/Whooop%20Me%20Happy/whoop/Whoop/ViewControllers/Unlock%20deal/WebDealDetailVC.swift"
+                  timestampString = "534864705.793594"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -614,15 +676,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/QuoteViewController.swift"
-            timestampString = "534850317.593799"
+            timestampString = "534864705.389515"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -630,15 +692,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/QuoteViewController.swift"
-            timestampString = "534850317.59454"
+            timestampString = "534864705.390168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Whoop/ViewControllers/QuoteViewController.swift"
+            timestampString = "534864705.390649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,12 +728,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Whoop/ViewControllers/QuoteViewController.swift"
-            timestampString = "534850317.595102"
+            timestampString = "534864705.391535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tapToAcceptDeal(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
