@@ -27,15 +27,15 @@ class DealsFromMessageViewController: UIViewController {
         tableViewMain.tableHeaderView = dealHeaderView
         
         arrScrollData = [
-            ["image" : "blue_plane","selected_image" :"gray_plane","title" : "Unlock your home's insurance deals".localized,"desc":"To unlock your home's exclusive insurance deals go to Deals To Unlock or just tap the relevant unlock message".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+            ["image" : "blue_Unlock_Icon","selected_image" :"gray_plane","title" : "Unlock your home's insurance deals".localized,"desc":"To unlock your home's exclusive insurance deals go to Deals To Unlock or just tap the relevant unlock message".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
             
             
-            ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Use your deal".localized,"desc":"Everyone you live with can use the deal. just go to Unlocked Deals and find the deal you want to use.".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
+            ["image" : "whoop!_me_happy_face","selected_image" :"gray_travel_medical","title" : "Use your deal".localized,"desc":"Everyone you live with can use the deal. just go to Unlocked Deals and find the deal you want to use.".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
             
             
             ["image" : "blue_car_break","selected_image" :"gray_car_break","title" : "See the insurers".localized,"desc":"From travel to car insurance just tap Get Quotes on the unlocked deal and you'll see the insurance brands who are ready to Whoop! You Happy with low prices.".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"],
             
-            ["image" : "blue_travel_medical","selected_image" :"gray_travel_medical","title" : "Be Whoop!'d Happy".localized,"desc":"Find your preferred brand and tap their Whoop! Button to lower the prices on their website. Get ready for huge savings. Purchase your policy in the normal way".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]
+            ["image" : "whoop!_me_happy_face","selected_image" :"gray_travel_medical","title" : "Be Whoop!'d Happy".localized,"desc":"Find your preferred brand and tap their Whoop! Button to lower the prices on their website. Get ready for huge savings. Purchase your policy in the normal way".localized,"bgImage" : "bg_ins","message" : "Expires in 45 days".localized, "category":"Insurance"]
             ]
 
         for dic in arrScrollData
