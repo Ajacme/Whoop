@@ -185,8 +185,12 @@ class WhoopButtonViewController: UIViewController,UIImagePickerControllerDelegat
         let imageFromData = UIImage(data: imageAdd)
         addPhotoButton.setImage(imageFromData, for: .normal)
         addPhotoButtonText.setTitle("Change Photo", for: .normal)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

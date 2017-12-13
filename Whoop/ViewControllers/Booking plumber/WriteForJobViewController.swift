@@ -10,7 +10,11 @@ import UIKit
 
 class WriteForJobViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var btnSelectYourDate: UIButton!
+    @IBOutlet weak var lblSelectDate: UILabel!
     @IBOutlet var jobsTextField: UITextView!
+    
+    var isTextFieldText = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +39,8 @@ class WriteForJobViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = ""
             textView.textColor = .black
+            lblSelectDate.textColor = UIColor.black
+            isTextFieldText = true
         }
         textView.becomeFirstResponder() //Optional
     }
@@ -45,13 +51,17 @@ class WriteForJobViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = "Please write about your job here."
             textView.textColor = .lightGray
+            lblSelectDate.textColor = UIColor.darkGray
+            isTextFieldText = false
         }
         textView.resignFirstResponder()
     }
     
     @IBAction func tapSelectDate(_ sender: Any) {
-        if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectTimeViewController") as? SelectTimeViewController{
-            self.navigationController?.pushViewController(initVC, animated: true)
+        if isTextFieldText == true{
+            if let initVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectTimeViewController") as? SelectTimeViewController{
+                self.navigationController?.pushViewController(initVC, animated: true)
+            }
         }
     }
     @IBAction func tapBack(_ sender: Any) {

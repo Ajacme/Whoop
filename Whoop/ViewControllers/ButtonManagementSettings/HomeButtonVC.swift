@@ -24,9 +24,19 @@ class HomeButtonVC: UIViewController,UIScrollViewDelegate,UIImagePickerControlle
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.clear
+    }
 
     //MARK: - Tapped Events
-    @IBAction func tappedOnControlChangeAddress(_ sender: Any) {
+    @IBAction func tappedOnControlChangeAddress(_ sender: Any) {//FindAddressVC
+        let FindAddVC = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let initVC = FindAddVC.instantiateViewController(withIdentifier: "FindAddressVC") as? FindAddressVC{
+            self.navigationController?.pushViewController(initVC, animated: true)
+        }
     }
     
     @IBAction func tappedOnControlDeleteYourself(_ sender: Any) {

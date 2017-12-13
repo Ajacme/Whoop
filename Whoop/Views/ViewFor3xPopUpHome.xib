@@ -44,7 +44,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8B-6y-xJX" userLabel="View 1">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="500.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your home's button" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-Rk-qmJ" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Address " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjC-Rk-qmJ" customClass="MTLabel" customModule="Whoop" customModuleProvider="target">
                                                     <rect key="frame" x="18" y="155" width="320" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="DMT-1O-lCr"/>
@@ -61,10 +61,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="90" id="o7U-D9-vXF"/>
                                                             </constraints>
-                                                            <string key="text">You're about to see your home's Whoop! 
-Button for the first time. You’ll need to verify your 
-address to unlock or join your home's 
-Whoop! Button.
+                                                            <string key="text">You've updated your address. Please verify it to unlock your home's button.
+
 </string>
                                                             <fontDescription key="fontDescription" name="LatoLatin-Semibold" family="LatoLatin" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
@@ -84,8 +82,8 @@ Whoop! Button.
                                                         <constraint firstAttribute="width" secondItem="0JC-m5-S33" secondAttribute="height" multiplier="1:1" id="OMF-Q4-6mz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJJ-vN-rVO">
-                                                    <rect key="frame" x="142" y="24" width="71" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJJ-vN-rVO">
+                                                    <rect key="frame" x="155.5" y="24" width="44.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="LatoLatin-Regular" family="LatoLatin" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -258,8 +256,8 @@ so you can start straight away,</string>
                 <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="4pl-ae-Odi">
                     <rect key="frame" x="176" y="1218.5" width="23" height="37"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="pageIndicatorTintColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="currentPageIndicatorTintColor" red="0.48627450979999998" green="0.54901960780000003" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="pageIndicatorTintColor" cocoaTouchSystemColor="lightTextColor"/>
+                    <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
