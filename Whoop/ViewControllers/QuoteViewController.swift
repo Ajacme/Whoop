@@ -19,6 +19,7 @@ class QuoteViewController: UIViewController {
     var  arrInsuranceData = [Insurance_data]()
     var pulseEffect:PulsingHaloLayer!
     var addedDeal = 1
+    let defaults:UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,12 +55,14 @@ class QuoteViewController: UIViewController {
             
             // tableData.UnlockedimageName = dic["selected_image"] as! String
             arrInsuranceData.append(tableData)
+            defaults.set(false, forKey: "isAccepted")
         }
         
     }
     
     @objc func tapToAcceptDeal(sender : UIButton){
         self.customCodeView(title: "Thank You!", desc: "We’ll contact you very soon to book in a convenient start date/time.")
+        defaults.set(true, forKey: "isAccepted")
     }
 
     
@@ -94,45 +97,41 @@ class QuoteViewController: UIViewController {
             self.pulseEffect.start()
             
             //compressed animation
-            UIView.animate(withDuration: 0.6,
+            UIView.animate(withDuration: 0.4,
                            animations: {
                             cell.btnWhoop.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
             },
                            completion: { _ in
-                            UIView.animate(withDuration: 0.6) {
+                            UIView.animate(withDuration: 0.4) {
                                 cell.btnWhoop.transform = CGAffineTransform.identity
                                 
                                 //ripple animation
                                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
                                     UIView.animate(withDuration: 0.1, animations: {
                                         
-                                        
-                                       
                                         var dic1 = self.arrScrollData[(indexPath?.row)!]
                                         dic1.updateValue("true", forKey: "isLock")
                                         dic1.updateValue("£475.00", forKey: "displayMessage")
                                         dic1.updateValue("£100 saved!", forKey: "totalSaving")
                                         dic1.updateValue("true", forKey: "isAddedSuper")
-//                                        dic1.updateValue("£475.00", forKey: "price")
-                                        cell.lblTotalSaving.isHidden = false
                                         
                                          self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
                                         
                                         self.arrScrollData .remove(at: (indexPath?.row)!)
                                         self.arrScrollData.insert(dic1, at: (indexPath?.row)!)
-                                        
+//                                         self.tableView.reloadRows(at: [indexPath!], with: .bottom)
+                                       
+                                        self.tableView.beginUpdates()
                                         self.tableView.reloadData()
-                                        
-                                        
+                                        self.tableView.endUpdates()
+                                 
                                         
                                     }, completion: { (result) in
-                                        //                                        self.pulseEffect.removeFromSuperlayer()
                                         self.pulseEffect.removeFromSuperlayer()
                                     })
                                 }
                             }
             })
-            
             
         }
         
@@ -140,6 +139,20 @@ class QuoteViewController: UIViewController {
     @IBAction func tapToClosePopUp(_ sender: UIButton) {
         self.objCodePopUp.removeFromSuperview()
         self.objCodePopUp.Cons_ViewMiddle.constant = 1000
+        
+        let accepted:Bool = defaults.bool(forKey: "isAccepted" )
+        if accepted {
+            
+            let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: self.tableView)
+            let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+            
+            let cell = self.tableView.cellForRow(at: indexPath!) as! CellForTickets
+            let button = cell.viewWithTag(11) as? UIButton
+            button?.isUserInteractionEnabled = false
+            button?.setTitleColor(UIColor(red: 141.0/255.0, green: 142.0/255.0, blue: 143.0/255.0, alpha: 1.0), for: .normal)
+            defaults.set(false, forKey: "isAccepted")
+            
+        }
     }
     
     // MARK: - CustumeView Design For PopUp
@@ -175,9 +188,6 @@ class QuoteViewController: UIViewController {
         
         
     }
-   
-    
-    
 }
 
 //MARK: - Tableview Delegates And Datasource
@@ -224,6 +234,7 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
 //            button.backgroundColor = .clear
             button.titleLabel?.font =  UIFont(name: "Lato-Semibold", size: 20)
             button.setTitle("Accept", for: .normal)
+            button.tag = 11
 //            button.titleLabel?.textAlignment = .center//NSTextAlignment.Center
             button.setTitleColor(UIColor(red: 253.0/255.0, green: 86.0/255.0, blue: 18.0/255.0, alpha: 1.0), for: .normal)
             button.addTarget(self, action: #selector(QuoteViewController.tapToAcceptDeal(sender:)), for: .touchUpInside)
@@ -234,7 +245,7 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
             cell.lblUnlockBy.text = ""
             cell.btnWhoop.isHidden = false
             cell.btnWhoop.isUserInteractionEnabled = true
-            cell.lblLocked.text = "Accept"
+//            cell.lblLocked.text = "Accept"
             cell.lblTotalSaving.text = dic["totalSaving"] as? String
         }
         if strislock == "true"
