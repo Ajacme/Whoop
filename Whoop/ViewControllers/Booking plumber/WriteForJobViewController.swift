@@ -14,7 +14,7 @@ class WriteForJobViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var lblSelectDate: UILabel!
     @IBOutlet var jobsTextField: UITextView!
     
-    var isTextFieldText = false
+    var isTextFieldText = true
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,8 +42,8 @@ class WriteForJobViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = ""
             textView.textColor = .black
-            lblSelectDate.textColor = UIColor.black
-            isTextFieldText = true
+//            lblSelectDate.textColor = UIColor.black
+//            isTextFieldText = true
         }
         textView.becomeFirstResponder() //Optional
     }
@@ -54,8 +54,8 @@ class WriteForJobViewController: UIViewController, UITextViewDelegate {
         {
             textView.text = "Please write about your job here."
             textView.textColor = .lightGray
-            lblSelectDate.textColor = UIColor.darkGray
-            isTextFieldText = false
+//            lblSelectDate.textColor = UIColor.darkGray
+//            isTextFieldText = false
         }
         textView.resignFirstResponder()
     }

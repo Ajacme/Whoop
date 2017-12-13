@@ -17,6 +17,14 @@ class ViewFor3xPopUpHome: UIView, UIScrollViewDelegate {
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var Cons_ViewTop: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var firstDetailDescription: MTLabel!
+    @IBOutlet weak var firstShortDescription: MTLabel!
+    @IBOutlet weak var imgFirstIcon: UIImageView!
+    @IBOutlet weak var lblFirstTitle: UILabel!
+    
+    
     var x = 1
     @objc var scrollTimer:Timer?
     var isWorking = false

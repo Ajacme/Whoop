@@ -274,6 +274,10 @@ so you can start straight away,</string>
             <connections>
                 <outlet property="Cons_ViewTop" destination="QCc-At-5fU" id="MVM-0J-Nfs"/>
                 <outlet property="btnCancel" destination="uWZ-Fc-bBh" id="Sbt-k7-QKE"/>
+                <outlet property="firstDetailDescription" destination="b6L-PV-fo6" id="FtO-cK-yU1"/>
+                <outlet property="firstShortDescription" destination="gjC-Rk-qmJ" id="YeJ-xT-95c"/>
+                <outlet property="imgFirstIcon" destination="0JC-m5-S33" id="s5o-Fg-3CP"/>
+                <outlet property="lblFirstTitle" destination="yJJ-vN-rVO" id="ps1-aZ-SJj"/>
                 <outlet property="pageControl" destination="4pl-ae-Odi" id="zvG-jN-xMi"/>
                 <outlet property="scrollView" destination="39v-MZ-1Gn" id="pNp-Sj-coV"/>
             </connections>
