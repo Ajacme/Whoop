@@ -57,7 +57,12 @@ class QuoteViewController: UIViewController {
         }
         
     }
+    
+    @objc func tapToAcceptDeal(sender : UIButton){
+        self.customCodeView(title: "Thank You!", desc: "We’ll contact you very soon to book in a convenient start date/time.")
+    }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,7 +83,15 @@ class QuoteViewController: UIViewController {
                 self.pulseEffect.removeFromSuperlayer()
             }
             
+            self.pulseEffect = PulsingHaloLayer()
+            self.pulseEffect.haloLayerNumber = 7
+            self.pulseEffect.animationDuration = 3
+            self.pulseEffect.radius = 125.0
+            self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
+            self.pulseEffect.position = cell.imgMiddleblue.center
+            cell.imgMiddleblue.layer.addSublayer(self.pulseEffect)
             
+            self.pulseEffect.start()
             
             //compressed animation
             UIView.animate(withDuration: 0.6,
@@ -103,6 +116,7 @@ class QuoteViewController: UIViewController {
 //                                        dic1.updateValue("£475.00", forKey: "price")
                                         cell.lblTotalSaving.isHidden = false
                                         
+                                         self.pulseEffect.backgroundColor = UIColor.init(red: 255/255.0, green: 79/255.0, blue: 0/255.0, alpha: 1.0).cgColor
                                         
                                         self.arrScrollData .remove(at: (indexPath?.row)!)
                                         self.arrScrollData.insert(dic1, at: (indexPath?.row)!)
@@ -113,7 +127,7 @@ class QuoteViewController: UIViewController {
                                         
                                     }, completion: { (result) in
                                         //                                        self.pulseEffect.removeFromSuperlayer()
-                                        
+                                        self.pulseEffect.removeFromSuperlayer()
                                     })
                                 }
                             }
@@ -129,12 +143,12 @@ class QuoteViewController: UIViewController {
     }
     
     // MARK: - CustumeView Design For PopUp
-    func customCodeView()  {
+    func customCodeView(title: String, desc: String)  {
         objCodePopUp = Bundle.main.loadNibNamed("SuperWhoopPopUp", owner: self, options: nil)?.first as! SuperWhoopPopUp
         self.objCodePopUp.frame = CGRect(x: 0, y:89, width:ScreenSize.WIDTH, height:ScreenSize.HEIGHT - 89)
         
-        objCodePopUp.labelTitle.text = "Job description"
-        objCodePopUp.labelDiscription.text = "We'll replace or fix your boiler. If necessary we'll take your old boiler away too."
+        objCodePopUp.labelTitle.text = title//"Job description"
+        objCodePopUp.labelDiscription.text = desc//"We'll replace or fix your boiler. If necessary we'll take your old boiler away too."
         objCodePopUp.backgroundColor = UIColor.clear
         self.view.addSubview(objCodePopUp)
         UIView.animate(withDuration: 0.5) {
@@ -150,7 +164,8 @@ class QuoteViewController: UIViewController {
     }
    
     @objc func jobInfoClicked(sender: UIButton){
-        self.customCodeView()
+        
+        self.customCodeView(title: "Job description", desc: "We'll replace or fix your boiler. If necessary we'll take your old boiler away too.")
     }
     @IBAction func tapBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -160,6 +175,7 @@ class QuoteViewController: UIViewController {
         
         
     }
+   
     
     
 }
@@ -201,14 +217,16 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
         }else{
             
             cell.btnJobInfo.isHidden = true
-
             cell.bottomViewHeightConstraint.constant = 50
             
-            let button:UIButton = UIButton(frame: CGRect(x: 0, y: 13, width: 303, height: 27))
-            button.backgroundColor = .clear
+            let button:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 10, height: 50))//UIButton(frame:
+            button.backgroundColor = UIColor.clear
+//            button.backgroundColor = .clear
             button.titleLabel?.font =  UIFont(name: "Lato-Semibold", size: 20)
             button.setTitle("Accept", for: .normal)
+//            button.titleLabel?.textAlignment = .center//NSTextAlignment.Center
             button.setTitleColor(UIColor(red: 253.0/255.0, green: 86.0/255.0, blue: 18.0/255.0, alpha: 1.0), for: .normal)
+            button.addTarget(self, action: #selector(QuoteViewController.tapToAcceptDeal(sender:)), for: .touchUpInside)
 
             cell.cntrolAddDeal.addSubview(button)
             
@@ -227,8 +245,10 @@ extension QuoteViewController: UITableViewDelegate,UITableViewDataSource{
             cell.imgMiddleblue.image = UIImage(named: dic["imageName"] as! String)
             cell.lblTapUnlock.text = ""
             cell.lblLocked.text = dic["lockText"] as? String//"Not Added".localized
-            cell.imgTopBG.image = UIImage(named : dic["bgImage"] as! String)
+//            cell.imgTopBG.image = UIImage(named : dic["bgImage"] as! String)
+            cell.imgTopBG.image = nil
             cell.cntrolTapImage.isUserInteractionEnabled = true
+            cell.imgTopBG.backgroundColor = UIColor(red: 141.0 / 255.0, green: 142.0 / 255.0, blue: 143.0 / 255.0, alpha: 1.0)
             
         }
         return cell

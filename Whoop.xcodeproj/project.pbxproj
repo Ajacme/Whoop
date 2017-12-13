@@ -965,6 +965,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Debug;
 		};
@@ -987,6 +988,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/admin/Documents/GitHub/whoop/Whoop/Whoop-bridge-header.h";
 				SWIFT_VERSION = 4.0;
+				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Release;
 		};
